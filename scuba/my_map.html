@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+   <head profile="http://gmpg.org/xfn/11">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ 
+      <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+      
+      <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+      <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js'></script>
+   </head>
+ 
+   <body>
+      <h1>Leaflet Example</h1>
+      
+      <p>this is points of the dive sites.
+      
+      <div id="map" style="height: 440px; border: 1px solid #AAA;"></div>
+ 
+      <script type='text/javascript' src='maps/markers.json'></script>
+      <script type='text/javascript' src='maps/leaf-demo.js'></script>
+   </body>
+   <script>
+     var map = L.map( 'map', {
+       center: [39.381266, -97.922211],
+       minZoom: 2,
+       zoom: 4
+      });
+      
+      L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    subdomains: ['a','b','c']
+  }).addTo( map );
+
+
+
+  var data=[
+  {
+    "countries_name": "Alabama",
+    "countries_dive_name": "Blue Water",
+    "countries_dive_avg_depth": "18.3 m",
+    "latitudes": "33° 17.74' N",
+    "longitudes": "86° 49.034' W"
+  },
+  {
+    "countries_name": "Alabama",
+    "countries_dive_name": "Dive land park",
+    "countries_dive_avg_depth": "13.7 m",
+    "latitudes": "33° 55.373' N",
+    "longitudes": "85° 54.353' W"
+  },
+  {
+    "countries_name": "Alabama",
+    "countries_dive_name": "Madison Aquatic & Recreation Park",
+    "countries_dive_avg_depth": "13.7 m",
+    "latitudes": "34° 40.535' N",
+    "longitudes": "86° 43.817' W"
+  }]
+
+  var jsonFeatures = [];
+  data.forEach(function(point){
+    var lat = point.latitudes;
+    var lon = point.longitudes;
+
+    var feature = {type: 'Feature',
+        properties: point,
+        geometry: {
+            type: 'Point',
+            coordinates: [lon,lat]
+        }
+    };
+
+    jsonFeatures.push(feature);
+  });
+  var geoJson = { type: 'FeatureCollection', features: jsonFeatures };
+  L.geoJson(geoJson).addTo(map);
+ 
+ 
+
+   </script>
+</html>
+
+    
+
+          
+        
