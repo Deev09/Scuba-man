@@ -1,0 +1,4 @@
+**/__pychace__ 
+.DS_Store
+ *.pyc 
+**/dump.rdb
