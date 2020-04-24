@@ -4,9 +4,9 @@ from flask import request, url_for, render_template, redirect
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://devo:password@localhost/scuba_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://devo:password@localhost/countries_db'
 db = SQLAlchemy(app)
-class User(db.Model):
+'''class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String, unique=True, nullable=False)
     email = db.Column(db.String, unique=True, nullable=False)
@@ -29,7 +29,7 @@ def post_user():
     user=User(request.form['username'],request.form['email'])
     db.session.add(user)
     db.session.commit()
-    return redirect(url_for('simple'))
+    return redirect(url_for('simple'))'''
 
 
 

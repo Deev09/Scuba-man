@@ -114,6 +114,10 @@
 		display_map();
 	
 	</script>
+	 {% for user in myUser %}
+	 <li>{{ user.id }}. {{ user.username }} - {{ user.email }}</li>
+	 {% endfor %}
+	
 
 </body>
 </html>	
