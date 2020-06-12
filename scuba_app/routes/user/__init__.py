@@ -34,15 +34,10 @@ def post_user():
     
     #return redirect(url_for('userRoute.simple'))
 
-@userRoute.route('/pot', methods=['GET'])
-def pot():
-    return redirect(url_for('userRoute.simple'))
 
-@userRoute.route('/') 
+
+@userRoute.route('/', methods=['GET']) 
 def simple():
-    
-    
-    
     
     #oneItem = Country.query.filter_by(countries_name="Alabama").first()
     #arr=Country.query.filter_by(countries_name="Alabama").all()
@@ -51,16 +46,12 @@ def simple():
     
     
 
-@userRoute.route('/meh', methods=['GET'])
-def index():
-    
+@userRoute.route('/meh/<country>', methods=['GET'])
+def index(country):
+
 
     
-    
-    
-    #search="%{}%".format('Alabama')
-    
-    cities =Country.query.filter_by(countries_name="{}".format('Alabama')).first()
+    cities =Country.query.filter_by(countries_name="{}".format(country)).first()
 
     url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=230b7544b48513a794a7284e48f2ca63'
 
@@ -76,21 +67,10 @@ def index():
     }
     weather_data.append(weather)
 
-    '''for city in cities:
-
-        r = requests.get(url.format(city.countries_name)).json()
-
-        weather = {
-            'city' : city.countries_name,
-            'temperature' : r['main']['temp'],
-            'description' : r['weather'][0]['description'],
-            'icon' : r['weather'][0]['icon'],
-        }
-
-        weather_data.append(weather)'''
+   
 
 
-    return render_template('api.html', weather_data=weather_data)
+    return render_template('api.html', weather_data=weather_data, country=country)
 
 @userRoute.route('/map',methods=['GET','POST'])
 def my_maps():

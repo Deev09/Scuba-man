@@ -6,29 +6,28 @@
     <title>Countries</title>
 </head>
 <body>
-    <form method="post" action="/">
+    <form method="post" action="/post_user">
         <label>Country:</label>
         <input id="countries_name" name="countries_name" type="text" />
         <input type="submit" formaction="/post_user" />
     </form>
-    {% for countries_tbl in myCountry %}
     
-    <li >{{countries_tbl.countries_dive_name}} {{countries_tbl.countries_name}} {{countries_tbl.countries_dive_avg_depth}}</li>
-    {% endfor %}
+    
+    
 
-    
     {% for meh in arr %}
-            <p><a href="/meh">
+        <p>
+           
                 
-                
-                <button>{meh.countries_name}} {{ meh.countries_dive_name }}</button>
+            <li><a href="/meh/{{meh.countries_name}}">{{meh.countries_name}} {{ meh.countries_dive_name }}</a></li>  
+            
                 
                 
             
-            </a></p>
-        {% endfor %}
+        </p>
+    {% endfor %}
 
-
+  
     
   
 </body>
