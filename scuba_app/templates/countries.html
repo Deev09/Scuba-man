@@ -16,15 +16,20 @@
     <li >{{countries_tbl.countries_dive_name}} {{countries_tbl.countries_name}} {{countries_tbl.countries_dive_avg_depth}}</li>
     {% endfor %}
 
-    {% for meh in arr %}
-    <p><a href="/meh">
-        
-        
-        <li>{{meh.countries_name}} {{ meh.countries_dive_name }}</li>
-        
     
-    </a></p>
-    {% endfor %}
+    {% for meh in arr %}
+            <p><a href="/meh">
+                
+                
+                <button>{meh.countries_name}} {{ meh.countries_dive_name }}</button>
+                
+                
+            
+            </a></p>
+        {% endfor %}
+
+
+    
   
 </body>
 </html>

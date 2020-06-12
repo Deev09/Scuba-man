@@ -34,7 +34,7 @@ def post_user():
     
     #return redirect(url_for('userRoute.simple'))
 
-@userRoute.route('/pot/<index>', methods=['GET'])
+@userRoute.route('/pot', methods=['GET'])
 def pot():
     return redirect(url_for('userRoute.simple'))
 
