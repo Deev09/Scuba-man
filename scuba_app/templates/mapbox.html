@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> My maps </title>
+	<script src='https://api.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css' rel='stylesheet' />
+	<style>
+        .weather {
+            background-color:rgb(0, 204, 153);
+            position: absolute;
+            top: 10%;
+            right: 10px;
+            width: 25%;
+            height: 40%;
+        }
+        .tides {
+            background-color:rgb(0, 153, 153);
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            width: 25%;
+            height: 40%;
+        }
+		.container {
+			max-width: 90%;
+			max-height: 70%;
+			margin-left: auto;
+			margin-right: 25%;
+		}
+		.inputBox {
+		    width: 50%;
+		    padding: 12px 20px;
+		    margin: 8px 0;
+		    box-sizing: border-box;
+		}
+        
+		.button {
+		    background-color: #4CAF50;
+		    border: none;
+		    color: white;
+		    padding: 15px 32px;
+		    text-align: center;
+		    text-decoration: none;
+		    display: inline-block;
+		    font-size: 16px;
+		    margin: 4px 2px;
+		    cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		
+		<font face="verdana" size='7'> Scuba-man</font> <br/><br/>
+		<input class="inputBox" type="number" id="Longitude" placeholder="Enter Longitude" />
+		<input class="inputBox" type="number" id="Latitude" placeholder="Enter Latitude" />
+		<button class="button" onclick="getLonLat()"> Submit</button>
+		<div id='map' style='width: 95%; height:500px;'></div><br/><br/>
+		
+    </div>
+    <div class="weather">
+        <font face="verdana" size='7'> Weather</font> 
+        <p style="font-size:80px;text-align: center;">{{climate}} °C</p>
+
+    </div>
+    <div class="tides">
+        <font face="verdana" size='7'> Tide Conditions</font>
+        <p style="font-size:60px;text-align: center;">{{tide}} m</p> 
+
+    </div>
+	
+
+
+
+	<script>
+		var longitude, latitude;
+		function getLonLat(){
+			longitude = document.getElementById("Longitude").value;
+			latitude = document.getElementById("Latitude").value;
+			display_map(longitude, latitude);
+		}
+		function display_map(longitude=-89.500000, latitude=44.500000) {
+			mapboxgl.accessToken = "{{ mapbox_access_token }}"
+			var map = new mapboxgl.Map({
+			container: 'map',
+			style: 'mapbox://styles/mapbox/satellite-streets-v10',
+			center: [longitude,latitude],
+			zoom: 1,
+			bearing: 0,
+			pitch:0
+		
+			});
+			// fulscreen button 
+			map.addControl(new mapboxgl.FullscreenControl());
+			// display a blue marker
+			var marker = new mapboxgl.Marker()
+	  			.setLngLat([longitude,latitude])
+	  			.addTo(map);
+	  		// Navigation marker at top-left corner
+	  		var nav = new mapboxgl.NavigationControl();
+	  			map.addControl(nav, 'top-left');
+	  		// change false to true, to get your location. Then, enable location in the browser.
+	  		map.addControl(new mapboxgl.GeolocateControl({
+	    			positionOptions: {
+	        			enableHighAccuracy: false
+	    			},
+	    		trackUserLocation: false
+			}));
+	  		
+			
+			
+		}
+		display_map();
+	
+	</script>
+	 {% for user in myUser %}
+	 <li>{{ user.id }}. {{ user.username }} - {{ user.email }}</li>
+	 {% endfor %}
+	
+
+</body>
+</html>	

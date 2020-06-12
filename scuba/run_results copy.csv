@@ -1,0 +1,170 @@
+id,countries_name,countries_dive_name,countries_dive_avg_depth,latitudes,longitudes
+1,Alabama,Blue Water,18.3 m,33° 17.74' N,86° 49.034' W
+2,Alabama,Dive land park,13.7 m,33° 55.373' N,85° 54.353' W
+3,Alabama,Madison Aquatic & Recreation Park,13.7 m,34° 40.535' N,86° 43.817' W
+4,Alabama,Poseidon's Playground,12.2 m,30° 14.07' N,87° 31.522' W
+5,Alabama,The Whiskey wreck,4.6 m,30° 14.614' N,87° 41.879' W
+6,Alaska,Birch lake,9.1 m,64° 18.853' N,146° 39.76' W
+7,Alaska,Mountain Point,4.6 m,55° 17.509' N,131° 32.626' W
+8,Alaska,Whittier Cessna,9.1 m,60° 46.639' N,148° 40.174' W
+9,Arizona,Acacia picnic site,6.1 m,33° 32.267' N,111° 25.961' W
+10,Arizona,Cabinsite,13.7 m,35° 14.401' N,114° 34.607' W
+11,Arizona,Lake Mead - Black Canyon,4.6 m,36° 1.118' N,114° 43.683' W
+12,Arkansas,Beaver Lake - Dam Site Bluffs,9.1 m,36° 25.722' N,93° 51.443' W
+13,Arkansas,Bull Shoals Lake,12.2 m,36° 22.99' N,92° 36.253' W
+14,California,Folsom Lake,3 m,38° 44.681' N,121° 8.543' W
+15,California,June Lake,10 m,37° 47.411' N,119° 3.972' W
+16,California,Mission Bay Jetty North,7.6 m,32° 45.59' N,117° 14.825' W
+17,California,Mission Bay Jetty South,7.6 m,32° 45.52' N,117° 14.573' W
+18,Colorado,Aurora Resevior,9.1 m,39° 37.087' N,104° 39.218' W
+19,Colorado,Downtown Aquarium,6.9 m,39° 45.1' N,105° 0.85' W
+20,Colorado,Horsetooth Reservoir,6.1 m,40° 34.952' N,105° 10.111' W
+21,Colorado,King Fisher Ponds,8 m,39° 31.123' N,105° 4.978' W
+22,Colorado,Pacific Tarn lake,7 m,39° 25.183' N,106° 7.202' W
+23,Connecticut,Brownstone Exploration and Discovery Park,10.7 m,41° 34.504' N,72° 38.666' W
+24,Connecticut,New London Ledge Lighthouse,6.1 m,41° 18.348' N,72° 4.644' W
+25,Florida,Boynton Comb Reef,15.8 m,26° 29.128' N,80° 2.341' W
+26,Florida,Briney Breezes,16.8 m,26° 30.56' N,80° 2.083' W
+27,Florida,Castor Wreck,21.3 m,26° 28.73' N,80° 2.228' W
+28,Florida,Tumble Rock,15.8 m,26° 30.187' N,80° 2.122' W
+29,Georgia,Crew Boat Mary Lou,9.1 m,31° 18.422' N,81° 9.18' W
+30,Georgia,Reef C - Esparta Wreck,13.7 m,30° 50.845' N,81° 10.171' W
+31,Georgia,Reef C - M-60 Battle Tanks,13.7 m,30° 51.701' N,81° 9.846' W
+32,Georgia,Reef CCA - Deck Barge,15.2 m,31° 43.18' N,80° 41.166' W
+33,Georgia,Reef CCA - Deck Barge 2,15.2 m,31° 42.039' N,80° 41.241' W
+34,Georgia,Reef CCA - SMS Warehouse Barge,15.2 m,31° 43.22' N,80° 40.638' W
+35,Georgia,Reef CCA - Tug Matt Turecamo,15.2 m,31° 43.2' N,80° 40.17' W
+36,Georgia,Reef DRH - RV “Zapala”,13.7 m,31° 17.441' N,80° 58.021' W
+37,Georgia,Reef DRH - Tug “Rio Caroni”,13.7 m,31° 16.37' N,80° 57.058' W
+38,Georgia,Reef DRH - “John Bird” Wreck,13.7 m,31° 17.232' N,80° 58.765' W
+39,Georgia,Reef DW - Dump Scow,45.7 m,31° 21.525' N,79° 50.403' W
+40,Georgia,Reef F - Landing Craft 1,10.7 m,31° 5.926' N,81° 12.483' W
+41,Georgia,Reef F - Landing Craft 2,10.7 m,31° 5.939' N,81° 12.255' W
+42,Georgia,Reef G - Liberty Ship “Nettleton”,16.8 m,30° 58.704' N,80° 58.562' W
+43,Georgia,Reef G - M-60 Battle Tanks,16.8 m,30° 59.361' N,80° 58.603' W
+44,Georgia,Reef G - Tug “Mac Tide 21”,16.8 m,30° 59.269' N,80° 57.153' W
+45,Georgia,Reef G - Tug “Recife”,16.8 m,30° 58.617' N,80° 58.034' W
+46,Georgia,Reef G - Tug “Tampa”,16.8 m,30° 58.498' N,80° 58.875' W
+47,Georgia,Reef G - Work Boat “Striker”,16.8 m,30° 58.198' N,80° 58.8' W
+48,Georgia,Reef J - Buoy Tender Sagebrush,16.8 m,31° 36.6' N,80° 47.8' W
+49,Georgia,Reef J - Ferry Boat Janet,16.8 m,31° 36.298' N,80° 47.575' W
+50,Georgia,Reef J - Liberty Ship Daniels,16.8 m,31° 36.207' N,80° 47.75' W
+51,Georgia,Reef J - M-60 Battle Tanks,16.8 m,31° 36.036' N,80° 48.295' W
+52,Georgia,Reef J - Tug Elmira,16.8 m,31° 36.082' N,80° 47.673' W
+53,Georgia,Reef J - Tug Rio Apon,16.8 m,31° 36.18' N,80° 49.364' W
+54,Georgia,Reef KC - Deck Barge,12.2 m,31° 50.775' N,80° 46.015' W
+55,Georgia,Reef KC - Dump Scow,12.2 m,31° 50.502' N,80° 46.507' W
+56,Georgia,Reef KC - Honey Barge,12.2 m,31° 50.944' N,80° 46.29' W
+57,Georgia,Reef KC - Motherlode Barge,12.2 m,31° 50.699' N,80° 46.533' W
+58,Georgia,Reef KC - Olympics Barge,12.2 m,31° 49.904' N,80° 46.26' W
+59,Georgia,Reef KC - Sailboat Jupiter,12.2 m,31° 50.211' N,80° 46.343' W
+60,Georgia,Reef KTK - Barge Modena,10.7 m,31° 31.061' N,81° 0.132' W
+61,Georgia,Reef L - Dredge Henry Bacon,16.8 m,31° 45.385' N,80° 36.543' W
+62,Georgia,Reef L - Latex Barge,16.8 m,31° 45.379' N,80° 36.7' W
+63,Georgia,Reef L - M-60 Battle Tanks,16.8 m,31° 44.463' N,80° 35.3' W
+64,Georgia,Reef L - Sayler Barge,16.8 m,31° 45.2' N,80° 36.596' W
+65,Georgia,Reef L - Tug Delta Diamond,16.8 m,31° 44.948' N,80° 36.405' W
+66,Georgia,Reef L - Tug Senasqua,16.8 m,31° 45.03' N,80° 36.721' W
+67,Georgia,Reef SFC - Landing Craft Optimist,13.7 m,30° 59.928' N,81° 2.308' W
+68,Georgia,Reef SFC - Landing Craft Scalper,13.7 m,30° 59.862' N,81° 2.298' W
+69,Georgia,Reef SFC - M-60 Battle Tanks,13.7 m,31° 0.483' N,81° 2.283' W
+70,Georgia,Reef WW - Hopper Barge,36.6 m,31° 42.878' N,79° 58.577' W
+71,Georgia,Reef WW - Tug Semarca 40,36.6 m,31° 42.434' N,79° 58.281' W
+72,Hawaii,Idaho - Alturas Lake,5 m,43° 55.491' N,114° 51.076' W
+73,Idaho,Bob Rice Pond,6.1 m,43° 37.564' N,116° 13.862' W
+74,Idaho,Jefferson County Lake,4.6 m,43° 42.005' N,111° 54.299' W
+75,Idaho,Juniper Boat Dock,9.1 m,43° 34.765' N,111° 44.304' W
+76,Illinois,Haigh Quarry,35 m,41° 8.463' N,87° 49.462' W
+77,Illinois,Mermet Springs,20 m,37° 17.056' N,88° 51.503' W
+78,Illinois,Pearl Lake,7.6 m,42° 28.866' N,89° 1.551' W
+79,Illinois,St. Mary,35.1 m,42° 11.484' N,87° 35.927' W
+80,Illinois,Straits of Mackinack,19.8 m,42° 2.73' N,87° 30.888' W
+81,Illinois,Strode Lake,12.2 m,40° 35.125' N,90° 2.992' W
+82,Illinois,Wells Burt,12.2 m,42° 2.748' N,87° 37.082' W
+83,Indiana,France Park,m,40° 45.229' N,86° 27.421' W
+84,Iowa,Big Creek,9.1 m,41° 48.859' N,93° 44.512' W
+85,Kentucky,Blue Springs,20 m,36° 51.624' N,87° 27.992' W
+86,Kentucky,Cerulean Springs,m,36° 54.639' N,87° 54.54' W
+87,Kentucky,Pennyroyal,15 m,36° 51.676' N,87° 27.968' W
+88,Maine,Beauchamp Point,6.1 m,44° 10.739' N,69° 4.016' W
+89,Maine,Cape Neddick Nubble,16 m,43° 9.955' N,70° 35.515' W
+90,Maine,City Of Portland,6.1 m,44° 2.272' N,69° 3.794' W
+91,Maine,F.C. Pendleton,12.2 m,44° 19.615' N,68° 54.674' W
+92,Maine,Little Hunters Beach,7.6 m,44° 17.872' N,68° 12.692' W
+93,Maine,Sand Beach,7.6 m,44° 19.702' N,68° 10.945' W
+94,Maine,The Graves,7.6 m,44° 10.932' N,69° 3.083' W
+95,Maine,Wreck of the Irvington,15.2 m,44° 0.565' N,69° 2.445' W
+96,Maryland,Fort Carroll,15 m,39° 12.92' N,76° 31.118' W
+97,Maryland,Hydes Quarry,9.1 m,39° 33.923' N,77° 4.292' W
+98,Maryland,Woodsboro Quarry (550),19.8 m,39° 31.76' N,77° 17.885' W
+99,Massachusetts,Andrea Doria,53.3 m,40° 29.408' N,69° 52.046' W
+100,Massachusetts,Brant Rock,7.9 m,42° 5.577' N,70° 38.703' W
+101,Massachusetts,City of Rockland Wreck,2 m,42° 32.746' N,70° 47.853' W
+102,Massachusetts,Corporation Beach,3 m,41° 45.113' N,70° 11.31' W
+103,Massachusetts,Folly Cove,9.1 m,42° 41.099' N,70° 38.522' W
+104,Massachusetts,Garbage Beach,10.7 m,41° 31.5' N,70° 40.334' W
+105,Massachusetts,Hathaway's Pond,12.2 m,41° 41.063' N,70° 18.742' W
+106,Massachusetts,Haviland Pond,4.6 m,42° 10.32' N,72° 28.644' W
+107,Massachusetts,Magnolia Rocks,10 m,42° 34.31' N,70° 42.738' W
+108,Massachusetts,Mares Pond,10.7 m,41° 35.327' N,70° 35.855' W
+109,Massachusetts,Niles Beach,4.6 m,42° 35.864' N,70° 39.282' W
+110,Massachusetts,Normans Woe,12.2 m,42° 34.61' N,70° 42.1' W
+111,Massachusetts,Old Garden Beach,6.1 m,42° 39.497' N,70° 36.454' W
+112,Massachusetts,Russell Pond,4.6 m,42° 9.417' N,72° 51.655' W
+113,Massachusetts,Sandwich Town Beach,6.1 m,41° 46.118' N,70° 29.099' W
+114,Massachusetts,The Crane,43 m,42° 36.855' N,70° 35.229' W
+115,Massachusetts,White Beach,7.6 m,42° 34.609' N,70° 44.167' W
+116,Michigan,America Wreck,9.1 m,47° 53.62' N,89° 13.239' W
+117,Michigan,Anita's Wreck,5.8 m,42° 42.929' N,82° 29.52' W
+118,Michigan,Bermuda Wreck,7 m,46° 27.762' N,86° 38.95' W
+119,Michigan,Car Bodies,5.5 m,44° 54.338' N,85° 23.152' W
+120,Michigan,Depot beach,5 m,45° 19.103' N,85° 14.432' W
+121,Michigan,Eliza H. Strong,8.5 m,43° 15.709' N,82° 30.581' W
+122,Michigan,Elmwood Wreck,10 m,44° 47.261' N,85° 38.115' W
+123,Michigan,Higgins lake,13.4 m,44° 30.143' N,84° 46.509' W
+124,Michigan,Ironsides Wreck,35.1 m,43° 2.898' N,86° 19.146' W
+125,Michigan,Lake Fenton,10 m,42° 50.587' N,83° 43.093' W
+126,Michigan,Marquette Upper Harbor,8.4 m,46° 34.717' N,87° 23.267' W
+127,Michigan,Mary Alice B,27.4 m,43° 22.309' N,82° 26.301' W
+128,Michigan,Myron Wreck,12.2 m,46° 47.214' N,85° 8.313' W
+129,Michigan,Mystic wreck,13.7 m,46° 47.327' N,85° 5.511' W
+130,Michigan,Sadie Thompson Wreck,33.2 m,46° 42.386' N,85° 0.197' W
+131,Michigan,Smith Moore Wreck,22.9 m,46° 27.762' N,86° 36.478' W
+132,Michigan,Spring Mill Pond,10 m,42° 29.38' N,83° 43.423' W
+133,Michigan,Straits of Mackinaw,15 m,45° 47.307' N,84° 43.89' W
+134,Michigan,Three Brothers,6.1 m,45° 0.548' N,86° 5.453' W
+135,Michigan,Vienna,36 m,46° 44.767' N,84° 58.517' W
+136,Minnesota,Crosby Mine Pit,3 m,46° 29.521' N,93° 57.681' W
+137,Minnesota,Louise Mine Pitt,12.2 m,46° 29.45' N,93° 59.798' W
+138,Minnesota,Madiera,10.7 m,47° 12.372' N,91° 21.473' W
+139,Missouri,Bonne Terre Mine,15.2 m,37° 55.506' N,90° 32.918' W
+140,Missouri,Captain John's Dive Park,13.7 m,37° 11.426' N,94° 28.443' W
+141,Missouri,Duck Island,6.1 m,36° 35.126' N,93° 19.231' W
+142,Missouri,Table Rock Lake,30.5 m,36° 35.661' N,93° 18.712' W
+143,Missouri,The Dive Stop,12.2 m,38° 43.973' N,90° 52.613' W
+144,Montana,Canyon Ferry Cemetery Island,15.2 m,46° 38.018' N,111° 42.432' W
+145,Montana,Cliff Lake,4.6 m,44° 46.716' N,111° 33.444' W
+146,Montana,Kim's Marina,9.1 m,46° 38.972' N,111° 42.036' W
+147,Montana,Old Canyon Ferry Dam and power plant,24.4 m,46° 38.126' N,111° 41.903' W
+148,Nevada,Lake Mead - Wreck Alley,36.6 m,36° 3.447' N,114° 44.581' W
+149,Nevada,Sand Harbor,9.1 m,39° 11.932' N,119° 55.941' W
+150,Nevada,Sparks Marina,18.3 m,39° 32.04' N,119° 43.833' W
+151,Nevada,Zephyr Cove,8 m,39° 0.455' N,119° 57.099' W
+152,New Hampshire,Split Rock,10 m,43° 21.653' N,72° 3.606' W
+153,New Hampshire,The Plateau,9 m,43° 20.829' N,72° 2.985' W
+154,New Hampshire,Three Old Boats,6 m,43° 22.414' N,72° 4.261' W
+155,New Hampshire,Weetamoo Wreck,18.3 m,43° 20.093' N,72° 2.517' W
+156,New Jersey,Adventure Aquarium,6.7 m,39° 56.697' N,75° 7.883' W
+157,New Jersey,Great Isaac,25.9 m,39° 40.007' N,73° 54.974' W
+158,New Jersey,U-869 Wreck,65 m,39° 33.822' N,73° 2.064' W
+159,New Jersey,USS Algol,33.5 m,40° 11.551' N,73° 51.335' W
+160,New Mexico,Blue Hole,15 m,34° 56.429' N,104° 40.394' W
+161,New Mexico,Lea Lake,18 m,33° 19.078' N,104° 19.845' W
+162,New York,A.E. Vickery,m,44° 16.825' N,76° 1.122' W
+163,New York,American,16.9 m,44° 27.212' N,75° 48.527' W
+164,New York,Keystorm,20 m,44° 25.781' N,75° 49.353' W
+165,New York,Lake Minnewaska State Park,10 m,41° 43.664' N,74° 14.154' W
+166,New York,Radeau,32.6 m,43° 25.982' N,73° 41.937' W
+167,New York,Rogers Rock,18 m,43° 45.049' N,73° 29.114' W
+168,New York,Seneca Lake FLUPA buoy The Steps,13.7 m,42° 24.257' N,76° 53.189' W
+169,New York,Seneca Lake Watkins Glen Barges,9.1 m,42° 23.225' N,76° 52.62' W

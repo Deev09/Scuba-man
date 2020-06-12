@@ -11,9 +11,10 @@ class Config():
 
 class DevConfig(Config):
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:arbiter117@localhost/qmusic'
+    SQLALCHEMY_DATABASE_URI = 'postgresql://mask:password@localhost/scubapp_db'
 
 
 class ProdConfig(Config):
     DEBUG = False
     SQLALCHEMY_DATABASE_URI = ''
+
