@@ -19,7 +19,17 @@ class Country(db.Model):
     def __repr__(self):
         return '<Country %r>'%self.countries_dive_name
 
-class CountrySchema(ma.SQLAlchemyAutoSchema):
+class CountrySchema(ma.Schema):
     class Meta:
-        model=Country
-        load_instance = True
+        fields = (
+            'id',
+            'countries_dive_name',
+            'countries_name',
+            'countries_dive_avg_depth',
+            'latitude',
+            'longitude'
+        )
+
+
+country_schema = CountrySchema()
+countries_schema = CountrySchema(many=True)

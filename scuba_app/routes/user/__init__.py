@@ -1,12 +1,15 @@
 import requests
 from flask import   session, Blueprint, request, render_template, redirect, flash, url_for, current_app, jsonify
-from ...models.base import db
-from ...models.user import User
-from ...models.country import Country, CountrySchema
 from .forms import CountryForm
 #from .helper_func import send_confirmation_email, confirm_token
 #from .forms import RegisterForm, SignupForm
+from ...models.base import db
+from ...models.user import User
+from ...models.country import (Country,
+                               country_schema,
+                               countries_schema)
 from ...secrets import MAPBOX
+
 
 
 
@@ -18,9 +21,9 @@ userRoute = Blueprint('userRoute', __name__)
 def coordinata():
     array=[]
     listo=[]
-    
-    
-        
+
+
+
 
     if request.method=="POST":
         form=request.form
@@ -28,9 +31,6 @@ def coordinata():
         search="%{}%".format(search_value)
         coordinate=Country.query.filter(Country.countries_name.like(search)).all()
         #oneItem = Country.query.filter_by(countries_name="Alabama").first()
-
-        
-        
         def conversion(old):
             direction = {'N':1, 'S':-1, 'E': 1, 'W':-1}
             new = old.replace(u'°',' ').replace('\'',' ').replace('"',' ')
@@ -46,35 +46,27 @@ def coordinata():
             array.append(u)
             listo.append(e.countries_dive_name)
 
-
-        country_schema=CountrySchema(many=True)
-        output= country_schema.dump(coordinate)
-        
-        coordinate_var= jsonify({ 'country' : output})
-        
-        return coordinate_var
+        #return coordinate_var
         #print(coordinate)
-        
-        
-        
-            
-       
-        #session['coord_var']  =coordinate_var  
+        print('it reaches here 1')
+
+        coordinate_output= countries_schema.dump(coordinate)
+
         session['my_var'] = array
-        session['coord_var']= coordinate
-        
-    #return redirect(url_for('userRoute.maps'))
+        session['coord_var']= coordinate_output
+        print('it reaches here x')
 
-       
+        #return redirect(url_for('userRoute.test'))
 
-
+    print('it reaches here 3x')
+    return redirect(url_for('userRoute.maps'))
     #return render_template('countries.html', coordinate=coordinate, lat=conversion(lat), lon=conversion(lon), array=array)
 
 
 @userRoute.route('/post_user', methods=['GET','POST'])
 def post_user():
     myCountry=Country.query.limit(30).all()
-    
+
     if request.method=="POST":
         form=request.form
         search_value=form['countries_name']
@@ -83,24 +75,24 @@ def post_user():
 
 
 
-        
+
         #user=request.form["countries_name"]
         return render_template('countries.html', arr=arr)
     else:
         return render_template('filter.html')
-    
+
     #return redirect(url_for('userRoute.simple'))
 
 
 
-@userRoute.route('/', methods=['GET']) 
+@userRoute.route('/', methods=['GET'])
 def simple():
-    
+
     #oneItem = Country.query.filter_by(countries_name="Alabama").first()
     #arr=Country.query.filter_by(countries_name="Alabama").all()
-    
+
     return render_template('filter.html' )
-    
+
 
 
 
@@ -108,7 +100,7 @@ def simple():
 def index(country):
 
 
-    
+
     cities =Country.query.filter_by(countries_name="{}".format(country)).first()
 
     url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=230b7544b48513a794a7284e48f2ca63'
@@ -121,11 +113,11 @@ def index(country):
         'temperature' : r['main']['temp'],
         'description' : r['weather'][0]['description'],
         'icon' : r['weather'][0]['icon'],
-        
+
     }
     weather_data.append(weather)
 
-   
+
 
 
     return render_template('api.html', weather_data=weather_data, country=country)
@@ -136,8 +128,8 @@ def my_maps(mappy):
     coord=mappy
     print(mappy)
     print('my_var', my_var)
-    
-    
+
+
 
 #    mapbox_access_token = 'pk.eyJ1Ijoibm9ub25hbWUiLCJhIjoiY2s4eDkwMm5qMDNsNzNnbnhzenRiMHhzNSJ9.pYTchNKhUZQL-G0HHkZtrg'
     return render_template('mapbox.html',
@@ -145,20 +137,11 @@ def my_maps(mappy):
 
 @userRoute.route('/map',methods=['GET','POST'])
 def maps():
-    searcher = session.get('coord_var', None)
-    my_var = session.get('my_var', None)
-    if searcher is not None:
-        country_schema=CountrySchema(many=True)
-        output= country_schema.dump(searcher)
-            
-        coordinate_var= jsonify({ 'country' : output})
-        return coordinate_var
-        
-        
-    
-    
-    
 
-   
+    output = session.get('coord_var', None)
+    my_var = session.get('my_var', None)
+
+    searcher= jsonify({ 'country' : output})
+
     return render_template('mapbox.html',
-        mapbox_access_token=MAPBOX,tide='1.24',climate='27', coord=my_var)
+        mapbox_access_token=MAPBOX,tide='1.24',climate='27', coord=my_var, searcher=searcher)
