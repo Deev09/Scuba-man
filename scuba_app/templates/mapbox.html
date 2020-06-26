@@ -5,21 +5,46 @@
 	<script src='https://api.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.js'></script>
 	<link href='https://api.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css' rel='stylesheet' />
 	<style>
+		#info {
+			display: block;
+			position: relative;
+			margin: 0px auto;
+			width: 50%;
+			padding: 10px;
+			border: none;
+			border-radius: 3px;
+			font-size: 12px;
+			text-align: center;
+			color: #222;
+			background: #fff;
+			}
+			
+		.searcher{
+			background-color: antiquewhite;
+			position: absolute;
+			top: 10%;
+			right: 10px;
+            width: 25%;
+            height: 40%;
+
+
+		}
         .weather {
             background-color:rgb(0, 204, 153);
             position: absolute;
-            top: 10%;
+            top: 30%;
             right: 10px;
             width: 25%;
-            height: 40%;
+            height: 20%;
         }
+	
         .tides {
             background-color:rgb(0, 153, 153);
             position: absolute;
             top: 50%;
             right: 10px;
             width: 25%;
-            height: 40%;
+            height: 20%;
         }
 		.container {
 			max-width: 90%;
@@ -47,15 +72,26 @@
 		    cursor: pointer;
 		}
 	</style>
+	
+	<pre id="info"></pre>
 </head>
 
 <body>
+	<!--cwewcwece-->
+	<form method="post" >
+        <label>Country state:</label>
+        <input id="countries_name" name="countries_name" type="text" />
+        <input type="submit" formaction="/coordinate" />
+    </form>
+	
 	<div class="container">
 		
 		<font face="verdana" size='7'> Scuba-man</font> <br/><br/>
-		<input class="inputBox" type="number" id="Longitude" placeholder="Enter Longitude" />
+		<p id="value_map">{{ coord }}</p>
+		
+		<!--<input class="inputBox" type="number" id="Longitude" placeholder="Enter Longitude" />
 		<input class="inputBox" type="number" id="Latitude" placeholder="Enter Latitude" />
-		<button class="button" onclick="getLonLat()"> Submit</button>
+		<button class="button" onclick="getLonLat()"> Submit</button>-->
 		<div id='map' style='width: 95%; height:500px;'></div><br/><br/>
 		
     </div>
@@ -66,14 +102,34 @@
     </div>
     <div class="tides">
         <font face="verdana" size='7'> Tide Conditions</font>
-        <p style="font-size:60px;text-align: center;">{{tide}} m</p> 
+		<p style="font-size:60px;text-align: center;">{{tide}} m</p> 
+		
 
-    </div>
+	</div>
+	<div class="searcher">
+		
+        <p>
+           
+                
+            <li>{{ searcher }}</li>
+            
+              
+            
+                
+                
+            
+        </p>
+    	{
+		
+	</div>
+	
 	
 
 
 
 	<script>
+		function myFunction() {
+		var x = document.getElementById("myText").value;} 
 		var longitude, latitude;
 		function getLonLat(){
 			longitude = document.getElementById("Longitude").value;
@@ -91,6 +147,17 @@
 			pitch:0
 		
 			});
+			const locations = {{ coord }};
+            locations.forEach(function(coords) {
+            new mapboxgl.Marker().setLngLat(coords)
+            .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+            .setHTML('<h3>{{ coord }}</h3>'))
+            .addTo(map);
+            });
+
+			
+			
+			  
 			// fulscreen button 
 			map.addControl(new mapboxgl.FullscreenControl());
 			// display a blue marker
@@ -111,6 +178,9 @@
 			
 			
 		}
+		
+          
+      
 		display_map();
 	
 	</script>

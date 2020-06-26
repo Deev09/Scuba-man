@@ -1,4 +1,6 @@
 from .base import db
+from .base import ma
+#from marshmallow_sqlalchemy import ModelSchema
 
 class Country(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -16,3 +18,8 @@ class Country(db.Model):
         self.longitude=longitude
     def __repr__(self):
         return '<Country %r>'%self.countries_dive_name
+
+class CountrySchema(ma.SQLAlchemyAutoSchema):
+    class Meta:
+        model=Country
+        load_instance = True

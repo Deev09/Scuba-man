@@ -6,26 +6,46 @@
     <title>Countries</title>
 </head>
 <body>
-    <form method="post" action="/post_user">
+    <form method="post" >
         <label>Country:</label>
         <input id="countries_name" name="countries_name" type="text" />
-        <input type="submit" formaction="/post_user" />
+        <input type="submit" formaction="/coordinate" />
     </form>
     
     
     
 
-    {% for meh in arr %}
+    {% for meh in searcher %}
         <p>
            
                 
-            <li><a href="/meh/{{meh.countries_name}}">{{meh.countries_name}} {{ meh.countries_dive_name }}</a></li>  
+            <li>{{ meh.countries_dive_name }}  {{meh.longitude}}, {{meh.latitude}}</li>
+            <p>view on map</p>
+              
             
                 
                 
             
         </p>
     {% endfor %}
+    
+    <!--{% for err in coordinate %}
+        <p>
+           
+                
+            <li><a href="/coordinate"> {{ err.countries_dive_name }} {{err.latitude}}, {{err.longitude}}</a></li>  
+            
+                
+                
+            
+        </p>
+    {% endfor %}-->
+
+    
+    <p>{{lat}} {{lon}}</p>
+    <h1>View on map</h1>
+    <p id="myText"><a href="/map/{{array}}">{{ array }}</a></p>
+    
 
   
     
