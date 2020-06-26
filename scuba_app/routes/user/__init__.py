@@ -47,12 +47,12 @@ def coordinata():
             listo.append(e.countries_dive_name)
 
 
-        '''country_schema=CountrySchema(many=True)
+        country_schema=CountrySchema(many=True)
         output= country_schema.dump(coordinate)
         
-        coordinate_var= jsonify({ 'country' : output})'''
+        coordinate_var= jsonify({ 'country' : output})
         
-        #return coordinate_var
+        return coordinate_var
         #print(coordinate)
         
         
@@ -63,7 +63,7 @@ def coordinata():
         session['my_var'] = array
         session['coord_var']= coordinate
         
-    return redirect(url_for('userRoute.maps'))
+    #return redirect(url_for('userRoute.maps'))
 
        
 
