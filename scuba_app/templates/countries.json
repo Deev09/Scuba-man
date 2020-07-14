@@ -1,0 +1,47 @@
+{
+  "countries":
+
+
+[
+      {
+        "countries_dive_avg_depth": "18.3 m", 
+        "countries_dive_name": "Blue Water", 
+        "countries_name": "Alabama", 
+        "id": 1, 
+        "latitude": 33.28333333333333, 
+        "longitude": -86.81666666666666
+      }, 
+      {
+        "countries_dive_avg_depth": "13.7 m", 
+        "countries_dive_name": "Dive land park", 
+        "countries_name": "Alabama", 
+        "id": 2, 
+        "latitude": 33.916666666666664, 
+        "longitude": -85.9
+      }, 
+      {
+        "countries_dive_avg_depth": "13.7 m", 
+        "countries_dive_name": "Madison Aquatic & Recreation Park", 
+        "countries_name": "Alabama", 
+        "id": 3, 
+        "latitude": 34.666666666666664, 
+        "longitude": -86.71666666666667
+      }, 
+      {
+        "countries_dive_avg_depth": "12.2 m", 
+        "countries_dive_name": "Poseidon's Playground", 
+        "countries_name": "Alabama", 
+        "id": 4, 
+        "latitude": 30.233333333333334, 
+        "longitude": -87.51666666666667
+      }, 
+      {
+        "countries_dive_avg_depth": "4.6 m", 
+        "countries_dive_name": "The Whiskey wreck", 
+        "countries_name": "Alabama", 
+        "id": 5, 
+        "latitude": 30.233333333333334, 
+        "longitude": -87.68333333333334
+      }
+]
+}

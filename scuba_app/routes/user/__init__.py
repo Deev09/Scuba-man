@@ -1,13 +1,14 @@
 import requests
-from flask import   session, Blueprint, request, render_template, redirect, flash, url_for, current_app, jsonify
+from flask import   session, Blueprint, request, render_template, redirect, flash, url_for, current_app, jsonify, render_template_string
 from .forms import CountryForm
+from .helperfunc import conversion
 #from .helper_func import send_confirmation_email, confirm_token
 #from .forms import RegisterForm, SignupForm
 from ...models.base import db
 from ...models.user import User
 from ...models.country import (Country,
                                country_schema,
-                               countries_schema)
+                               countries_schema, SitesSchema,Sites, site_schema)
 from ...secrets import MAPBOX
 
 
@@ -28,33 +29,38 @@ def coordinata():
     if request.method=="POST":
         form=request.form
         search_value=form['countries_name']
+        print(search_value)
         search="%{}%".format(search_value)
-        coordinate=Country.query.filter(Country.countries_name.like(search)).all()
-        #oneItem = Country.query.filter_by(countries_name="Alabama").first()
-        def conversion(old):
-            direction = {'N':1, 'S':-1, 'E': 1, 'W':-1}
-            new = old.replace(u'°',' ').replace('\'',' ').replace('"',' ')
-            new = new.split()
-            new_dir = new.pop()
-            new.extend([0,0,0])
-            return (int(float(new[0]))+int(float(new[1]))/60.0+int(float(new[2]))/3600.0) * direction[new_dir]
+        trial=Country.query.filter_by(countries_name="Alabama")
+        print(trial.id)
+        
+        
+        
+        coordinate=Sites.query.filter(Country.countries_name.like(search)).all()
+        #coordinate=Sites.query.filter(Sites.site_name.like(search)).all()
+        #coordinate= Sites.query.filter_by(countries_name="Alabama").first()
+        
         for e in coordinate:
             lat, lon = u'''{0}, {1}'''.format(e.latitude, e.longitude).split(', ')
             u=[conversion(lon),conversion(lat)]
             e.latitude=conversion(lat)
             e.longitude=conversion(lon)
             array.append(u)
-            listo.append(e.countries_dive_name)
+            listo.append(e.site_name)
 
         #return coordinate_var
         #print(coordinate)
         print('it reaches here 1')
+        print(listo)
+        print(coordinate)
+        
 
         coordinate_output= countries_schema.dump(coordinate)
 
-        session['my_var'] = array
+        #session['my_var'] = array
         session['coord_var']= coordinate_output
         print('it reaches here x')
+        print(coordinate_output)
 
         #return redirect(url_for('userRoute.test'))
 
@@ -106,21 +112,32 @@ def index(country):
     url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=230b7544b48513a794a7284e48f2ca63'
 
     weather_data = []
+    lat=conversion(cities.latitude)
+    lon=conversion(cities.longitude)
+    
     r = requests.get(url.format(cities.countries_name)).json()
 
-    weather = {
+    '''weather = { 
         'city' : cities.countries_name,
         'temperature' : r['main']['temp'],
         'description' : r['weather'][0]['description'],
-        'icon' : r['weather'][0]['icon'],
+        
 
-    }
+    }'''
+    weather=[{'city' : cities.countries_name},{'temperature' : r['main']['temp']},{'description' : r['weather'][0]['description']}]
     weather_data.append(weather)
+    print(weather_data)
+    
+    session['my_api']=weather
+    session['my_coord']=[lon, lat]
+    print(lat, lon, 'string : latlong')
+    return redirect(url_for('userRoute.maps'))
 
 
 
 
-    return render_template('api.html', weather_data=weather_data, country=country)
+
+    #return render_template('api.html', weather_data=weather_data, country=country)
 
 @userRoute.route('/map/<mappy>',methods=['GET','POST'])
 def my_maps(mappy):
@@ -137,11 +154,33 @@ def my_maps(mappy):
 
 @userRoute.route('/map',methods=['GET','POST'])
 def maps():
+    #searcher1=[{1:1},{2:2}]
+    
+    output = session.get('coord_var', [{1:1},{2:2}])
+    #my_var = session.get('my_var', None)
+    my_weather=session.get('my_api',[{1:1},{2:2}])
+    my_coord=session.get('my_coord', None)
+    searcher1=(output)
+    
 
-    output = session.get('coord_var', None)
-    my_var = session.get('my_var', None)
+    
+    
+    
 
-    searcher= jsonify({ 'country' : output})
+        #searcher= jsonify({ 'country' : output })
+    
+        
+
 
     return render_template('mapbox.html',
-        mapbox_access_token=MAPBOX,tide='1.24',climate='27', coord=my_var, searcher=searcher)
+        mapbox_access_token=MAPBOX,tide='1.24',climate='27', coord=my_coord, searcher=searcher1, weather_data=my_weather)
+
+    
+    
+    
+    
+    
+    
+
+    
+    

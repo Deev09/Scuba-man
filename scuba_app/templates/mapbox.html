@@ -2,9 +2,12 @@
 <html>
 <head>
 	<title> My maps </title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
 	<script src='https://api.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.js'></script>
 	<link href='https://api.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css' rel='stylesheet' />
 	<style>
+		
 		#info {
 			display: block;
 			position: relative;
@@ -16,8 +19,9 @@
 			font-size: 12px;
 			text-align: center;
 			color: #222;
-			background: #fff;
+			background:white;
 			}
+		
 			
 		.searcher{
 			background-color: antiquewhite;
@@ -25,35 +29,35 @@
 			top: 10%;
 			right: 10px;
             width: 25%;
-            height: 40%;
+            height: 50%;
 
 
 		}
         .weather {
             background-color:rgb(0, 204, 153);
             position: absolute;
-            top: 30%;
+            top: 60%;
             right: 10px;
             width: 25%;
-            height: 20%;
+            height: 30%;
         }
 	
         .tides {
             background-color:rgb(0, 153, 153);
             position: absolute;
-            top: 50%;
+            top: 30%;
             right: 10px;
             width: 25%;
             height: 20%;
         }
 		.container {
-			max-width: 90%;
-			max-height: 70%;
+			max-width: 70%;
+			max-height: 50%;
 			margin-left: auto;
-			margin-right: 25%;
+			margin-right: 30%;
 		}
 		.inputBox {
-		    width: 50%;
+		    width: 30%;
 		    padding: 12px 20px;
 		    margin: 8px 0;
 		    box-sizing: border-box;
@@ -81,8 +85,11 @@
 	<form method="post" >
         <label>Country state:</label>
         <input id="countries_name" name="countries_name" type="text" />
-        <input type="submit" formaction="/coordinate" />
-    </form>
+		<input id="button" type="submit" formaction="/coordinate" />
+		
+	</form>
+	
+	
 	
 	<div class="container">
 		
@@ -94,32 +101,63 @@
 		<button class="button" onclick="getLonLat()"> Submit</button>-->
 		<div id='map' style='width: 95%; height:500px;'></div><br/><br/>
 		
-    </div>
-    <div class="weather">
+		
+	</div>
+	<div class="weather">
+		{% for weather in weather_data %}
+		
+			<h2>{{weather.city}} {{ weather.temperature }} {{ weather.description }}</h2>
+		
+		{% endfor %}
+		
+	</div>	
+    <!--<div class="weather">
         <font face="verdana" size='7'> Weather</font> 
         <p style="font-size:80px;text-align: center;">{{climate}} °C</p>
 
-    </div>
+    </div>-->
     <div class="tides">
         <font face="verdana" size='7'> Tide Conditions</font>
-		<p style="font-size:60px;text-align: center;">{{tide}} m</p> 
+		<!--<p style="font-size:60px;text-align: center;">{{tide}} m</p> -->
 		
 
 	</div>
-	<div class="searcher">
+	<div class="searcher" id="countries" >
 		
-        <p>
-           
-                
-            <li>{{ searcher }}</li>
-            
-              
-            
-                
-                
-            
-        </p>
-    	{
+	{% for meh in searcher%}
+		<script>
+
+			function display_map(longitude=-89.500000, latitude=44.500000) {
+				mapboxgl.accessToken = "{{ mapbox_access_token }}"
+				var map = new mapboxgl.Map({
+				container: 'map',
+				style: 'mapbox://styles/mapbox/satellite-streets-v10',
+				center: [longitude,latitude],
+				zoom: 1,
+				bearing: 0,
+				pitch:0
+			
+				});
+
+
+				var searching=("{{ meh.countries_dive_name }}");
+				var latsearch=([{{ meh.longitude}} , {{ meh.latitude }}]);
+				console.log(searching);
+				new mapboxgl.Marker().setLngLat(latsearch)
+			    
+					
+				.setPopup(new mapboxgl.Popup({ offset: 25 })
+				.setHTML('<h3>{{ meh.countries_dive_name }}</h3>'))	
+				.addTo(map);
+				
+
+			};
+
+		</script>
+		<li style="font-size:90%;text-align: left;"><a href="/meh/{{meh.countries_dive_name}}">{{meh.countries_dive_name}} , {{ meh.latitude }} {{meh.longitude }} </a></li>
+	{% endfor %}
+		
+        
 		
 	</div>
 	
@@ -128,65 +166,143 @@
 
 
 	<script>
-		function myFunction() {
-		var x = document.getElementById("myText").value;} 
-		var longitude, latitude;
-		function getLonLat(){
-			longitude = document.getElementById("Longitude").value;
-			latitude = document.getElementById("Latitude").value;
-			display_map(longitude, latitude);
-		}
-		function display_map(longitude=-89.500000, latitude=44.500000) {
-			mapboxgl.accessToken = "{{ mapbox_access_token }}"
-			var map = new mapboxgl.Map({
-			container: 'map',
-			style: 'mapbox://styles/mapbox/satellite-streets-v10',
-			center: [longitude,latitude],
-			zoom: 1,
-			bearing: 0,
-			pitch:0
 		
-			});
-			const locations = {{ coord }};
-            locations.forEach(function(coords) {
-            new mapboxgl.Marker().setLngLat(coords)
-            .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-            .setHTML('<h3>{{ coord }}</h3>'))
-            .addTo(map);
-            });
+
+		// function myFunction() {
+		// var x = document.getElementById("myText").value;} 
+		// var longitude, latitude;
+		// function getLonLat(){
+		// 	longitude = document.getElementById("Longitude").value;
+		// 	latitude = document.getElementById("Latitude").value;
+		// 	display_map(longitude, latitude);
+		// }
+		// function display_map(longitude=-89.500000, latitude=44.500000) {
+		// 	mapboxgl.accessToken = "{{ mapbox_access_token }}"
+		// 	var map = new mapboxgl.Map({
+		// 	container: 'map',
+		// 	style: 'mapbox://styles/mapbox/satellite-streets-v10',
+		// 	center: [longitude,latitude],
+		// 	zoom: 1,
+		// 	bearing: 0,
+		// 	pitch:0
+		
+		// 	});
+
+			
+
+
+			
+			// var searcherss={{ coord }};
+
+			
+			// for (let i = 0; i < searcherss.length -1; i++) {
+			// 	new mapboxgl.Marker().setLngLat(searcherss[i])
+				
+			// 	.setPopup(new mapboxgl.Popup({ offset: 25 })
+			// 	.setHTML('<h3>{{ searcher[1].countries_dive_name }}</h3>'))
+				
+			// 	//console.log(searcherss[i]);
+			// 	.addTo(map);
+				
+			
+			// }
+			
+			
+			//const locations1= {{ [searcher[0].longitude, searcher[0].latitude] }};
+			//console.log(text);
+
+			// const locations = {{ coord }};
+			
+			
+            // locations.forEach(function(coords) {
+            // new mapboxgl.Marker().setLngLat(coords)
+            // .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+			// //.setHTML('<h3 id="numero"></h3>'))
+			// //set different tags since it loops through so new function or something
+            // .setHTML('<h3>{{ searcher[0].countries_dive_name }}</h3>'))
+            // .addTo(map);
+			
+            // });
 
 			
 			
 			  
-			// fulscreen button 
-			map.addControl(new mapboxgl.FullscreenControl());
-			// display a blue marker
-			var marker = new mapboxgl.Marker()
-	  			.setLngLat([longitude,latitude])
-	  			.addTo(map);
-	  		// Navigation marker at top-left corner
-	  		var nav = new mapboxgl.NavigationControl();
-	  			map.addControl(nav, 'top-left');
-	  		// change false to true, to get your location. Then, enable location in the browser.
-	  		map.addControl(new mapboxgl.GeolocateControl({
-	    			positionOptions: {
-	        			enableHighAccuracy: false
-	    			},
-	    		trackUserLocation: false
-			}));
+			// // fulscreen button 
+			// map.addControl(new mapboxgl.FullscreenControl());
+			// // display a blue marker
+			// var marker = new mapboxgl.Marker()
+	  		// 	.setLngLat([longitude,latitude])
+	  		// 	.addTo(map);
+	  		// // Navigation marker at top-left corner
+	  		// var nav = new mapboxgl.NavigationControl();
+	  		// 	map.addControl(nav, 'top-left');
+	  		// // change false to true, to get your location. Then, enable location in the browser.
+	  		// map.addControl(new mapboxgl.GeolocateControl({
+	    	// 		positionOptions: {
+	        // 			enableHighAccuracy: false
+	    	// 		},
+	    	// 	trackUserLocation: false
+			// }));
+
 	  		
 			
 			
-		}
+		// };
+
+
+
+
+
+
+
+
+
+
+
+		// document.getElementById('button2').addEventListener('click', function(){
+		// 	document.getElementById('countries').innerHTML='hmm'
+		// });
+		// document.getElementById('button2').addEventListener('click', loadCountries);
+        // function loadCountries(e) {
+        //     const meh = new XMLHttpRequest();
+
+        //     meh.open('GET', 'countries.json', true);
+
+        //     meh.onload = function(){
+                
+		// 		console.log(this.responseText);
+
+        //             // const countries = JSON.parse(this.responseText);
+
+        //             // let output = '';
+
+        //             // countries.forEach(function(country){
+        //             //     output += `
+                        
+        //             //     <ul>
+        //             //     <li>ID: ${country.id}</li>
+        //             //     <li>Site: ${country.countries_dive_name}</li>
+        //             //     <li>State: ${country.countries_name}</li>
+        //             //     <li>Latitude: ${country.latitude}</li>
+        //             //     <li>Longitude: ${country.longitude}</li>
+        //             //     </ul>
+        //             // `;
+        //             // });
+
+        //             // document.getElementById('countries').innerHTML = output;
+                
+        //     }
+
+        //     meh.send();
+        //     }
+
 		
           
       
 		display_map();
 	
 	</script>
-	 {% for user in myUser %}
-	 <li>{{ user.id }}. {{ user.username }} - {{ user.email }}</li>
-	 {% endfor %}
+	 
 	
 
 </body>
