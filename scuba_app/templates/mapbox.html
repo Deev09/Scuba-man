@@ -7,8 +7,21 @@
 	<script src='https://api.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.js'></script>
 	<link href='https://api.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css' rel='stylesheet' />
 	<style>
+		.mapboxgl-popup {
+			max-width: 200px;
+			
+			}
+
+		.mapboxgl-popup-content {
+			text-align: center;
+			font-size:12px;
+			
+			color: rgb(19, 12, 85);
+			
+			}
 		
-		#info {
+		
+		/* #info {
 			display: block;
 			position: relative;
 			margin: 0px auto;
@@ -21,12 +34,12 @@
 			color: #222;
 			background:white;
 			}
-		
+		 */
 			
 		.searcher{
-			background-color: antiquewhite;
+			background-color:rgba(216, 195, 181, 0.705);
 			position: absolute;
-			top: 10%;
+			top: 0%;
 			right: 10px;
             width: 25%;
             height: 50%;
@@ -34,36 +47,36 @@
 
 		}
         .weather {
-            background-color:rgb(0, 204, 153);
+            background-color:rgba(241, 216, 183, 0.696);
             position: absolute;
-            top: 60%;
+            top: 50%;
             right: 10px;
             width: 25%;
-            height: 30%;
+            height: 100%;
         }
 	
-        .tides {
+        /* .tides {
             background-color:rgb(0, 153, 153);
             position: absolute;
             top: 30%;
             right: 10px;
             width: 25%;
             height: 20%;
-        }
+        } */
 		.container {
 			max-width: 70%;
 			max-height: 50%;
-			margin-left: auto;
+			margin-left: 5%;
 			margin-right: 30%;
 		}
-		.inputBox {
+		/* .inputBox {
 		    width: 30%;
 		    padding: 12px 20px;
 		    margin: 8px 0;
 		    box-sizing: border-box;
-		}
+		} */
         
-		.button {
+		/* .button {
 		    background-color: #4CAF50;
 		    border: none;
 		    color: white;
@@ -74,7 +87,58 @@
 		    font-size: 16px;
 		    margin: 4px 2px;
 		    cursor: pointer;
+		} */
+		body {
+			width: 100wh;
+			height: 90vh;
+			color: rgb(46, 42, 51);
+			/*background: radial-gradient( #EE7752, #E73C7E, #23A6D5, #23D5AB);*/
+			background: linear-gradient(-30deg, #EE7752, #f6f1d3, #648880 ,#293f50);
+			/*#293f50,*/
+			overflow: scroll;
+			background-size: 400% 400%;
+			-webkit-animation: Gradient 15s ease infinite;
+			-moz-animation: Gradient 15s ease infinite;
+			animation: Gradient 15s ease infinite;
 		}
+
+		@-webkit-keyframes Gradient {
+			0% {
+				background-position: 0% 20%
+			}
+			50% {
+				background-position: 100% 50%
+			}
+			100% {
+				background-position: 0% 50%
+			}
+		}
+
+		@-moz-keyframes Gradient {
+			0% {
+				background-position: 0% 50%
+			}
+			50% {
+				background-position: 100% 50%
+			}
+			100% {
+				background-position: 0% 50%
+			}
+		}
+
+		@keyframes Gradient {
+			0% {
+				background-position: 0% 20%
+			}
+			50% {
+				background-position: 100% 50%
+			}
+			100% {
+				background-position: 0% 20%
+			}
+		}
+
+
 	</style>
 	
 	<pre id="info"></pre>
@@ -104,57 +168,84 @@
 		
 	</div>
 	<div class="weather">
-		{% for weather in weather_data %}
+		<h3>{{weather_data.city}}</h3>
+		<h5>temp: {{ weather_data.temperature }} C</h5>
+		<h5>description: {{ weather_data.description }} </h5>
+		<h5>wind speed: {{ weather_data.wind_speed }}</h5>
+		<h5>water temperature: {{ waves.water_temperature }}</h5>
+		<div>
+			
+				{% for err in tidal %}
+
+					<p>tide height : {{ err.height }} </p> 
+					<p>tide time:	{{ err.time }}</p> 
+					<p>tide type: {{err.type}}</p>
+
+				{% endfor %}
 		
-			<h2>{{weather.city}} {{ weather.temperature }} {{ weather.description }}</h2>
+
+		</div>
 		
-		{% endfor %}
 		
-	</div>	
+		
+		
+	</div>
+		
     <!--<div class="weather">
         <font face="verdana" size='7'> Weather</font> 
         <p style="font-size:80px;text-align: center;">{{climate}} °C</p>
 
     </div>-->
-    <div class="tides">
+    <!-- <div class="tides">
         <font face="verdana" size='7'> Tide Conditions</font>
-		<!--<p style="font-size:60px;text-align: center;">{{tide}} m</p> -->
+		
 		
 
-	</div>
+	</div> -->
 	<div class="searcher" id="countries" >
+	<script>
+		var listing_site=[];
+		var listing_coord=[];
+
+	</script>
 		
 	{% for meh in searcher%}
 		<script>
 
-			function display_map(longitude=-89.500000, latitude=44.500000) {
-				mapboxgl.accessToken = "{{ mapbox_access_token }}"
-				var map = new mapboxgl.Map({
-				container: 'map',
-				style: 'mapbox://styles/mapbox/satellite-streets-v10',
-				center: [longitude,latitude],
-				zoom: 1,
-				bearing: 0,
-				pitch:0
+			// function display_map(longitude=-89.500000, latitude=44.500000) {
+			// 	mapboxgl.accessToken = "{{ mapbox_access_token }}"
+			// 	var map = new mapboxgl.Map({
+			// 	container: 'map',
+			// 	style: 'mapbox://styles/mapbox/satellite-streets-v10',
+			// 	center: [longitude,latitude],
+			// 	zoom: 1,
+			// 	bearing: 0,
+			// 	pitch:0
 			
-				});
+			// 	});
+			
 
 
-				var searching=("{{ meh.countries_dive_name }}");
+
+				var searching=("{{ meh.site_name }}");
 				var latsearch=([{{ meh.longitude}} , {{ meh.latitude }}]);
 				console.log(searching);
+				console.log(latsearch)
 				new mapboxgl.Marker().setLngLat(latsearch)
+				listing_site.push(searching);
+				listing_coord.push(latsearch);
 			    
 					
-				.setPopup(new mapboxgl.Popup({ offset: 25 })
-				.setHTML('<h3>{{ meh.countries_dive_name }}</h3>'))	
-				.addTo(map);
+				// .setPopup(new mapboxgl.Popup({ offset: 25 })
+				// .setHTML('<h3>'+ searching +'</h3>'))	
+				// .addTo(map);
 				
 
-			};
+			// };
 
 		</script>
-		<li style="font-size:90%;text-align: left;"><a href="/meh/{{meh.countries_dive_name}}">{{meh.countries_dive_name}} , {{ meh.latitude }} {{meh.longitude }} </a></li>
+		<li style="font-size:90%;text-align: center; color: coral;"><a href="/meh/{{meh.site_name}}" style="color: rgb(39, 39, 44)
+		;">{{meh.site_name}}  </a></li>
 	{% endfor %}
 		
         
@@ -166,6 +257,7 @@
 
 
 	<script>
+
 		
 
 		// function myFunction() {
@@ -176,17 +268,36 @@
 		// 	latitude = document.getElementById("Latitude").value;
 		// 	display_map(longitude, latitude);
 		// }
-		// function display_map(longitude=-89.500000, latitude=44.500000) {
-		// 	mapboxgl.accessToken = "{{ mapbox_access_token }}"
-		// 	var map = new mapboxgl.Map({
-		// 	container: 'map',
-		// 	style: 'mapbox://styles/mapbox/satellite-streets-v10',
-		// 	center: [longitude,latitude],
-		// 	zoom: 1,
-		// 	bearing: 0,
-		// 	pitch:0
+		function display_map(longitude=-89.500000, latitude=44.500000) {
+			mapboxgl.accessToken = "{{ mapbox_access_token }}"
+			var map = new mapboxgl.Map({
+			container: 'map',
+			style: 'mapbox://styles/mapbox/satellite-streets-v10',
+			center: [longitude,latitude],
+			zoom: 1,
+			bearing: 0,
+			pitch:0
 		
-		// 	});
+			});
+			console.log(listing_site)
+			
+			const locations = {{ coord }};
+            
+            
+			
+			const locations_uno = {{ coordinator }};
+            locations_uno.forEach(function(coords) {
+            new mapboxgl.Marker().setLngLat(coords)
+            .setPopup(new mapboxgl.Popup({ color: 'hotpink' }) // add popups
+            .setHTML('<h3>nearby</h3>'))
+            .addTo(map);
+			});
+			new mapboxgl.Marker({ color: 'hotpink' }).setLngLat(locations)
+            .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+            .setHTML('<h3>{{ sito }}</h3>'))
+			.addTo(map);
+			
+		};
 
 			
 
@@ -259,42 +370,7 @@
 
 
 
-		// document.getElementById('button2').addEventListener('click', function(){
-		// 	document.getElementById('countries').innerHTML='hmm'
-		// });
-		// document.getElementById('button2').addEventListener('click', loadCountries);
-        // function loadCountries(e) {
-        //     const meh = new XMLHttpRequest();
-
-        //     meh.open('GET', 'countries.json', true);
-
-        //     meh.onload = function(){
-                
-		// 		console.log(this.responseText);
-
-        //             // const countries = JSON.parse(this.responseText);
-
-        //             // let output = '';
-
-        //             // countries.forEach(function(country){
-        //             //     output += `
-                        
-        //             //     <ul>
-        //             //     <li>ID: ${country.id}</li>
-        //             //     <li>Site: ${country.countries_dive_name}</li>
-        //             //     <li>State: ${country.countries_name}</li>
-        //             //     <li>Latitude: ${country.latitude}</li>
-        //             //     <li>Longitude: ${country.longitude}</li>
-        //             //     </ul>
-        //             // `;
-        //             // });
-
-        //             // document.getElementById('countries').innerHTML = output;
-                
-        //     }
-
-        //     meh.send();
-        //     }
+		
 
 		
           
