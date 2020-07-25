@@ -35,13 +35,31 @@
 			background:white;
 			}
 		 */
+		 
 			
 		.searcher{
 			background-color:rgba(216, 195, 181, 0.705);
 			position: absolute;
 			top: 0%;
-			right: 10px;
-            width: 25%;
+			right: 90px;
+			left: 5px;
+            width: 23%;
+            height: 50%;
+
+
+		}
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+		.tide{
+			background-color:rgba(216, 195, 181, 0.905);
+			position: absolute;
+			top: 40%;
+			right: 750px;
+			border-radius: 5px;
+			
+            width: 23%;
             height: 50%;
 
 
@@ -50,9 +68,11 @@
             background-color:rgba(241, 216, 183, 0.696);
             position: absolute;
             top: 50%;
-            right: 10px;
-            width: 25%;
+            right: 90px;
+			left: 5px;
+            width: 23%;
             height: 100%;
+			
         }
 	
         /* .tides {
@@ -64,18 +84,24 @@
             height: 20%;
         } */
 		.container {
-			max-width: 70%;
+			max-width: 87%;
+			margin-top: -5%;
 			max-height: 50%;
-			margin-left: 5%;
-			margin-right: 30%;
+			margin-left: 24%;
+			margin-right: 50%;
 		}
+		.button_country{
+			margin-left: 80%;
+		}
+		
 		/* .inputBox {
 		    width: 30%;
 		    padding: 12px 20px;
 		    margin: 8px 0;
+			
 		    box-sizing: border-box;
-		} */
-        
+		}
+         */
 		/* .button {
 		    background-color: #4CAF50;
 		    border: none;
@@ -95,7 +121,8 @@
 			/*background: radial-gradient( #EE7752, #E73C7E, #23A6D5, #23D5AB);*/
 			background: linear-gradient(-30deg, #EE7752, #f6f1d3, #648880 ,#293f50);
 			/*#293f50,*/
-			overflow: scroll;
+			/* overflow: scroll; */
+			overflow: hidden;
 			background-size: 400% 400%;
 			-webkit-animation: Gradient 15s ease infinite;
 			-moz-animation: Gradient 15s ease infinite;
@@ -146,12 +173,15 @@
 
 <body>
 	<!--cwewcwece-->
-	<form method="post" >
-        <label>Country state:</label>
-        <input id="countries_name" name="countries_name" type="text" />
-		<input id="button" type="submit" formaction="/coordinate" />
-		
-	</form>
+	<div class="button_country">
+		<form method="post" >
+			<label>Country state:</label>
+			<input id="countries_name" name="countries_name" type="text" />
+			<button type="submit" formaction="/coordinate" >Submit</button>
+			
+		</form>
+	</div>
+	
 	
 	
 	
@@ -160,9 +190,7 @@
 		<font face="verdana" size='7'> Scuba-man</font> <br/><br/>
 		<p id="value_map">{{ coord }}</p>
 		
-		<!--<input class="inputBox" type="number" id="Longitude" placeholder="Enter Longitude" />
-		<input class="inputBox" type="number" id="Latitude" placeholder="Enter Latitude" />
-		<button class="button" onclick="getLonLat()"> Submit</button>-->
+		
 		<div id='map' style='width: 95%; height:500px;'></div><br/><br/>
 		
 		
@@ -173,7 +201,7 @@
 		<h5>description: {{ weather_data.description }} </h5>
 		<h5>wind speed: {{ weather_data.wind_speed }}</h5>
 		<h5>water temperature: {{ waves.water_temperature }}</h5>
-		<div>
+		<!-- <div>
 			
 				{% for err in tidal %}
 
@@ -184,7 +212,7 @@
 				{% endfor %}
 		
 
-		</div>
+		</div> -->
 		
 		
 		
@@ -251,6 +279,25 @@
         
 		
 	</div>
+	<div class="tide">
+		<h4>Tidal pattern</h4>
+		<div>
+			
+			{% for err in tidal %}
+
+				<p>tide height : {{ err.height }} </p> 
+				<p>tide time:	{{ err.time }}</p> 
+				<p>tide type: {{err.type}}</p>
+
+			{% endfor %}
+			<!-- <img src="//my.meteoblue.com/visimage/meteogram_web?look=KILOMETER_PER_HOUR%2CCELSIUS%2CMILLIMETER&apikey=5838a18e295d&temperature=C&windspeed=kmh&precipitationamount=mm&winddirection=3char&city=Api&iso2=np&lat={{ coord.lat }}&lon={{ coord.lon }}.950203&asl=7132&tz=Asia%2FKathmandu&lang=en&sig=e135f68d6211e6a8b83b760907910198" 
+			srcset="//my.meteoblue.com/visimage/meteogram_web_hd?look=KILOMETER_PER_HOUR%2CCELSIUS%2CMILLIMETER&apikey=5838a18e295d&temperature=C&windspeed=kmh&precipitationamount=mm&winddirection=3char&city=Api&iso2=np&lat=30.000700&lon=80.950203&asl=7132&tz=Asia%2FKathmandu&lang=en&sig=6abd236a4defbd391d4900e45e36d74d 1.4x" 
+			alt="Meteogram - 5 days - Api"> -->
+			
+	
+
+	</div>
+	</div>
 	
 	
 
@@ -268,13 +315,13 @@
 		// 	latitude = document.getElementById("Latitude").value;
 		// 	display_map(longitude, latitude);
 		// }
-		function display_map(longitude=-89.500000, latitude=44.500000) {
+		function display_map(longitude=-119.500000, latitude=44.500000) {
 			mapboxgl.accessToken = "{{ mapbox_access_token }}"
 			var map = new mapboxgl.Map({
 			container: 'map',
 			style: 'mapbox://styles/mapbox/satellite-streets-v10',
 			center: [longitude,latitude],
-			zoom: 1,
+			zoom: 2,
 			bearing: 0,
 			pitch:0
 		
