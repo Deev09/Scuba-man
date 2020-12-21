@@ -580,38 +580,76 @@
 					"maxzoom": 22
 					
 				});
+				map.addLayer({
+					"id": "temp",
+					"type": "raster",
+					"source": {
+						"type": "raster",
+						"tiles":["https://sat.owm.io/vane/2.0/weather/TA2/{z}/{x}/{y}?appid=9de243494c0b295cca9337e1e96b00e2&day=2020-12-21T08:00"],
+						"tileSize": 256
+					},
+					"minzoom": 0,
+					"maxzoom": 22
+					
+				});
+				map.addLayer({
+					"id": "cloud",
+					"type": "raster",
+					"source": {
+						"type": "raster",
+						"tiles":["https://sat.owm.io/vane/2.0/weather/CL/{z}/{x}/{y}?appid=9de243494c0b295cca9337e1e96b00e2&day=2020-12-21T08:00"],
+						"tileSize": 256
+					},
+					"minzoom": 0,
+					"maxzoom": 22
+					
+				});
+				map.addLayer({
+					"id": "wind speed",
+					"type": "raster",
+					"source": {
+						"type": "raster",
+						"tiles":["https://sat.owm.io/vane/2.0/weather/WND/{z}/{x}/{y}?appid=9de243494c0b295cca9337e1e96b00e2&day=2020-12-21T08:00"],
+						"tileSize": 256
+					},
+					"minzoom": 0,
+					"maxzoom": 22
+					
+				});
 				
 			});
+			var toggleableLayerIds = ['preci', 'temp', 'cloud','wind speed'];
 				
 			
 
-			var toggleableLayerIds = [ 'preci' ];
-
-			var link = document.createElement('a');
-			link.href = '#';
-			link.className = 'active';
-			link.textContent = "toggle layers";
-			link.onclick = function (e) {
-				for(var index in toggleableLayerIds) {
-				var clickedLayer = toggleableLayerIds[index];
+			for (var i = 0; i < toggleableLayerIds.length; i++) {
+				var id = toggleableLayerIds[i];
+				
+				var link = document.createElement('a');
+				link.href = '#';
+				link.className = 'active';
+				link.textContent = id;
+				
+				link.onclick = function (e) {
+				var clickedLayer = this.textContent;
 				e.preventDefault();
 				e.stopPropagation();
-			
-				var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
-			
-				if (visibility === 'visible') {
-					map.setLayoutProperty(clickedLayer, 'visibility', 'none');
-					this.className = '';
-				} else {
-					this.className = 'active';
-					map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
-				}
-				}
 				
-			};
-			var layers = document.getElementById('menu');
-			layers.appendChild(link);
-
+				var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
+				
+				// toggle layer visibility by changing the layout object's visibility property
+				if (visibility === 'visible') {
+				map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+				this.className = '';
+				} else {
+				this.className = 'active';
+				map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+				}
+				};
+				
+				var layers = document.getElementById('menu');
+				layers.appendChild(link);
+			}
 
 			map.on('load', function () {
 
