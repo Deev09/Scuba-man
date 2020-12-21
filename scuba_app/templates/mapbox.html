@@ -545,12 +545,7 @@
 
 		</div>
 
-		<div id=map>
-			<nav id='map-ui' class='menu-ui'>
-				<a href='#' class='active' id='precipitation'>Precipitation</a>
-			</nav>
-			
-		</div>
+		<nav id="menu"></nav>
 	
 	
 	
@@ -563,39 +558,59 @@
 			var map = new mapboxgl.Map({
 			container: 'map',
 			style: 'mapbox://styles/nononame/ckd1r7ujp0xon1imlduw7gm98',
-			// style: mapStyle,
-
-			// transformRequest: (url, resourceType)=> {
-			// 	if(resourceType === 'Source' && url.startsWith('http://myHost')) {
-			// 		return {
-			// 				url: 'https://map-eu.foreca.com/api/v1/image/tile/4/9/3/2020-12-20T03:00:00Z/2',
-			// 				headers: { 'my-custom-header': true},
-			// 				credentials: 'include'  // Include cookies for cross-origin requests
-			// 			}
-			// 	}
-			// },
+			
 			center: [longitude,latitude],
 					zoom: 2,
 					bearing: 0,
 					pitch:0
 							
 			});
+			
 
 			map.on('load', function(){
 				map.addLayer({
-					"id": "simple-tiles",
+					"id": "preci",
 					"type": "raster",
 					"source": {
 						"type": "raster",
 						"tiles":["https://sat.owm.io/maps/2.0/radar/{z}/{x}/{y}?appid=9de243494c0b295cca9337e1e96b00e2&day=2020-12-21T08:00"],
-						// "tiles":["https://d.sat.owm.io/vane/2.0/weather/TA2/3/2/1?appid=230b7544b48513a794a7284e48f2ca63&fill_bound"],
-						// "tiles": ["https://tile.openweathermap.org/map/clouds_new/{z}/{x}/{y}.png?appid=230b7544b48513a794a7284e48f2ca63"],
 						"tileSize": 256
 					},
 					"minzoom": 0,
 					"maxzoom": 22
+					
 				});
+				
 			});
+				
+			
+
+			var toggleableLayerIds = [ 'preci' ];
+
+			var link = document.createElement('a');
+			link.href = '#';
+			link.className = 'active';
+			link.textContent = "toggle layers";
+			link.onclick = function (e) {
+				for(var index in toggleableLayerIds) {
+				var clickedLayer = toggleableLayerIds[index];
+				e.preventDefault();
+				e.stopPropagation();
+			
+				var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
+			
+				if (visibility === 'visible') {
+					map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+					this.className = '';
+				} else {
+					this.className = 'active';
+					map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+				}
+				}
+				
+			};
+			var layers = document.getElementById('menu');
+			layers.appendChild(link);
 
 
 			map.on('load', function () {
