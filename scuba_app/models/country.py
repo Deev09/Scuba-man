@@ -20,7 +20,7 @@ class Sites(db.Model):
         self.longitude=longitude
 
     def __repr__(self):
-        return '<Country %r>'%self.countries_dive_name
+        return '<Sites %r>'%self.site_name
 
 
 

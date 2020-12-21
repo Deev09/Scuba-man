@@ -1,5 +1,5 @@
 class Config():
-    SECRET_KEY = 'some_secret_key_you_name_it'
+    SECRET_KEY = '378f9b8d99211b55f74229568e4a732b' 
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 

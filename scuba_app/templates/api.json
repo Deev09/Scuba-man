@@ -1,0 +1,61 @@
+{
+    "images": [
+      {
+        "title": "Cell simulated precipitation",
+        "description": "Precipitation with more intricate convection visualization",
+        "formats": [
+          "image/png"
+        ],
+        "colorschemes": [
+          "default",
+          "csdata-blue"
+        ],
+        "extent": {
+          "minLat": -79.171,
+          "maxLat": 79.171,
+          "minLon": -180,
+          "maxLon": 180,
+          "maxZoom": 11,
+          "minZoom": 3
+        },
+        "times": {
+          "updated": "2017-01-01T00:00:00Z",
+          "available": [
+            "2017-09-01T03:00:00Z",
+            "2017-09-01T06:00:00Z"
+          ],
+          "current": 1
+        },
+        "id": 1
+      },
+      {
+        "title": "Wind symbol",
+        "description": "Traditional wind symbol",
+        "formats": [
+          "image/svg+xml"
+        ],
+        "colorschemes": [
+          "default",
+          "data-pt"
+        ],
+        "extent": {
+          "minLat": -79.171,
+          "maxLat": 79.171,
+          "minLon": -180,
+          "maxLon": 180,
+          "maxZoom": 11,
+          "minZoom": 3
+        },
+        "times": {
+          "updated": "2017-01-01T00:00:00Z",
+          "available": [
+            "2017-09-18T06:00:00Z",
+            "2017-09-18T07:00:00Z"
+          ],
+          "current": 0
+        },
+        "id": 2
+      }
+    ]
+  }
+  
