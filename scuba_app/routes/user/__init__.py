@@ -8,9 +8,10 @@ from .forms import CountryForm
 from .helperfunc import conversion
 # from .helper_func import send_confirmation_email, confirm_token
 from .forms import RegisterForm, LoginForm
-from ...models.base import db, bcrypt, login_manager, login_user, current_user, logout_user, login_required
+from flask_login import login_user, current_user, logout_user, login_required
+from ...models.base import db, bcrypt, login_manager
 from ...models.user import User
-from ...models.country import (sites_schema,Sites, site_schema)
+from ...models.country import (sites_schema, Sites, site_schema)
 from ...secrets import MAPBOX
 
 
@@ -104,8 +105,6 @@ def coordinata():
     listo=[]
 
 
-
-
     if request.method=="POST":
         form=request.form
         search_value=form['countries_name']
@@ -117,7 +116,7 @@ def coordinata():
         #coordinate= Sites.query.filter_by(countries_name="Alabama").first()
         
         for e in coordinate:
-            lat, lon = u'''{0}, {1}'''.format(e.latitude, e.longitude).split(', ')
+            lat, lon = u'''{0}, {1}'''.format(e.latitude, e.longitude).split(',')
             u=[conversion(lon),conversion(lat)]
             e.latitude=conversion(lat)
             e.longitude=conversion(lon)
@@ -145,22 +144,22 @@ def coordinata():
 
 
 
-@userRoute.route('/post_user', methods=['GET','POST'])
-def post_user():
-    myCountry=Sites.query.limit(30).all()
+# @userRoute.route('/post_user', methods=['GET','POST'])
+# def post_user():
+#     myCountry=Sites.query.limit(30).all()
 
-    if request.method=="POST":
-        form=request.form
-        search_value=form['countries_name']
-        search="%{}%".format(search_value)
-        arr=Sites.query.filter(Sites.countries_name.like(search)).all()
+#     if request.method=="POST":
+#         form=request.form
+#         search_value=form['countries_name']
+#         search="%{}%".format(search_value)
+#         arr=Sites.query.filter(Sites.countries_name.like(search)).all()
 
-        #user=request.form["countries_name"]
-        return render_template('countries.html', arr=arr)
-    else:
-        return render_template('filter.html')
+#         #user=request.form["countries_name"]
+#         return render_template('countries.html', arr=arr)
+#     else:
+#         return render_template('filter.html')
 
-    #return redirect(url_for('userRoute.simple'))
+#     #return redirect(url_for('userRoute.simple'))
 
 
 
@@ -169,6 +168,7 @@ def simple():
     #oneItem = Country.query.filter_by(countries_name="Alabama").first()
     #arr=Country.query.filter_by(countries_name="Alabama").all()
     return render_template('filter.html' )
+
 
 
 
@@ -246,8 +246,11 @@ def index(country):
   
     #weather=[{'city' : cities.site_name},{'temperature' : r1['main']['temp']},{'description' : r1['weather'][0]['description']},{'wind_speed':r1['wind']['speed']}]
     weather_data.append(weather)
-    print(weather)
+    diving_site=weather['city']
+    print(diving_site)
     
+    
+    session['my_api_site']=diving_site
     session['my_api']=weather
     session['my_coord']=[lon, lat]
     session['my_site_name']=(cities.site_name, cities.countries_dive_avg_depth)
@@ -259,19 +262,45 @@ def index(country):
 
 
 
+@userRoute.route('/save', methods=['GET'])
+@login_required
+def saveSite():
+    site_name=session.get('my_api_site',[{1:1},{2:2}])
+    site_obj=Sites.query.filter_by(site_name="{}".format(site_name)).first()
+    print(site_obj.site_name)
+    user_obj = User.query.filter_by(username=current_user.username).first_or_404()
+    print('appending to user_obj')
+    user_obj.diving_sites.append(site_obj)
+    db.session.commit()
+    print('appended successfully')
+
+    print(user_obj.diving_sites)
+    return redirect(url_for('userRoute.maps'))
 
 
 
-@userRoute.route('/map/<mappy>',methods=['GET','POST'])
-def my_maps(mappy):
-    my_var = session.get('my_var', None)
-    coord=mappy
-    print(mappy)
-    print('my_var', my_var)
+@userRoute.route('/display_location')
+@login_required
+def display_sites():
+    user_obj = User.query.filter_by(username=current_user.username).first_or_404()
+    site_names=[]
+    print('test222222')
+    for site in user_obj.diving_sites:
+        print(site.site_name)
+        site_names.append(site.site_name)
+    return json.dumps(site_names)
 
-#    mapbox_access_token = 'pk.eyJ1Ijoibm9ub25hbWUiLCJhIjoiY2s4eDkwMm5qMDNsNzNnbnhzenRiMHhzNSJ9.pYTchNKhUZQL-G0HHkZtrg'
-    return render_template('mapbox.html',
-        mapbox_access_token=MAPBOX,tide='1.24',climate='27', coord=coord)
+
+# @userRoute.route('/map/<mappy>',methods=['GET','POST'])
+# def my_maps(mappy):
+#     my_var = session.get('my_var', None)
+#     coord=mappy
+#     print(mappy)
+#     print('my_var', my_var)
+
+# #    mapbox_access_token = 'pk.eyJ1Ijoibm9ub25hbWUiLCJhIjoiY2s4eDkwMm5qMDNsNzNnbnhzenRiMHhzNSJ9.pYTchNKhUZQL-G0HHkZtrg'
+#     return render_template('mapbox.html',
+#         mapbox_access_token=MAPBOX,tide='1.24',climate='27', coord=coord)
 
 
 
@@ -295,8 +324,11 @@ def maps():
     searcher1=(output)
     form = RegisterForm()
 
+
+
+
     if form.validate_on_submit():
-        url="http://maps.openweathermap.org/maps/2.0/weather/TA2/{1}/{23}/{78}?appid=230b7544b48513a794a7284e48f2ca63"
+        
         hashed_password = generate_password_hash(form.password.data, method='sha256')
         new_user = User(username=form.username.data, email=form.email.data, password=hashed_password)
         db.session.add(new_user)
@@ -306,7 +338,7 @@ def maps():
  
         #searcher= jsonify({ 'country' : output }) 
     return render_template('mapbox.html',mapbox_access_token=MAPBOX,tide='1.24',climate='27', coord=my_coord,
-     searcher=searcher1, weather_data=my_weather,sito=sito,coordinator=my_var,tidal=tide,waves=waves, form=form)
+     searcher=searcher1, weather_data=my_weather,sito=sito,coordinator=my_var,tidal=tide,waves=waves, form=form, name=current_user.username)
 
     
     

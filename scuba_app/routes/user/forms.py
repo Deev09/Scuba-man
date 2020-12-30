@@ -6,24 +6,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from ...models.user import User
 
-# https://wtforms.readthedocs.io/en/latest/fields.html
-#TODO need etter validators
-#https://wtforms.readthedocs.io/en/latest/validators.html#custom-validators
 
-
-# class LoginForm(FlaskForm):
-#     username = StringField('username', validators=[InputRequired(), Length(min=4, max=15)])
-#     password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)])
-#     remember = BooleanField('remember me')
-#     submit = SubmitField('Login')
-
-
-# class RegisterForm(FlaskForm):
-#     email = StringField('email', validators=[InputRequired(), Email(message='Invalid email'), Length(max=50)])
-#     username = StringField('username', validators=[InputRequired(), Length(min=4, max=15)])
-#     password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)])
-#     confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')])
-#     submit = SubmitField('Sign Up')
 
 class RegisterForm(FlaskForm):
     username = StringField('Username',
@@ -56,3 +39,4 @@ class CountryForm(Form):
     choices = [('Country', 'Country')]
     select = SelectField('Search for country:', choices=choices)
     search = StringField('')
+
