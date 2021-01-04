@@ -4,22 +4,59 @@ import datetime
 import json
 from datetime import datetime
 from flask import   session, Blueprint, request, render_template, redirect, flash, url_for, current_app, jsonify, render_template_string
+import redis
+from rq import Queue
+import time
 from .forms import CountryForm
 from .helperfunc import conversion
 # from .helper_func import send_confirmation_email, confirm_token
 from .forms import RegisterForm, LoginForm
-from flask_login import login_user, current_user, logout_user, login_required
+from flask_login import login_user, current_user, logout_user, login_required,AnonymousUserMixin
 from ...models.base import db, bcrypt, login_manager
 from ...models.user import User
 from ...models.country import (sites_schema, Sites, site_schema)
 from ...secrets import MAPBOX
 
 
+r=redis.Redis()
+q=Queue(connection=r)
+
+def background_task(n):
+    delay=2
+    print("Task running")
+    print(f"Simulating {delay} second delay")
+
+    time.sleep(delay)
+    print(len(n))
+    print("Task Complete")
+
+    return len(n)
+
+
+class Anonymous(AnonymousUserMixin):
+  def __init__(self):
+    self.username = 'Guest'
 
 
 
 
 userRoute = Blueprint('userRoute', __name__)
+
+
+@userRoute.route("/task")
+def task():
+
+    if request.args.get("n"):
+
+        job = q.enqueue(background_task, request.args.get("n"))
+        q_len=len(q)
+
+        return f"Task ({job.id}) added to queue at {job.enqueued_at}. {q_len} tasks in the queue"
+
+    return "No value for count provided"
+
+
+
 
 
 @userRoute.route('/capabilities', methods=['GET','POST'])
@@ -77,12 +114,13 @@ def signup():
         db.session.add(user)
         db.session.commit()
         flash('Your account has been created! You are now able to log in', 'success')
-        return redirect(url_for('userRoute.maps'))
+        return redirect(url_for('userRoute.login'))
     return render_template('signup.html', title='Register', form=form)
 
 
 @userRoute.route("/logout")
 def logout():
+    login_manager.anonymous_user = Anonymous
     logout_user()
     return redirect(url_for('userRoute.maps'))
 
@@ -112,9 +150,7 @@ def coordinata():
         search="%{}%".format(search_value)
         
         coordinate=Sites.query.filter(Sites.countries_name.like(search)).all()
-        #coordinate=Sites.query.filter(Sites.site_name.like(search)).all()
-        #coordinate= Sites.query.filter_by(countries_name="Alabama").first()
-        
+       
         for e in coordinate:
             lat, lon = u'''{0}, {1}'''.format(e.latitude, e.longitude).split(',')
             u=[conversion(lon),conversion(lat)]
@@ -123,51 +159,23 @@ def coordinata():
             array.append(u)
             listo.append(e.site_name)
 
-        #return coordinate_var
-        #print(coordinate)
-        print('it reaches here 1')
  
         coordinate_output= sites_schema.dump(coordinate)
 
         session['my_var'] = array
         session['coord_var']= coordinate_output
-        print('it reaches here x')
         print(array)
-        #return redirect(url_for('userRoute.test'))
-
-    print('it reaches here 3x')
+   
     return redirect(url_for('userRoute.maps'))
-    #return render_template('countries.html', coordinate=coordinate, lat=conversion(lat), lon=conversion(lon), array=array)
+    
 
 
-
-
-
-
-# @userRoute.route('/post_user', methods=['GET','POST'])
-# def post_user():
-#     myCountry=Sites.query.limit(30).all()
-
-#     if request.method=="POST":
-#         form=request.form
-#         search_value=form['countries_name']
-#         search="%{}%".format(search_value)
-#         arr=Sites.query.filter(Sites.countries_name.like(search)).all()
-
-#         #user=request.form["countries_name"]
-#         return render_template('countries.html', arr=arr)
-#     else:
-#         return render_template('filter.html')
-
-#     #return redirect(url_for('userRoute.simple'))
 
 
 
 @userRoute.route('/', methods=['GET'])
 def simple():
-    #oneItem = Country.query.filter_by(countries_name="Alabama").first()
-    #arr=Country.query.filter_by(countries_name="Alabama").all()
-    return render_template('filter.html' )
+    return redirect(url_for('userRoute.login'))
 
 
 
@@ -177,11 +185,7 @@ def simple():
 @userRoute.route('/meh/<country>', methods=['GET'])
 def index(country):
     cities=Sites.query.filter_by(site_name="{}".format(country)).first()
-
-    #state=Sites.query.order_by(Sites.site_name).limit(10).all()
-    # statelat=Sites.query.order_by(Sites.latitude).limit(10).all()
-    # statelon=Sites.query.order_by(Sites.longitude).limit(10).all()
-    # print(statelat, statelon)    
+   
     url = 'http://api.openweathermap.org/data/2.5/weather?lat={}&lon={}&units=metric&appid=230b7544b48513a794a7284e48f2ca63'
 
     weather_data = []
@@ -219,7 +223,7 @@ def index(country):
     tidal_arr=[]
     for i in range(2):
         tidal={
-            'height': tide_data['data'][i]['height'],
+            'height': "{:.2f}".format(tide_data['data'][i]['height']),
             'time': tide_data['data'][i]['time'],
             'type': tide_data['data'][i]['type'],
         }
@@ -284,7 +288,6 @@ def saveSite():
 def display_sites():
     user_obj = User.query.filter_by(username=current_user.username).first_or_404()
     site_names=[]
-    print('test222222')
     for site in user_obj.diving_sites:
         print(site.site_name)
         site_names.append(site.site_name)

@@ -12,7 +12,7 @@
 			this.setTime(this.getTime() - (h*60*60*1000));
 			return this;
 		}
-		var early = today.addHours(12);
+		var early = today.addHours(24);
 		var conv= early.getUTCHours();
 		console.log(conv);
 
@@ -392,13 +392,20 @@
 	
 	
 	<div class="button_country">
-		<form class="form-signin" method="POST">
+		{% if current_user.is_authenticated %}
+				<a class="nav-item nav-link" href="/logout" style="color: rgb(31, 29, 29);">Logout</a>
+				<a class="nav-item nav-link" href="/display_location" style="color: rgb(31, 29, 29);">Your locations</a>
+		{% else %}
+			<a class="nav-item nav-link" href="{{ url_for('userRoute.login') }}"style="color: rgb(31, 29, 29);">Login</a>
+            <a class="nav-item nav-link" href="{{ url_for('userRoute.signup') }}"style="color: rgb(31, 29, 29);">Register</a>
+        {% endif %}
+		<!-- <form class="form-signin" method="POST">
 			<button formaction="/signup" style="width:auto;">Sign Up</button>
 			<button formaction="/login" style="width:auto;">Login</button>
-			<!-- <button formaction="/logout" style="width:auto;">Log out</button> -->
 			
 			
-		</form>
+			
+		</form> -->
 
 
 		<form method="post" >
@@ -544,7 +551,7 @@
 					"type": "raster",
 					"source": {
 						"type": "raster",
-						"tiles":["https://sat.owm.io/maps/2.0/radar/{z}/{x}/{y}?appid=9de243494c0b295cca9337e1e96b00e2&day="+preci_dateTime],
+						"tiles":["https://sat.owm.io/vane/2.0/weather/PA0/{z}/{x}/{y}?appid=9de243494c0b295cca9337e1e96b00e2&day="+preci_dateTime],
 						"tileSize": 256
 					},
 					"layout": {
@@ -559,7 +566,7 @@
 					"type": "raster",
 					"source": {
 						"type": "raster",
-						"tiles":["https://sat.owm.io/vane/2.0/weather/TA2/{z}/{x}/{y}?appid=9de243494c0b295cca9337e1e96b00e2&day="+preci_dateTime],
+						"tiles":["https://sat.owm.io/vane/2.0/weather/TA2/{z}/{x}/{y}?appid=9de243494c0b295cca9337e1e96b00e2&day="+dateTime],
 						"tileSize": 256
 					},
 					"layout": {
@@ -599,9 +606,24 @@
 					"maxzoom": 22
 					
 				});
+				map.addLayer({
+					"id": "cities",
+					"type": "raster",
+					"source": {
+						"type": "raster",
+						"tiles":["https://maps.owm.io/weather/cities/{z}/{x}/{y}?appid=9de243494c0b295cca9337e1e96b00e2&day"],
+						"tileSize": 256
+					},
+					"layout": {
+						visibility: "none"
+					},
+					"minzoom": 0,
+					"maxzoom": 22
+					
+				});
 				
 			});
-			var toggleableLayerIds = ['preci', 'temp', 'cloud','wind speed'];
+			var toggleableLayerIds = ['preci', 'temp', 'cloud','wind speed', 'cities'];
 				
 			
 
