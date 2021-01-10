@@ -2,13 +2,13 @@ import arrow
 import requests
 import datetime
 import json
-from datetime import datetime
-from flask import   session, Blueprint, request, render_template, redirect, flash, url_for, current_app, jsonify, render_template_string
-import redis
-from rq import Queue
 import time
+from datetime import datetime
+from flask import session, Blueprint, request, render_template, redirect, flash, url_for, current_app, jsonify, render_template_string
+from redis import Redis
+from rq.job import Job
 from .forms import CountryForm
-from .helperfunc import conversion
+from .helperfunc import conversion, tasker
 # from .helper_func import send_confirmation_email, confirm_token
 from .forms import RegisterForm, LoginForm
 from flask_login import login_user, current_user, logout_user, login_required,AnonymousUserMixin
@@ -17,9 +17,6 @@ from ...models.user import User
 from ...models.country import (sites_schema, Sites, site_schema)
 from ...secrets import MAPBOX
 
-
-r=redis.Redis()
-q=Queue(connection=r)
 
 def background_task(n):
     delay=2
@@ -31,6 +28,9 @@ def background_task(n):
     print("Task Complete")
 
     return len(n)
+    
+ 
+
 
 
 class Anonymous(AnonymousUserMixin):
@@ -45,16 +45,18 @@ userRoute = Blueprint('userRoute', __name__)
 
 @userRoute.route("/task")
 def task():
+    job = tasker()
+    print('Job id: %s' % job.id)
+    return 'Job id: {}'.format(job.id)
 
-    if request.args.get("n"):
+@userRoute.route("/fetch/<jobid>")
+def fetch_job(jobid):
+    redis_conn = Redis()
+    job = Job.fetch(jobid, connection=redis_conn)
+    print(len(job.result))
+    return 'job result printed'
 
-        job = q.enqueue(background_task, request.args.get("n"))
-        q_len=len(q)
-
-        return f"Task ({job.id}) added to queue at {job.enqueued_at}. {q_len} tasks in the queue"
-
-    return "No value for count provided"
-
+ 
 
 
 
@@ -246,12 +248,16 @@ def index(country):
     
     waves={'water_temperature': wave_data['hours'][0]['waterTemperature']['noaa']}
     #waves_arr.append(waves)
-    print(waves)
+    # print(waves)
+    #print('https://api.stormglass.io/v2/weather/point?lat=37.78333333333333&lng=-119.05')
   
     #weather=[{'city' : cities.site_name},{'temperature' : r1['main']['temp']},{'description' : r1['weather'][0]['description']},{'wind_speed':r1['wind']['speed']}]
     weather_data.append(weather)
     diving_site=weather['city']
-    print(diving_site)
+    print(tidal_arr)
+    # print(weather_data)
+
+    # print(diving_site)
     
     
     session['my_api_site']=diving_site
@@ -276,7 +282,7 @@ def saveSite():
     print('appending to user_obj')
     user_obj.diving_sites.append(site_obj)
     db.session.commit()
-    print('appended successfully')
+    print('saved diving site successfully')
 
     print(user_obj.diving_sites)
     return redirect(url_for('userRoute.maps'))
