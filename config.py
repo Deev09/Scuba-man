@@ -14,7 +14,7 @@ class Config():
 class DevConfig(Config):
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = 'postgresql://mask:password@localhost/scubapp_db'
-    
+  
 
 
 class ProdConfig(Config):

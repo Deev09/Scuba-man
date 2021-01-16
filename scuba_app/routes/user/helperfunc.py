@@ -18,7 +18,7 @@ def conversion(old):
 
 def tasker():
     cities=Sites.query.limit(3).all()
-    job = q.enqueue(get_request_lalong, cities, job_timeout=600, result_ttl=4000)
+    job = q.enqueue(get_request_lalong, cities, job_timeout=1000, result_ttl=4000)
     return job
 
 def get_request_lalong(cities):

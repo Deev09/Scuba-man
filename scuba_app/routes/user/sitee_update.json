@@ -1,0 +1,2552 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Alabama",
+                "countries_dive_name": "Blue Water",
+                "countries_dive_avg_depth": "18.3 ",
+                "city": "Blue Water",
+                "description": "overcast clouds",
+                "temperature": 0.94,
+                "wind_speed": 3.09
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -86.81723333333333,
+                    33.29566666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Alabama",
+                "countries_dive_name": "Dive land park",
+                "countries_dive_avg_depth": "13.7 ",
+                "city": "Dive land park",
+                "description": "overcast clouds",
+                "temperature": 1.78,
+                "wind_speed": 5.14
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -85.90588333333334,
+                    33.92288333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Alabama",
+                "countries_dive_name": "Madison Aquatic & Recreation Park",
+                "countries_dive_avg_depth": "13.7 ",
+                "city": "Madison Aquatic & Recreation Park",
+                "description": "overcast clouds",
+                "temperature": 2.32,
+                "wind_speed": 6.17
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -86.73028333333333,
+                    34.675583333333336
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Alabama",
+                "countries_dive_name": "Poseidon's Playground",
+                "countries_dive_avg_depth": "12.2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -87.52536666666667,
+                    30.2345
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Alabama",
+                "countries_dive_name": "The Whiskey wreck",
+                "countries_dive_avg_depth": "4.6 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -87.69798333333334,
+                    30.243566666666666
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Alaska",
+                "countries_dive_name": "Birch lake",
+                "countries_dive_avg_depth": "9.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -146.66266666666667,
+                    64.31421666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Alaska",
+                "countries_dive_name": "Mountain Point",
+                "countries_dive_avg_depth": "4.6 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -131.54376666666667,
+                    55.29181666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Alaska",
+                "countries_dive_name": "Whittier Cessna",
+                "countries_dive_avg_depth": "9.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -148.66956666666667,
+                    60.777316666666664
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Arizona",
+                "countries_dive_name": "Acacia picnic site",
+                "countries_dive_avg_depth": "6.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -111.43268333333333,
+                    33.53778333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Arizona",
+                "countries_dive_name": "Cabinsite",
+                "countries_dive_avg_depth": "13.7 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -114.57678333333334,
+                    35.24001666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Arizona",
+                "countries_dive_name": "Lake Mead - Black Canyon",
+                "countries_dive_avg_depth": "4.6 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -114.72805,
+                    36.018633333333334
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Arkansas",
+                "countries_dive_name": "Beaver Lake - Dam Site Bluffs",
+                "countries_dive_avg_depth": "9.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.85738333333333,
+                    36.4287
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Arkansas",
+                "countries_dive_name": "Bull Shoals Lake",
+                "countries_dive_avg_depth": "12.2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.60421666666667,
+                    36.38316666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "California",
+                "countries_dive_name": "Folsom Lake",
+                "countries_dive_avg_depth": "3 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.14238333333333,
+                    38.744683333333334
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "California",
+                "countries_dive_name": "June Lake",
+                "countries_dive_avg_depth": "10 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -119.0662,
+                    37.79018333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "California",
+                "countries_dive_name": "Mission Bay Jetty North",
+                "countries_dive_avg_depth": "7.6 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -117.24708333333334,
+                    32.75983333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "California",
+                "countries_dive_name": "Mission Bay Jetty South",
+                "countries_dive_avg_depth": "7.6 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -117.24288333333334,
+                    32.75866666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Colorado",
+                "countries_dive_name": "Aurora Resevior",
+                "countries_dive_avg_depth": "9.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -104.65363333333333,
+                    39.618116666666666
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Colorado",
+                "countries_dive_name": "Downtown Aquarium",
+                "countries_dive_avg_depth": "6.9 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -105.01416666666667,
+                    39.751666666666665
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Colorado",
+                "countries_dive_name": "Horsetooth Reservoir",
+                "countries_dive_avg_depth": "6.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -105.16851666666666,
+                    40.58253333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Colorado",
+                "countries_dive_name": "King Fisher Ponds",
+                "countries_dive_avg_depth": "8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -105.08296666666666,
+                    39.51871666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Colorado",
+                "countries_dive_name": "Pacific Tarn lake",
+                "countries_dive_avg_depth": "7 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -106.12003333333334,
+                    39.419716666666666
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Connecticut",
+                "countries_dive_name": "Brownstone Exploration and Discovery Park",
+                "countries_dive_avg_depth": "10.7 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.64443333333334,
+                    41.575066666666665
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Connecticut",
+                "countries_dive_name": "New London Ledge Lighthouse",
+                "countries_dive_avg_depth": "6.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.0774,
+                    41.3058
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Florida",
+                "countries_dive_name": "Boynton Comb Reef",
+                "countries_dive_avg_depth": "15.8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.03901666666667,
+                    26.485466666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Florida",
+                "countries_dive_name": "Briney Breezes",
+                "countries_dive_avg_depth": "16.8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.03471666666667,
+                    26.509333333333334
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Florida",
+                "countries_dive_name": "Castor Wreck",
+                "countries_dive_avg_depth": "21.3 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.03713333333333,
+                    26.478833333333334
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Florida",
+                "countries_dive_name": "Tumble Rock",
+                "countries_dive_avg_depth": "15.8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.03536666666666,
+                    26.503116666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Crew Boat Mary Lou",
+                "countries_dive_avg_depth": "9.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.153,
+                    31.307033333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef C - Esparta Wreck",
+                "countries_dive_avg_depth": "13.7 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.16951666666667,
+                    30.847416666666668
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef C - M-60 Battle Tanks",
+                "countries_dive_avg_depth": "13.7 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.1641,
+                    30.861683333333332
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef CCA - Deck Barge",
+                "countries_dive_avg_depth": "15.2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.6861,
+                    31.719666666666665
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef CCA - Deck Barge 2",
+                "countries_dive_avg_depth": "15.2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.68735,
+                    31.70065
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef CCA - SMS Warehouse Barge",
+                "countries_dive_avg_depth": "15.2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.6773,
+                    31.720333333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef CCA - Tug Matt Turecamo",
+                "countries_dive_avg_depth": "15.2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.6695,
+                    31.72
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef DRH - RV “Zapala”",
+                "countries_dive_avg_depth": "13.7 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.96701666666667,
+                    31.290683333333334
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef DRH - Tug “Rio Caroni”",
+                "countries_dive_avg_depth": "13.7 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.95096666666667,
+                    31.272833333333335
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef DRH - “John Bird” Wreck",
+                "countries_dive_avg_depth": "13.7 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.97941666666667,
+                    31.2872
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef DW - Dump Scow",
+                "countries_dive_avg_depth": "45.7 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -79.84005,
+                    31.35875
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef F - Landing Craft 1",
+                "countries_dive_avg_depth": "10.7 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.20805,
+                    31.098766666666666
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef F - Landing Craft 2",
+                "countries_dive_avg_depth": "10.7 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.20425,
+                    31.098983333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef G - Liberty Ship “Nettleton”",
+                "countries_dive_avg_depth": "16.8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.97603333333333,
+                    30.9784
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef G - M-60 Battle Tanks",
+                "countries_dive_avg_depth": "16.8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.97671666666666,
+                    30.98935
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef G - Tug “Mac Tide 21”",
+                "countries_dive_avg_depth": "16.8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.95255,
+                    30.987816666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef G - Tug “Recife”",
+                "countries_dive_avg_depth": "16.8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.96723333333334,
+                    30.97695
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef G - Tug “Tampa”",
+                "countries_dive_avg_depth": "16.8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.98125,
+                    30.974966666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef G - Work Boat “Striker”",
+                "countries_dive_avg_depth": "16.8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.98,
+                    30.969966666666668
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef J - Buoy Tender Sagebrush",
+                "countries_dive_avg_depth": "16.8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.79666666666667,
+                    31.61
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef J - Ferry Boat Janet",
+                "countries_dive_avg_depth": "16.8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.79291666666667,
+                    31.604966666666666
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef J - Liberty Ship Daniels",
+                "countries_dive_avg_depth": "16.8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.79583333333333,
+                    31.60345
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef J - M-60 Battle Tanks",
+                "countries_dive_avg_depth": "16.8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.80491666666667,
+                    31.6006
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef J - Tug Elmira",
+                "countries_dive_avg_depth": "16.8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.79455,
+                    31.601366666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef J - Tug Rio Apon",
+                "countries_dive_avg_depth": "16.8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.82273333333333,
+                    31.603
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef KC - Deck Barge",
+                "countries_dive_avg_depth": "12.2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.76691666666666,
+                    31.84625
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef KC - Dump Scow",
+                "countries_dive_avg_depth": "12.2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.77511666666666,
+                    31.8417
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef KC - Honey Barge",
+                "countries_dive_avg_depth": "12.2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.7715,
+                    31.849066666666666
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef KC - Motherlode Barge",
+                "countries_dive_avg_depth": "12.2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.77555,
+                    31.84498333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef KC - Olympics Barge",
+                "countries_dive_avg_depth": "12.2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.771,
+                    31.831733333333332
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef KC - Sailboat Jupiter",
+                "countries_dive_avg_depth": "12.2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.77238333333334,
+                    31.83685
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef KTK - Barge Modena",
+                "countries_dive_avg_depth": "10.7 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.0022,
+                    31.517683333333334
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef L - Dredge Henry Bacon",
+                "countries_dive_avg_depth": "16.8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.60905,
+                    31.756416666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef L - Latex Barge",
+                "countries_dive_avg_depth": "16.8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.61166666666666,
+                    31.756316666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef L - M-60 Battle Tanks",
+                "countries_dive_avg_depth": "16.8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.58833333333334,
+                    31.74105
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef L - Sayler Barge",
+                "countries_dive_avg_depth": "16.8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.60993333333333,
+                    31.753333333333334
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef L - Tug Delta Diamond",
+                "countries_dive_avg_depth": "16.8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.60675,
+                    31.749133333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef L - Tug Senasqua",
+                "countries_dive_avg_depth": "16.8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.61201666666666,
+                    31.7505
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef SFC - Landing Craft Optimist",
+                "countries_dive_avg_depth": "13.7 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.03846666666666,
+                    30.9988
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef SFC - Landing Craft Scalper",
+                "countries_dive_avg_depth": "13.7 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.0383,
+                    30.997700000000002
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef SFC - M-60 Battle Tanks",
+                "countries_dive_avg_depth": "13.7 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.03805,
+                    31.00805
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef WW - Hopper Barge",
+                "countries_dive_avg_depth": "36.6 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -79.97628333333333,
+                    31.71463333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Georgia",
+                "countries_dive_name": "Reef WW - Tug Semarca 40",
+                "countries_dive_avg_depth": "36.6 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -79.97135,
+                    31.707233333333335
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Hawaii",
+                "countries_dive_name": "Idaho - Alturas Lake",
+                "countries_dive_avg_depth": "5 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -114.85126666666666,
+                    43.92485
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Idaho",
+                "countries_dive_name": "Bob Rice Pond",
+                "countries_dive_avg_depth": "6.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -116.23103333333333,
+                    43.62606666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Idaho",
+                "countries_dive_name": "Jefferson County Lake",
+                "countries_dive_avg_depth": "4.6 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -111.90498333333333,
+                    43.70008333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Idaho",
+                "countries_dive_name": "Juniper Boat Dock",
+                "countries_dive_avg_depth": "9.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -111.7384,
+                    43.57941666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Illinois",
+                "countries_dive_name": "Haigh Quarry",
+                "countries_dive_avg_depth": "35 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -87.82436666666666,
+                    41.14105
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Illinois",
+                "countries_dive_name": "Mermet Springs",
+                "countries_dive_avg_depth": "20 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -88.85838333333334,
+                    37.28426666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Illinois",
+                "countries_dive_name": "Pearl Lake",
+                "countries_dive_avg_depth": "7.6 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -89.02585,
+                    42.4811
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Illinois",
+                "countries_dive_name": "St. Mary",
+                "countries_dive_avg_depth": "35.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -87.59878333333333,
+                    42.1914
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Illinois",
+                "countries_dive_name": "Straits of Mackinack",
+                "countries_dive_avg_depth": "19.8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -87.5148,
+                    42.0455
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Illinois",
+                "countries_dive_name": "Strode Lake",
+                "countries_dive_avg_depth": "12.2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.04986666666667,
+                    40.58541666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Illinois",
+                "countries_dive_name": "Wells Burt",
+                "countries_dive_avg_depth": "12.2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -87.61803333333333,
+                    42.0458
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Indiana",
+                "countries_dive_name": "France Park",
+                "countries_dive_avg_depth": ""
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -86.45701666666666,
+                    40.753816666666665
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Iowa",
+                "countries_dive_name": "Big Creek",
+                "countries_dive_avg_depth": "9.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.74186666666667,
+                    41.81431666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Kentucky",
+                "countries_dive_name": "Blue Springs",
+                "countries_dive_avg_depth": "20 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -87.46653333333333,
+                    36.8604
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Kentucky",
+                "countries_dive_name": "Cerulean Springs",
+                "countries_dive_avg_depth": ""
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -87.909,
+                    36.91065
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Kentucky",
+                "countries_dive_name": "Pennyroyal",
+                "countries_dive_avg_depth": "15 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -87.46613333333333,
+                    36.861266666666666
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Maine",
+                "countries_dive_name": "Beauchamp Point",
+                "countries_dive_avg_depth": "6.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.06693333333334,
+                    44.178983333333335
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Maine",
+                "countries_dive_name": "Cape Neddick Nubble",
+                "countries_dive_avg_depth": "16 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.59191666666666,
+                    43.16591666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Maine",
+                "countries_dive_name": "City Of Portland",
+                "countries_dive_avg_depth": "6.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.06323333333333,
+                    44.037866666666666
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Maine",
+                "countries_dive_name": "F.C. Pendleton",
+                "countries_dive_avg_depth": "12.2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -68.91123333333333,
+                    44.32691666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Maine",
+                "countries_dive_name": "Little Hunters Beach",
+                "countries_dive_avg_depth": "7.6 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -68.21153333333334,
+                    44.297866666666664
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Maine",
+                "countries_dive_name": "Sand Beach",
+                "countries_dive_avg_depth": "7.6 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -68.18241666666667,
+                    44.32836666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Maine",
+                "countries_dive_name": "The Graves",
+                "countries_dive_avg_depth": "7.6 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.05138333333333,
+                    44.1822
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Maine",
+                "countries_dive_name": "Wreck of the Irvington",
+                "countries_dive_avg_depth": "15.2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.04075,
+                    44.00941666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Maryland",
+                "countries_dive_name": "Fort Carroll",
+                "countries_dive_avg_depth": "15 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -76.51863333333333,
+                    39.215333333333334
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Maryland",
+                "countries_dive_name": "Hydes Quarry",
+                "countries_dive_avg_depth": "9.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -77.07153333333333,
+                    39.56538333333334
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Maryland",
+                "countries_dive_name": "Woodsboro Quarry (550)",
+                "countries_dive_avg_depth": "19.8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -77.29808333333334,
+                    39.529333333333334
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Massachusetts",
+                "countries_dive_name": "Andrea Doria",
+                "countries_dive_avg_depth": "53.3 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.86743333333334,
+                    40.49013333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Massachusetts",
+                "countries_dive_name": "Brant Rock",
+                "countries_dive_avg_depth": "7.9 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.64505,
+                    42.09295
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Massachusetts",
+                "countries_dive_name": "City of Rockland Wreck",
+                "countries_dive_avg_depth": "2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.79755,
+                    42.545766666666665
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Massachusetts",
+                "countries_dive_name": "Corporation Beach",
+                "countries_dive_avg_depth": "3 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.1885,
+                    41.75188333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Massachusetts",
+                "countries_dive_name": "Folly Cove",
+                "countries_dive_avg_depth": "9.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.64203333333333,
+                    42.684983333333335
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Massachusetts",
+                "countries_dive_name": "Garbage Beach",
+                "countries_dive_avg_depth": "10.7 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.67223333333334,
+                    41.525
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Massachusetts",
+                "countries_dive_name": "Hathaway's Pond",
+                "countries_dive_avg_depth": "12.2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.31236666666666,
+                    41.68438333333334
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Massachusetts",
+                "countries_dive_name": "Haviland Pond",
+                "countries_dive_avg_depth": "4.6 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.4774,
+                    42.172
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Massachusetts",
+                "countries_dive_name": "Magnolia Rocks",
+                "countries_dive_avg_depth": "10 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.7123,
+                    42.57183333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Massachusetts",
+                "countries_dive_name": "Mares Pond",
+                "countries_dive_avg_depth": "10.7 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.59758333333333,
+                    41.58878333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Massachusetts",
+                "countries_dive_name": "Niles Beach",
+                "countries_dive_avg_depth": "4.6 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.6547,
+                    42.59773333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Massachusetts",
+                "countries_dive_name": "Normans Woe",
+                "countries_dive_avg_depth": "12.2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.70166666666667,
+                    42.57683333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Massachusetts",
+                "countries_dive_name": "Old Garden Beach",
+                "countries_dive_avg_depth": "6.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.60756666666667,
+                    42.65828333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Massachusetts",
+                "countries_dive_name": "Russell Pond",
+                "countries_dive_avg_depth": "4.6 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.86091666666667,
+                    42.15695
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Massachusetts",
+                "countries_dive_name": "Sandwich Town Beach",
+                "countries_dive_avg_depth": "6.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.48498333333333,
+                    41.768633333333334
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Massachusetts",
+                "countries_dive_name": "The Crane",
+                "countries_dive_avg_depth": "43 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.58715,
+                    42.61425
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Massachusetts",
+                "countries_dive_name": "White Beach",
+                "countries_dive_avg_depth": "7.6 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.73611666666666,
+                    42.576816666666666
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Michigan",
+                "countries_dive_name": "America Wreck",
+                "countries_dive_avg_depth": "9.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -89.22065,
+                    47.89366666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Michigan",
+                "countries_dive_name": "Anita's Wreck",
+                "countries_dive_avg_depth": "5.8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.492,
+                    42.71548333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Michigan",
+                "countries_dive_name": "Bermuda Wreck",
+                "countries_dive_avg_depth": "7 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -86.64916666666667,
+                    46.4627
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Michigan",
+                "countries_dive_name": "Car Bodies",
+                "countries_dive_avg_depth": "5.5 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -85.38586666666667,
+                    44.905633333333334
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Michigan",
+                "countries_dive_name": "Depot beach",
+                "countries_dive_avg_depth": "5 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -85.24053333333333,
+                    45.31838333333334
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Michigan",
+                "countries_dive_name": "Eliza H. Strong",
+                "countries_dive_avg_depth": "8.5 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.50968333333333,
+                    43.26181666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Michigan",
+                "countries_dive_name": "Elmwood Wreck",
+                "countries_dive_avg_depth": "10 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -85.63525,
+                    44.787683333333334
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Michigan",
+                "countries_dive_name": "Higgins lake",
+                "countries_dive_avg_depth": "13.4 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -84.77515,
+                    44.502383333333334
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Michigan",
+                "countries_dive_name": "Ironsides Wreck",
+                "countries_dive_avg_depth": "35.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -86.3191,
+                    43.0483
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Michigan",
+                "countries_dive_name": "Lake Fenton",
+                "countries_dive_avg_depth": "10 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -83.71821666666666,
+                    42.84311666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Michigan",
+                "countries_dive_name": "Marquette Upper Harbor",
+                "countries_dive_avg_depth": "8.4 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -87.38778333333333,
+                    46.57861666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Michigan",
+                "countries_dive_name": "Mary Alice B",
+                "countries_dive_avg_depth": "27.4 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.43835,
+                    43.37181666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Michigan",
+                "countries_dive_name": "Myron Wreck",
+                "countries_dive_avg_depth": "12.2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -85.13855,
+                    46.7869
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Michigan",
+                "countries_dive_name": "Mystic wreck",
+                "countries_dive_avg_depth": "13.7 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -85.09185,
+                    46.788783333333335
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Michigan",
+                "countries_dive_name": "Sadie Thompson Wreck",
+                "countries_dive_avg_depth": "33.2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -85.00328333333333,
+                    46.70643333333334
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Michigan",
+                "countries_dive_name": "Smith Moore Wreck",
+                "countries_dive_avg_depth": "22.9 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -86.60796666666667,
+                    46.4627
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Michigan",
+                "countries_dive_name": "Spring Mill Pond",
+                "countries_dive_avg_depth": "10 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -83.72371666666666,
+                    42.489666666666665
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Michigan",
+                "countries_dive_name": "Straits of Mackinaw",
+                "countries_dive_avg_depth": "15 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -84.7315,
+                    45.78845
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Michigan",
+                "countries_dive_name": "Three Brothers",
+                "countries_dive_avg_depth": "6.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -86.09088333333334,
+                    45.00913333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Michigan",
+                "countries_dive_name": "Vienna",
+                "countries_dive_avg_depth": "36 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -84.97528333333334,
+                    46.746116666666666
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Minnesota",
+                "countries_dive_name": "Crosby Mine Pit",
+                "countries_dive_avg_depth": "3 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.96135,
+                    46.492016666666665
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Minnesota",
+                "countries_dive_name": "Louise Mine Pitt",
+                "countries_dive_avg_depth": "12.2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.99663333333334,
+                    46.490833333333335
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Minnesota",
+                "countries_dive_name": "Madiera",
+                "countries_dive_avg_depth": "10.7 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -91.35788333333333,
+                    47.2062
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Missouri",
+                "countries_dive_name": "Bonne Terre Mine",
+                "countries_dive_avg_depth": "15.2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.54863333333333,
+                    37.9251
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Missouri",
+                "countries_dive_name": "Captain John's Dive Park",
+                "countries_dive_avg_depth": "13.7 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -94.47405,
+                    37.19043333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Missouri",
+                "countries_dive_name": "Duck Island",
+                "countries_dive_avg_depth": "6.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.32051666666666,
+                    36.585433333333334
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Missouri",
+                "countries_dive_name": "Table Rock Lake",
+                "countries_dive_avg_depth": "30.5 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.31186666666666,
+                    36.59435
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Missouri",
+                "countries_dive_name": "The Dive Stop",
+                "countries_dive_avg_depth": "12.2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.87688333333334,
+                    38.732883333333334
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Montana",
+                "countries_dive_name": "Canyon Ferry Cemetery Island",
+                "countries_dive_avg_depth": "15.2 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -111.7072,
+                    46.633633333333336
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Montana",
+                "countries_dive_name": "Cliff Lake",
+                "countries_dive_avg_depth": "4.6 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -111.5574,
+                    44.7786
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Montana",
+                "countries_dive_name": "Kim's Marina",
+                "countries_dive_avg_depth": "9.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -111.7006,
+                    46.64953333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Montana",
+                "countries_dive_name": "Old Canyon Ferry Dam and power plant",
+                "countries_dive_avg_depth": "24.4 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -111.69838333333334,
+                    46.63543333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Nevada",
+                "countries_dive_name": "Lake Mead - Wreck Alley",
+                "countries_dive_avg_depth": "36.6 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -114.74301666666666,
+                    36.05745
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Nevada",
+                "countries_dive_name": "Sand Harbor",
+                "countries_dive_avg_depth": "9.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -119.93235,
+                    39.19886666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Nevada",
+                "countries_dive_name": "Sparks Marina",
+                "countries_dive_avg_depth": "18.3 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -119.73055,
+                    39.534
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "Nevada",
+                "countries_dive_name": "Zephyr Cove",
+                "countries_dive_avg_depth": "8 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -119.95165,
+                    39.007583333333336
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "New Hampshire",
+                "countries_dive_name": "Split Rock",
+                "countries_dive_avg_depth": "10 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.0601,
+                    43.360883333333334
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "New Hampshire",
+                "countries_dive_name": "The Plateau",
+                "countries_dive_avg_depth": "9 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.04975,
+                    43.34715
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "New Hampshire",
+                "countries_dive_name": "Three Old Boats",
+                "countries_dive_avg_depth": "6 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.07101666666667,
+                    43.37356666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "New Hampshire",
+                "countries_dive_name": "Weetamoo Wreck",
+                "countries_dive_avg_depth": "18.3 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.04195,
+                    43.33488333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "New Jersey",
+                "countries_dive_name": "Adventure Aquarium",
+                "countries_dive_avg_depth": "6.7 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.13138333333333,
+                    39.94495
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "New Jersey",
+                "countries_dive_name": "Great Isaac",
+                "countries_dive_avg_depth": "25.9 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.91623333333334,
+                    39.666783333333335
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "New Jersey",
+                "countries_dive_name": "U-869 Wreck",
+                "countries_dive_avg_depth": "65 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.0344,
+                    39.5637
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "New Jersey",
+                "countries_dive_name": "USS Algol",
+                "countries_dive_avg_depth": "33.5 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.85558333333333,
+                    40.19251666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "New Mexico",
+                "countries_dive_name": "Blue Hole",
+                "countries_dive_avg_depth": "15 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -104.67323333333333,
+                    34.94048333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "New Mexico",
+                "countries_dive_name": "Lea Lake",
+                "countries_dive_avg_depth": "18 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -104.33075,
+                    33.31796666666666
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "New York",
+                "countries_dive_name": "A.E. Vickery",
+                "countries_dive_avg_depth": ""
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -76.0187,
+                    44.28041666666667
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "New York",
+                "countries_dive_name": "American",
+                "countries_dive_avg_depth": "16.9 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.80878333333334,
+                    44.45353333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "New York",
+                "countries_dive_name": "Keystorm",
+                "countries_dive_avg_depth": "20 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.82255,
+                    44.42968333333334
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "New York",
+                "countries_dive_name": "Lake Minnewaska State Park",
+                "countries_dive_avg_depth": "10 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -74.2359,
+                    41.72773333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "New York",
+                "countries_dive_name": "Radeau",
+                "countries_dive_avg_depth": "32.6 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.69895,
+                    43.433033333333334
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "New York",
+                "countries_dive_name": "Rogers Rock",
+                "countries_dive_avg_depth": "18 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.48523333333333,
+                    43.750816666666665
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "New York",
+                "countries_dive_name": "Seneca Lake FLUPA buoy The Steps",
+                "countries_dive_avg_depth": "13.7 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -76.88648333333333,
+                    42.40428333333333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "countries_name": "New York",
+                "countries_dive_name": "Seneca Lake Watkins Glen Barges",
+                "countries_dive_avg_depth": "9.1 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -76.877,
+                    42.38708333333334
+                ]
+            }
+        }
+    ]
+}

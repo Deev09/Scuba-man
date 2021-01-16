@@ -1,8 +1,11 @@
+import os
+import re
 import arrow
 import requests
 import datetime
 import json
 import time
+import geojson
 from datetime import datetime
 from flask import session, Blueprint, request, render_template, redirect, flash, url_for, current_app, jsonify, render_template_string
 from redis import Redis
@@ -43,21 +46,90 @@ class Anonymous(AnonymousUserMixin):
 userRoute = Blueprint('userRoute', __name__)
 
 
+
+@userRoute.route('/getdata', methods=['GET','POST'])
+def get_javascript_data():
+    
+    if request.method == 'GET':
+        message = {'greeting':'Hello from Flask!'}
+        return jsonify(message)  # serialize and use JSON headers
+    # POST request
+    if request.method == 'POST':
+        names = request.get_json()
+        
+        # parse as JSON
+        return 'Sucesss', 200 ,names
+
+
+
+
+@userRoute.route('/map_update', methods=['GET','POST'])
+def map_update():
+    return 'meh'
+
 @userRoute.route("/task")
 def task():
     job = tasker()
     print('Job id: %s' % job.id)
+    print('reached here')
     return 'Job id: {}'.format(job.id)
+
+
 
 @userRoute.route("/fetch/<jobid>")
 def fetch_job(jobid):
     redis_conn = Redis()
     job = Job.fetch(jobid, connection=redis_conn)
-    print(len(job.result))
-    return 'job result printed'
+    print(job)
+    print('Status: %s' % job.get_status())
+    #print(job.result)
+    site=job.result
+    # jsonify(site)
+    site_list=json.dumps(site)
+    session['my_allapi'] = site
+    
+    return site_list
 
  
+@userRoute.route("/geojson", methods=['GET','POST'])
+def geojson_submit():
+    allapi=session.get('my_allapi',[{1:1},{2:2}])
+    # Opening JSON file 
+    f = open('/Users/assswain/Desktop/projects/Scuba-man/scuba_app/routes/user/sitee.json',) 
+    
+    # returns JSON object as  
+    # a dictionary 
+    data = json.load(f) 
+    
+    # Iterating through the json 
+    # list 
+   
+    
+    # Closing file 
+    f.close()
+    site=json.dumps(data)
+    
 
+    for i in range(3):
+        d1=data['features'][i]['properties']
+        d2=allapi[i]
+        d1['city']=d2['city']
+        d1['description']=d2['description']
+        d1['temperature']=d2['temperature']
+        d1['wind_speed']=d2['wind_speed']
+        # print(d2['city'], d2['description'], d2['temperature'], d2['wind_speed'])
+        # print(d1)
+    with open('/Users/assswain/Desktop/projects/Scuba-man/scuba_app/routes/user/sitee_update.json', 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
+    #added_weather=json.dumps(data['features'])
+    #session['added_geojson'] = added_weather
+
+    print(type(data))
+
+       
+
+    return redirect(url_for('userRoute.maps'))
+    
 
 
 
@@ -105,6 +177,7 @@ def login():
         flash('Login Unsuccessful. Please check email and password', 'danger')
     return render_template('login.html', title='Login', form=form)
 
+
 @userRoute.route('/signup', methods=['GET', 'POST'])
 def signup():
     form = RegisterForm()
@@ -125,11 +198,6 @@ def logout():
     login_manager.anonymous_user = Anonymous
     logout_user()
     return redirect(url_for('userRoute.maps'))
-
-# @userRoute.route("/dashboard")
-# @login_required
-# def dashboard():
-#     return render_template('api.html', name=current_user.username)
 
 
 
@@ -329,10 +397,17 @@ def maps():
     tide=session.get('tide',[{1:1},{2:2}])
     waves=session.get('waves',[{1:1},{2:2}])
     
-    
+    # Opening JSON file 
+    f = open('/Users/assswain/Desktop/projects/Scuba-man/scuba_app/routes/user/sitee_update.json',) 
+ 
+    data = json.load(f) 
+
+    f.close()
+    site=json.dumps(data)
+
     searcher1=(output)
     form = RegisterForm()
-
+    
 
 
 
@@ -347,7 +422,7 @@ def maps():
  
         #searcher= jsonify({ 'country' : output }) 
     return render_template('mapbox.html',mapbox_access_token=MAPBOX,tide='1.24',climate='27', coord=my_coord,
-     searcher=searcher1, weather_data=my_weather,sito=sito,coordinator=my_var,tidal=tide,waves=waves, form=form, name=current_user.username)
+     searcher=searcher1, weather_data=my_weather,sito=sito,coordinator=my_var,tidal=tide,waves=waves, form=form, name=current_user.username, addedapi=data)
 
     
     
