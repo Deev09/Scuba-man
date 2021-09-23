@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> My maps </title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	
+	<script>
+		var today = new Date();
+		
+		Date.prototype.addHours = function(h) {
+			this.setTime(this.getTime() - (h*60*60*1000));
+			return this;
+		}
+		var early = today.addHours(24);
+		var conv= early.getUTCHours();
+		console.log(conv);
+
+
+		
+
+		var preci_today= early;
+		var preci_date = preci_today.getUTCFullYear()+'-'+(preci_today.getUTCMonth()+1)+'-'+today.getUTCDate();
+
+		var preci_time = early.getUTCHours() + ":" + preci_today.getUTCMinutes();
+
+		var preci_dateTime = preci_date+'T'+preci_time;
+
+		// var preci_hour=today.getUTCHours().addHours(-3);
+		// var preci_time=preci_hour + ":" + today.getUTCMinutes();
+		// var preci_dateTime=date+'T'+preci_time;
+
+		var date = today.getUTCFullYear()+'-'+(today.getUTCMonth()+1)+'-'+today.getUTCDate();
+
+		var time = today.getUTCHours() + ":" + today.getUTCMinutes();
+
+		var dateTime = date+'T'+time;
+		console.log(dateTime)
+		console.log(preci_dateTime)
+	</script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
+	<style>
+		.open-button {
+			background-color: rgb(109, 97, 97);
+			color: rgb(255, 221, 180);
+			padding: 10px 5px;
+			border: none;
+			cursor: pointer;
+			opacity: 0.8;
+			position: fixed;
+			bottom: 400px;
+			right: 1140px;
+			width: 280px;
+			}
+
+			/* The popup form - hidden by default */
+			.form-popup {
+			display: none;
+			position: relative;
+			bottom: 20;
+			right: 15px;
+			border: 3px solid #ffb56100;
+			z-index: 9;
+			}
+
+			/* Add styles to the form container */
+			.form-container {
+			max-width: 300px;
+			padding: 10px;
+			background-color: rgb(250, 193, 156);
+			}
+
+			/* Full-width input fields */
+			.form-container input[type=text], .form-container input[type=password] {
+			width: 100%;
+			padding: 15px;
+			margin: 5px 0 22px 0;
+			border: none;
+			background: #f1f1f1;
+			}
+
+			/* When the inputs get focus, do something */
+			.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+			background-color: #ddd;
+			outline: none;
+			}
+
+			/* Set a style for the submit/login button */
+			.form-container .btn {
+			background-color: #4c9baf;
+			color: white;
+			padding: 16px 20px;
+			border: none;
+			cursor: pointer;
+			width: 100%;
+			margin-bottom:5px;
+			opacity: 0.8;
+			}
+
+			/* Add a red background color to the cancel button */
+			.form-container .cancel {
+			background-color: rgba(94, 9, 9, 0.89);
+			}
+
+			/* Add some hover effects to buttons */
+			.form-container .btn:hover, .open-button:hover {
+			opacity: 1;
+			}
+	/* //////////////////////////////////// */
+	#menu {
+		background:#fff;
+		position:absolute;
+		top:10px;right:10px;
+		z-index:1;
+		border-radius:3px;
+		width:120px;
+		border:1px solid rgba(0,0,0,0.4);
+		}
+	#menu a {
+		font-size:13px;
+		color:#404040;
+		display:block;
+		margin:0;padding:0;
+		padding:10px;
+		text-decoration:none;
+		border-bottom:1px solid rgba(0,0,0,0.25);
+		text-align:center;
+		} 
+
+    #menu a:last-child {
+      border:none;
+      border-radius:0 0 3px 3px;
+      }
+    #menu a:hover {
+      background:#f8f8f8;
+      color:#404040;
+      }
+    #menu a.active {
+      background:#3887BE;
+      color:#FFF;
+      }
+    #menu a.active:hover {
+        background:#3074a4;
+    	}
+
+		body {font-family: Arial, Helvetica, sans-serif;}
+		* {box-sizing: border-box;}
+
+		/* Full-width input fields */
+		input[type=text], input[type=password] {
+		width: 50%;
+		padding: 15px;
+		margin: 5px 0 22px 0;
+		display: inline-block;
+		border: none;
+		background: #f1f1f1;
+		}
+
+		/* Add a background color when the inputs get focus */
+		input[type=text]:focus, input[type=password]:focus {
+		background-color: #ddd;
+		outline: none;
+		}
+
+		
+
+		button:hover {
+		opacity:1;
+		}
+
+		/* Extra styles for the cancel button */
+		.cancelbtn {
+		padding: 14px 20px;
+		background-color: #e9766e;
+		}
+
+		/* Float cancel and signup buttons and add an equal width */
+		.cancelbtn, .signupbtn {
+		float: left;
+		width: 50%;
+		}
+
+		/* Add padding to container elements */
+		.container {
+		padding: 16px;
+		top: 5%;
+		}
+
+		/* The Modal (background) */
+		.modal {
+		display: none; /* Hidden by default */
+		position: fixed; /* Stay in place */
+		z-index: 1; /* Sit on top */
+		left: 0;
+		top: 0;
+		width: 100%; /* Full width */
+		height: 100%; /* Full height */
+		overflow: auto; /* Enable scroll if needed */
+		background-color: #474e5d;
+		padding-top: 50px;
+		}
+
+		/* Modal Content/Box */
+		.modal-content {
+		background-color: #fefefe;
+		margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+		border: 1px solid #888;
+		width: 80%; /* Could be more or less, depending on screen size */
+		}
+
+		/* Style the horizontal ruler */
+		hr {
+		border: 1px solid #f1f1f1;
+		margin-bottom: 25px;
+		}
+		
+		/* The Close Button (x) */
+		.close {
+		position: absolute;
+		right: 35px;
+		top: 15px;
+		font-size: 40px;
+		font-weight: bold;
+		color: #f1f1f1;
+		}
+
+		.close:hover,
+		.close:focus {
+		color: #f44336;
+		cursor: pointer;
+		}
+
+		/* Clear floats */
+		.clearfix::after {
+		content: "";
+		clear: both;
+		display: table;
+		}
+
+		/* Change styles for cancel button and signup button on extra small screens */
+		@media screen and (max-width: 300px) {
+		.cancelbtn, .signupbtn {
+			width: 100%;
+		}
+		}
+
+
+		/* ----------------------- ---------------------------------------------------- --------------------*/
+		
+		.button_country{
+			margin-top: -1%;
+			margin-left: 80%;
+			height: 30%;
+			width: 23%;
+			
+		}
+		.mapboxgl-popup {
+			max-width: 200px;
+			font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+			
+			}
+
+		.mapboxgl-popup-content {
+			text-align: center;
+			font-size:12px;
+			
+			color: rgb(19, 12, 85);
+			
+			}
+		
+		
+	
+			
+		.searcher{
+			background-color:rgba(216, 195, 181, 0.705);
+			position: absolute;
+			top: 0%;
+			right: 90px;
+			left: 5px;
+            width: 23%;
+            height: 50%;
+
+
+		}
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+		.tide{
+			background-color:rgba(216, 195, 181, 0.905);
+			position: absolute;
+			top: 40%;
+			right: 750px;
+			border-radius: 5px;
+			
+            width: 23%;
+            height: 50%;
+
+
+		}
+
+    
+      .weather {
+            background-color:rgba(241, 216, 183, 0.696);
+            position: absolute;
+            top: 50%;
+            right: 90px;
+			left: 5px;
+            width: 23%;
+            height: 100%;
+			
+        }
+	
+		.container {
+			max-width: 80%;
+			margin-top: -10%;
+			max-height: 40%;
+			margin-left: 24%;
+			margin-right: 50%;
+		}
+		
+		body {
+			width: 100wh;
+			height: 90vh;
+			color: rgb(46, 42, 51);
+			/*background: radial-gradient( #EE7752, #E73C7E, #23A6D5, #23D5AB);*/
+			background: linear-gradient(-30deg, #EE7752, #f6f1d3, #648880 ,#537792);
+			/*#293f50,*/
+			/* overflow: scroll; */
+			overflow: hidden;
+			background-size: 400% 400%;
+			-webkit-animation: Gradient 15s ease infinite;
+			-moz-animation: Gradient 15s ease infinite;
+			animation: Gradient 15s ease infinite;
+		}
+
+		@-webkit-keyframes Gradient {
+			0% {
+				background-position: 0% 20%
+			}
+			50% {
+				background-position: 100% 50%
+			}
+			100% {
+				background-position: 0% 50%
+			}
+		}
+
+		@-moz-keyframes Gradient {
+			0% {
+				background-position: 0% 50%
+			}
+			50% {
+				background-position: 100% 50%
+			}
+			100% {
+				background-position: 0% 50%
+			}
+		}
+
+		@keyframes Gradient {
+			0% {
+				background-position: 0% 20%
+			}
+			50% {
+				background-position: 100% 50%
+			}
+			100% {
+				background-position: 0% 20%
+			}
+		}
+
+
+	</style>
+	
+	<pre id="info"></pre>
+</head>
+
+<body>
+  
+	
+	
+	<div class="button_country">
+		<!-- this calls from the python file __init__.py where it ensures the user is authenticated and displays logout / store location functionality -->
+		{% if current_user.is_authenticated %}
+				<a class="nav-item nav-link" href="/logout" style="color: rgb(31, 29, 29);">Logout</a>
+				<a class="nav-item nav-link" href="/display_location" style="color: rgb(31, 29, 29);">Your locations</a>
+		{% else %}
+			<a class="nav-item nav-link" href="{{ url_for('userRoute.login') }}"style="color: rgb(31, 29, 29);">Login</a>
+            <a class="nav-item nav-link" href="{{ url_for('userRoute.signup') }}"style="color: rgb(31, 29, 29);">Register</a>
+        {% endif %}
+		
+
+		<form method="post" >
+			<label>Country state:</label>
+			<input id="countries_name" name="countries_name" type="text" />
+			<button type="submit" formaction="/coordinate" method="post">Submit</button>
+			
+		</form>
+	</div>
+	
+	
+	
+	
+	
+	<div class="container">
+   
+    <font face="verdana" size='7'> Scuba-man, {{ name }} </font> <br/><br/>
+    
+		
+		<div id='map' style='width: 95%; height:500px;'></div><br/><br/>
+
+  </div>
+  
+	<div class="weather">
+    
+      <button id="depth">Depth</button>
+      <button id="temperature">Temperature</button>
+     
+		<!-- it's site name -->
+		<h3>{{weather_data.city}}</h3>
+		<h5>temp: {{ weather_data.temperature }} C</h5>
+		
+		<h5>description: {{ weather_data.description }} </h5>
+		<h5>wind speed: {{ weather_data.wind_speed }}</h5>
+		<h5>water temperature: {{ waves.water_temperature }}</h5>	
+	</div>
+		
+    
+    
+	<div class="searcher" id="countries" >
+			<script>
+				var modal = document.getElementById('id01');
+
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function(event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+				}
+				}
+
+				var listing_site=[];
+				var listing_coord=[];
+
+			</script>
+				
+		{% for meh in searcher%}
+			<script>
+				function openForm() {
+				document.getElementById("myForm").style.display = "block";
+				}
+
+				function closeForm() {
+				document.getElementById("myForm").style.display = "none";
+				}
+
+
+					var searching=("{{ meh.site_name }}");
+					var latsearch=([{{ meh.longitude}} , {{ meh.latitude }}]);
+					
+					
+					new mapboxgl.Marker().setLngLat(latsearch)
+					listing_site.push(searching);
+					listing_coord.push(latsearch);
+					
+						
+					
+
+			</script>
+			
+			<li style="font-size:90%;text-align: center; color: coral;"><a href="/meh/{{meh.site_name}}" style="color: rgb(39, 39, 44)
+				;">{{meh.site_name}}  </a></li>
+			<button class="open-button" onclick="openForm()">Save location?</button>
+			<div class="form-popup" id="myForm">
+				<form action="/save" class="form-container">
+				<h1>Save</h1>
+			
+				<button type="submit" class="btn">Save dive-site?</button>
+				<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+				</form>
+			</div>
+    {% endfor %}
+    
+    
+
+		
+        
+		
+  </div>
+
+
+		<div class="tide">
+			<h4>Tidal pattern</h4>
+			<div>
+				
+				{% for err in tidal %}
+
+					<p>tide height : {{ err.height }} </p> 
+					<p>tide time:	{{ err.time }}</p> 
+					<p>tide type: {{err.type}}</p>
+
+				{% endfor %}
+				
+		
+
+		</div>
+
+		<nav id="menu"></nav>
+	
+  
+    
+
+	<script>
+
+	
+   
+   var geojson = {{ addedapi|tojson }};
+   
+
+
+      //usage:
+      
+		
+		function display_map(longitude=-119.500000, latitude=44.500000) {
+			mapboxgl.accessToken = "{{ mapbox_access_token }}"
+			var map = new mapboxgl.Map({
+			container: 'map',
+			
+			style:'mapbox://styles/nononame/ckjqa8quo5jfm19qsat7g9b0k',
+			// style: 'mapbox://styles/nononame/ckd1r7ujp0xon1imlduw7gm98',
+			
+			center: [longitude,latitude],
+					zoom: 2,
+					bearing: 0,
+					pitch:0
+							
+      });
+      
+      
+
+			map.on('load', function(){
+
+
+        var popup = new mapboxgl.Popup({
+				closeButton: false,
+				closeOnClick: false
+				});
+        
+
+
+				// these are the different layers where I added the layers to mpabox from an extension API which I call by the url
+				// the layers is then displayed in javascript
+			
+
+
+				map.addLayer({
+					"id": "preci",
+					"type": "raster",
+					"source": {
+						"type": "raster",
+						"tiles":["https://sat.owm.io/vane/2.0/weather/PA0/{z}/{x}/{y}?appid=9de243494c0b295cca9337e1e96b00e2&day="+preci_dateTime],
+						"tileSize": 256
+					},
+					"layout": {
+						visibility: "none"
+					},
+					"minzoom": 0,
+					"maxzoom": 22
+					
+				});
+				map.addLayer({
+					"id": "temp",
+					"type": "raster",
+					"source": {
+						"type": "raster",
+						"tiles":["https://sat.owm.io/vane/2.0/weather/TA2/{z}/{x}/{y}?appid=9de243494c0b295cca9337e1e96b00e2&day="+dateTime],
+						"tileSize": 256
+					},
+					"layout": {
+						visibility: "none"
+					},
+					"minzoom": 0,
+					"maxzoom": 22
+					
+				});
+				map.addLayer({
+					"id": "cloud",
+					"type": "raster",
+					"source": {
+						"type": "raster",
+						"tiles":["https://sat.owm.io/vane/2.0/weather/CL/{z}/{x}/{y}?appid=9de243494c0b295cca9337e1e96b00e2&day="+dateTime],
+						"tileSize": 256
+					},
+					"layout": {
+						visibility: "none"
+					},
+					"minzoom": 0,
+					"maxzoom": 22
+					
+				});
+				map.addLayer({
+					"id": "wind speed",
+					"type": "raster",
+					"source": {
+						"type": "raster",
+						"tiles":["https://sat.owm.io/vane/2.0/weather/WND/{z}/{x}/{y}?appid=9de243494c0b295cca9337e1e96b00e2&day="+dateTime],
+						"tileSize": 256
+					},
+					"layout": {
+						visibility: "none"
+					},
+					"minzoom": 0,
+					"maxzoom": 22
+					
+				});
+				map.addLayer({
+					"id": "cities",
+					"type": "raster",
+					"source": {
+						"type": "raster",
+						"tiles":["https://maps.owm.io/weather/cities/{z}/{x}/{y}.geojson?appid=9de243494c0b295cca9337e1e96b00e2&day"],
+						"tileSize": 256
+					},
+					"layout": {
+						visibility: "none"
+					},
+					"minzoom": 0,
+					"maxzoom": 22
+					
+				});
+				
+			});
+			var toggleableLayerIds = ['preci', 'temp', 'cloud','wind speed', 'cities'];
+				
+			// this makes the layers visible and invisible by cliking on the button
+      
+
+			for (var i = 0; i < toggleableLayerIds.length; i++) {
+				var id = toggleableLayerIds[i];
+				
+				var link = document.createElement('a');
+				link.href = '#';
+				link.className = 'active';
+				link.textContent = id;
+				
+				link.onclick = function (e) {
+				var clickedLayer = this.textContent;
+				e.preventDefault();
+				e.stopPropagation();
+				
+				var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
+				
+				// toggle layer visibility by changing the layout object's visibility property
+				if (visibility === 'visible') {
+				map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+				this.className = '';
+				} else {
+				this.className = 'active';
+				map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+				}
+				};
+				
+				var layers = document.getElementById('menu');
+				layers.appendChild(link);
+      }
+      
+     
+		
+    
+
+
+			
+
+      var deep = document.getElementById("depth");
+      var temp = document.getElementById("temperature");
+
+		// this is under the condition that the user clicks on button to show the marker
+      deep.onclick = function(){
+
+            geojson.features.forEach(function(marker) {
+            
+            // makes a marker for each feature and adds it to the map
+            if ((marker.properties.countries_dive_avg_depth)>10){
+              new mapboxgl.Marker({ color: 'aqua '})
+              .setLngLat(marker.geometry.coordinates)
+              .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+              .setHTML('<h5>' + marker.properties.countries_dive_name + '</h5><h6> Depth in m: </h6><h6>' + marker.properties.countries_dive_avg_depth + '</h6><h6> Temperature: </h6><h6>' + marker.properties.temperature + '</h6>'))
+              .addTo(map);
+            } else {
+            
+            new mapboxgl.Marker({ color: 'green'})
+            .setLngLat(marker.geometry.coordinates)
+            .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+              .setHTML('<h5>' + marker.properties.countries_dive_name + '</h5><h6> Depth in m: </h6><h6>' + marker.properties.countries_dive_avg_depth + '</h6><h6> Temperature: </h6><h6>' + marker.properties.temperature + '</h6>'))
+            .addTo(map);
+            }
+
+          });
+            
+          }
+  
+      temp.onclick = function(){
+
+        geojson.features.forEach(function(marker) {
+            
+            // makes a marker for each feature and adds it to the map
+            if ((marker.properties.temperature)<5){
+              new mapboxgl.Marker({ color: 'white '})
+              .setLngLat(marker.geometry.coordinates)
+              .setPopup(new mapboxgl.Popup({ offset: 25 }) // adding popups
+              .setHTML('<h5>' + marker.properties.countries_dive_name + '</h5><h6> Depth in m: </h6><h6>' + marker.properties.countries_dive_avg_depth + '</h6><h6> Temperature: </h6><h6>' + marker.properties.temperature + '</h6>'))
+              .addTo(map);
+            } else {
+            
+            new mapboxgl.Marker({ color: 'blue'})
+            .setLngLat(marker.geometry.coordinates)
+            .setPopup(new mapboxgl.Popup({ offset: 25 }) // adding popups
+              .setHTML('<h5>' + marker.properties.countries_dive_name + '</h5><h6> Depth in m: </h6><h6>' + marker.properties.countries_dive_avg_depth + '</h6><h6> Temperature: </h6><h6>' + marker.properties.temperature + '</h6>'))
+            .addTo(map);
+            }
+
+          });
+            
+          }
+
+      
+		
+	// highlights the nearby places in the map		
+            locations_dos.forEach(function(coords) {new mapboxgl.Marker().setLngLat(coords)
+            .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+            .setHTML('<h3>nearby</h3>'))
+            .addTo(map);
+			});
+
+    //  highlights the dive site searched in pink
+			
+			new mapboxgl.Marker({ color: 'hotpink' }).setLngLat(locations)
+            .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+            .setHTML('<h3>{{ sito }}</h3>'))
+			.addTo(map);
+
+
+
+			
+		};
+
+	  
+      
+		display_map();
+	
+  </script>
+  
+	 
+	
+
+</body>
+</html>	
