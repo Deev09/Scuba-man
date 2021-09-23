@@ -9,7 +9,7 @@
                 "countries_dive_avg_depth": "18.3 ",
                 "city": "Blue Water",
                 "description": "overcast clouds",
-                "temperature": 0.94,
+                "temperature": 1.11,
                 "wind_speed": 3.09
             },
             "geometry": {
@@ -47,7 +47,7 @@
                 "countries_dive_avg_depth": "13.7 ",
                 "city": "Madison Aquatic & Recreation Park",
                 "description": "overcast clouds",
-                "temperature": 2.32,
+                "temperature": 2.11,
                 "wind_speed": 6.17
             },
             "geometry": {
@@ -63,7 +63,11 @@
             "properties": {
                 "countries_name": "Alabama",
                 "countries_dive_name": "Poseidon's Playground",
-                "countries_dive_avg_depth": "12.2 "
+                "countries_dive_avg_depth": "12.2 ",
+                "city": "Poseidon's Playground",
+                "description": "clear sky",
+                "temperature": 7.39,
+                "wind_speed": 5.14
             },
             "geometry": {
                 "type": "Point",
@@ -78,7 +82,11 @@
             "properties": {
                 "countries_name": "Alabama",
                 "countries_dive_name": "The Whiskey wreck",
-                "countries_dive_avg_depth": "4.6 "
+                "countries_dive_avg_depth": "4.6 ",
+                "city": "The Whiskey wreck",
+                "description": "clear sky",
+                "temperature": 7.09,
+                "wind_speed": 5.14
             },
             "geometry": {
                 "type": "Point",
@@ -93,7 +101,11 @@
             "properties": {
                 "countries_name": "Alaska",
                 "countries_dive_name": "Birch lake",
-                "countries_dive_avg_depth": "9.1 "
+                "countries_dive_avg_depth": "9.1 ",
+                "city": "Birch lake",
+                "description": "clear sky",
+                "temperature": -15.85,
+                "wind_speed": 2.13
             },
             "geometry": {
                 "type": "Point",
@@ -108,7 +120,11 @@
             "properties": {
                 "countries_name": "Alaska",
                 "countries_dive_name": "Mountain Point",
-                "countries_dive_avg_depth": "4.6 "
+                "countries_dive_avg_depth": "4.6 ",
+                "city": "Mountain Point",
+                "description": "moderate rain",
+                "temperature": 4.88,
+                "wind_speed": 2.47
             },
             "geometry": {
                 "type": "Point",
@@ -123,7 +139,11 @@
             "properties": {
                 "countries_name": "Alaska",
                 "countries_dive_name": "Whittier Cessna",
-                "countries_dive_avg_depth": "9.1 "
+                "countries_dive_avg_depth": "9.1 ",
+                "city": "Whittier Cessna",
+                "description": "snow",
+                "temperature": 1.11,
+                "wind_speed": 1.34
             },
             "geometry": {
                 "type": "Point",
@@ -138,7 +158,11 @@
             "properties": {
                 "countries_name": "Arizona",
                 "countries_dive_name": "Acacia picnic site",
-                "countries_dive_avg_depth": "6.1 "
+                "countries_dive_avg_depth": "6.1 ",
+                "city": "Acacia picnic site",
+                "description": "clear sky",
+                "temperature": 10.54,
+                "wind_speed": 2.75
             },
             "geometry": {
                 "type": "Point",
@@ -153,7 +177,11 @@
             "properties": {
                 "countries_name": "Arizona",
                 "countries_dive_name": "Cabinsite",
-                "countries_dive_avg_depth": "13.7 "
+                "countries_dive_avg_depth": "13.7 ",
+                "city": "Cabinsite",
+                "description": "clear sky",
+                "temperature": 17,
+                "wind_speed": 4.12
             },
             "geometry": {
                 "type": "Point",
@@ -168,7 +196,11 @@
             "properties": {
                 "countries_name": "Arizona",
                 "countries_dive_name": "Lake Mead - Black Canyon",
-                "countries_dive_avg_depth": "4.6 "
+                "countries_dive_avg_depth": "4.6 ",
+                "city": "Lake Mead - Black Canyon",
+                "description": "clear sky",
+                "temperature": 9.43,
+                "wind_speed": 3.09
             },
             "geometry": {
                 "type": "Point",
@@ -183,7 +215,11 @@
             "properties": {
                 "countries_name": "Arkansas",
                 "countries_dive_name": "Beaver Lake - Dam Site Bluffs",
-                "countries_dive_avg_depth": "9.1 "
+                "countries_dive_avg_depth": "9.1 ",
+                "city": "Beaver Lake - Dam Site Bluffs",
+                "description": "overcast clouds",
+                "temperature": -0.73,
+                "wind_speed": 0.89
             },
             "geometry": {
                 "type": "Point",
@@ -198,7 +234,11 @@
             "properties": {
                 "countries_name": "Arkansas",
                 "countries_dive_name": "Bull Shoals Lake",
-                "countries_dive_avg_depth": "12.2 "
+                "countries_dive_avg_depth": "12.2 ",
+                "city": "Bull Shoals Lake",
+                "description": "overcast clouds",
+                "temperature": 0.77,
+                "wind_speed": 6.17
             },
             "geometry": {
                 "type": "Point",
@@ -213,7 +253,11 @@
             "properties": {
                 "countries_name": "California",
                 "countries_dive_name": "Folsom Lake",
-                "countries_dive_avg_depth": "3 "
+                "countries_dive_avg_depth": "3 ",
+                "city": "Folsom Lake",
+                "description": "broken clouds",
+                "temperature": 10.24,
+                "wind_speed": 0.93
             },
             "geometry": {
                 "type": "Point",
@@ -228,7 +272,11 @@
             "properties": {
                 "countries_name": "California",
                 "countries_dive_name": "June Lake",
-                "countries_dive_avg_depth": "10 "
+                "countries_dive_avg_depth": "10 ",
+                "city": "Aurora Resevior",
+                "description": "broken clouds",
+                "temperature": 1.29,
+                "wind_speed": 2.2
             },
             "geometry": {
                 "type": "Point",
@@ -243,7 +291,11 @@
             "properties": {
                 "countries_name": "California",
                 "countries_dive_name": "Mission Bay Jetty North",
-                "countries_dive_avg_depth": "7.6 "
+                "countries_dive_avg_depth": "7.6 ",
+                "city": "Downtown Aquarium",
+                "description": "overcast clouds",
+                "temperature": 0.09,
+                "wind_speed": 0.89
             },
             "geometry": {
                 "type": "Point",
@@ -258,7 +310,11 @@
             "properties": {
                 "countries_name": "California",
                 "countries_dive_name": "Mission Bay Jetty South",
-                "countries_dive_avg_depth": "7.6 "
+                "countries_dive_avg_depth": "7.6 ",
+                "city": "Horsetooth Reservoir",
+                "description": "clear sky",
+                "temperature": 0.02,
+                "wind_speed": 2.79
             },
             "geometry": {
                 "type": "Point",
@@ -273,7 +329,11 @@
             "properties": {
                 "countries_name": "Colorado",
                 "countries_dive_name": "Aurora Resevior",
-                "countries_dive_avg_depth": "9.1 "
+                "countries_dive_avg_depth": "9.1 ",
+                "city": "King Fisher Ponds",
+                "description": "broken clouds",
+                "temperature": -0.76,
+                "wind_speed": 3.13
             },
             "geometry": {
                 "type": "Point",
@@ -288,7 +348,11 @@
             "properties": {
                 "countries_name": "Colorado",
                 "countries_dive_name": "Downtown Aquarium",
-                "countries_dive_avg_depth": "6.9 "
+                "countries_dive_avg_depth": "6.9 ",
+                "city": "Pacific Tarn lake",
+                "description": "light snow",
+                "temperature": -5.82,
+                "wind_speed": 2.57
             },
             "geometry": {
                 "type": "Point",
@@ -303,7 +367,11 @@
             "properties": {
                 "countries_name": "Colorado",
                 "countries_dive_name": "Horsetooth Reservoir",
-                "countries_dive_avg_depth": "6.1 "
+                "countries_dive_avg_depth": "6.1 ",
+                "city": "Brownstone Exploration and Discovery Park",
+                "description": "heavy intensity rain",
+                "temperature": 2.84,
+                "wind_speed": 2.06
             },
             "geometry": {
                 "type": "Point",
@@ -318,7 +386,11 @@
             "properties": {
                 "countries_name": "Colorado",
                 "countries_dive_name": "King Fisher Ponds",
-                "countries_dive_avg_depth": "8 "
+                "countries_dive_avg_depth": "8 ",
+                "city": "New London Ledge Lighthouse",
+                "description": "heavy intensity rain",
+                "temperature": 8.73,
+                "wind_speed": 12.35
             },
             "geometry": {
                 "type": "Point",
@@ -333,7 +405,11 @@
             "properties": {
                 "countries_name": "Colorado",
                 "countries_dive_name": "Pacific Tarn lake",
-                "countries_dive_avg_depth": "7 "
+                "countries_dive_avg_depth": "7 ",
+                "city": "Boynton Comb Reef",
+                "description": "clear sky",
+                "temperature": 14.55,
+                "wind_speed": 2.06
             },
             "geometry": {
                 "type": "Point",
@@ -348,7 +424,11 @@
             "properties": {
                 "countries_name": "Connecticut",
                 "countries_dive_name": "Brownstone Exploration and Discovery Park",
-                "countries_dive_avg_depth": "10.7 "
+                "countries_dive_avg_depth": "10.7 ",
+                "city": "Briney Breezes",
+                "description": "clear sky",
+                "temperature": 14.5,
+                "wind_speed": 2.06
             },
             "geometry": {
                 "type": "Point",
@@ -363,7 +443,11 @@
             "properties": {
                 "countries_name": "Connecticut",
                 "countries_dive_name": "New London Ledge Lighthouse",
-                "countries_dive_avg_depth": "6.1 "
+                "countries_dive_avg_depth": "6.1 ",
+                "city": "Castor Wreck",
+                "description": "clear sky",
+                "temperature": 14.57,
+                "wind_speed": 2.06
             },
             "geometry": {
                 "type": "Point",
@@ -378,7 +462,11 @@
             "properties": {
                 "countries_name": "Florida",
                 "countries_dive_name": "Boynton Comb Reef",
-                "countries_dive_avg_depth": "15.8 "
+                "countries_dive_avg_depth": "15.8 ",
+                "city": "Tumble Rock",
+                "description": "clear sky",
+                "temperature": 14.5,
+                "wind_speed": 2.06
             },
             "geometry": {
                 "type": "Point",
@@ -393,7 +481,11 @@
             "properties": {
                 "countries_name": "Florida",
                 "countries_dive_name": "Briney Breezes",
-                "countries_dive_avg_depth": "16.8 "
+                "countries_dive_avg_depth": "16.8 ",
+                "city": "Crew Boat Mary Lou",
+                "description": "clear sky",
+                "temperature": 3.77,
+                "wind_speed": 3.09
             },
             "geometry": {
                 "type": "Point",
@@ -408,7 +500,11 @@
             "properties": {
                 "countries_name": "Florida",
                 "countries_dive_name": "Castor Wreck",
-                "countries_dive_avg_depth": "21.3 "
+                "countries_dive_avg_depth": "21.3 ",
+                "city": "Reef C - Esparta Wreck",
+                "description": "clear sky",
+                "temperature": 4.74,
+                "wind_speed": 4.12
             },
             "geometry": {
                 "type": "Point",
@@ -423,7 +519,11 @@
             "properties": {
                 "countries_name": "Florida",
                 "countries_dive_name": "Tumble Rock",
-                "countries_dive_avg_depth": "15.8 "
+                "countries_dive_avg_depth": "15.8 ",
+                "city": "Reef C - M-60 Battle Tanks",
+                "description": "clear sky",
+                "temperature": 4.74,
+                "wind_speed": 4.12
             },
             "geometry": {
                 "type": "Point",
@@ -438,7 +538,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Crew Boat Mary Lou",
-                "countries_dive_avg_depth": "9.1 "
+                "countries_dive_avg_depth": "9.1 ",
+                "city": "Reef CCA - Deck Barge",
+                "description": "clear sky",
+                "temperature": 3.1,
+                "wind_speed": 10.66
             },
             "geometry": {
                 "type": "Point",
@@ -453,7 +557,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef C - Esparta Wreck",
-                "countries_dive_avg_depth": "13.7 "
+                "countries_dive_avg_depth": "13.7 ",
+                "city": "Reef CCA - SMS Warehouse Barge",
+                "description": "clear sky",
+                "temperature": 3.1,
+                "wind_speed": 10.7
             },
             "geometry": {
                 "type": "Point",
@@ -468,7 +576,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef C - M-60 Battle Tanks",
-                "countries_dive_avg_depth": "13.7 "
+                "countries_dive_avg_depth": "13.7 ",
+                "city": "Reef CCA - Tug Matt Turecamo",
+                "description": "clear sky",
+                "temperature": 3.1,
+                "wind_speed": 10.7
             },
             "geometry": {
                 "type": "Point",
@@ -483,7 +595,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef CCA - Deck Barge",
-                "countries_dive_avg_depth": "15.2 "
+                "countries_dive_avg_depth": "15.2 ",
+                "city": "Reef DRH - RV “Zapala”",
+                "description": "clear sky",
+                "temperature": 3.79,
+                "wind_speed": 2.57
             },
             "geometry": {
                 "type": "Point",
@@ -498,7 +614,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef CCA - Deck Barge 2",
-                "countries_dive_avg_depth": "15.2 "
+                "countries_dive_avg_depth": "15.2 ",
+                "city": "Reef DRH - Tug “Rio Caroni”",
+                "description": "clear sky",
+                "temperature": 3.8,
+                "wind_speed": 2.57
             },
             "geometry": {
                 "type": "Point",
@@ -513,7 +633,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef CCA - SMS Warehouse Barge",
-                "countries_dive_avg_depth": "15.2 "
+                "countries_dive_avg_depth": "15.2 ",
+                "city": "Reef DRH - “John Bird” Wreck",
+                "description": "clear sky",
+                "temperature": 3.79,
+                "wind_speed": 2.57
             },
             "geometry": {
                 "type": "Point",
@@ -528,7 +652,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef CCA - Tug Matt Turecamo",
-                "countries_dive_avg_depth": "15.2 "
+                "countries_dive_avg_depth": "15.2 ",
+                "city": "Reef DW - Dump Scow",
+                "description": "clear sky",
+                "temperature": 12.7,
+                "wind_speed": 10.61
             },
             "geometry": {
                 "type": "Point",
@@ -543,7 +671,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef DRH - RV “Zapala”",
-                "countries_dive_avg_depth": "13.7 "
+                "countries_dive_avg_depth": "13.7 ",
+                "city": "Reef F - Landing Craft 1",
+                "description": "clear sky",
+                "temperature": 3.81,
+                "wind_speed": 2.57
             },
             "geometry": {
                 "type": "Point",
@@ -558,7 +690,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef DRH - Tug “Rio Caroni”",
-                "countries_dive_avg_depth": "13.7 "
+                "countries_dive_avg_depth": "13.7 ",
+                "city": "Reef F - Landing Craft 2",
+                "description": "clear sky",
+                "temperature": 3.81,
+                "wind_speed": 2.57
             },
             "geometry": {
                 "type": "Point",
@@ -573,7 +709,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef DRH - “John Bird” Wreck",
-                "countries_dive_avg_depth": "13.7 "
+                "countries_dive_avg_depth": "13.7 ",
+                "city": "Reef G - Liberty Ship “Nettleton”",
+                "description": "clear sky",
+                "temperature": 3.92,
+                "wind_speed": 2.57
             },
             "geometry": {
                 "type": "Point",
@@ -588,7 +728,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef DW - Dump Scow",
-                "countries_dive_avg_depth": "45.7 "
+                "countries_dive_avg_depth": "45.7 ",
+                "city": "Reef G - M-60 Battle Tanks",
+                "description": "clear sky",
+                "temperature": 3.9,
+                "wind_speed": 2.57
             },
             "geometry": {
                 "type": "Point",
@@ -603,7 +747,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef F - Landing Craft 1",
-                "countries_dive_avg_depth": "10.7 "
+                "countries_dive_avg_depth": "10.7 ",
+                "city": "Reef G - Tug “Mac Tide 21”",
+                "description": "clear sky",
+                "temperature": 3.93,
+                "wind_speed": 2.57
             },
             "geometry": {
                 "type": "Point",
@@ -618,7 +766,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef F - Landing Craft 2",
-                "countries_dive_avg_depth": "10.7 "
+                "countries_dive_avg_depth": "10.7 ",
+                "city": "Reef G - Tug “Recife”",
+                "description": "clear sky",
+                "temperature": 3.92,
+                "wind_speed": 2.57
             },
             "geometry": {
                 "type": "Point",
@@ -633,7 +785,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef G - Liberty Ship “Nettleton”",
-                "countries_dive_avg_depth": "16.8 "
+                "countries_dive_avg_depth": "16.8 ",
+                "city": "Reef G - Tug “Tampa”",
+                "description": "clear sky",
+                "temperature": 3.92,
+                "wind_speed": 2.57
             },
             "geometry": {
                 "type": "Point",
@@ -648,7 +804,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef G - M-60 Battle Tanks",
-                "countries_dive_avg_depth": "16.8 "
+                "countries_dive_avg_depth": "16.8 ",
+                "city": "Reef G - Work Boat “Striker”",
+                "description": "clear sky",
+                "temperature": 3.92,
+                "wind_speed": 2.57
             },
             "geometry": {
                 "type": "Point",
@@ -663,7 +823,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef G - Tug “Mac Tide 21”",
-                "countries_dive_avg_depth": "16.8 "
+                "countries_dive_avg_depth": "16.8 ",
+                "city": "Reef J - Buoy Tender Sagebrush",
+                "description": "clear sky",
+                "temperature": 2.72,
+                "wind_speed": 3.6
             },
             "geometry": {
                 "type": "Point",
@@ -678,7 +842,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef G - Tug “Recife”",
-                "countries_dive_avg_depth": "16.8 "
+                "countries_dive_avg_depth": "16.8 ",
+                "city": "Reef J - Ferry Boat Janet",
+                "description": "clear sky",
+                "temperature": 2.72,
+                "wind_speed": 3.6
             },
             "geometry": {
                 "type": "Point",
@@ -693,7 +861,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef G - Tug “Tampa”",
-                "countries_dive_avg_depth": "16.8 "
+                "countries_dive_avg_depth": "16.8 ",
+                "city": "Reef J - Liberty Ship Daniels",
+                "description": "clear sky",
+                "temperature": 2.72,
+                "wind_speed": 3.6
             },
             "geometry": {
                 "type": "Point",
@@ -708,7 +880,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef G - Work Boat “Striker”",
-                "countries_dive_avg_depth": "16.8 "
+                "countries_dive_avg_depth": "16.8 ",
+                "city": "Reef J - M-60 Battle Tanks",
+                "description": "clear sky",
+                "temperature": 2.7,
+                "wind_speed": 3.6
             },
             "geometry": {
                 "type": "Point",
@@ -723,7 +899,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef J - Buoy Tender Sagebrush",
-                "countries_dive_avg_depth": "16.8 "
+                "countries_dive_avg_depth": "16.8 ",
+                "city": "Reef J - Tug Elmira",
+                "description": "clear sky",
+                "temperature": 2.72,
+                "wind_speed": 3.6
             },
             "geometry": {
                 "type": "Point",
@@ -738,7 +918,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef J - Ferry Boat Janet",
-                "countries_dive_avg_depth": "16.8 "
+                "countries_dive_avg_depth": "16.8 ",
+                "city": "Reef J - Tug Rio Apon",
+                "description": "clear sky",
+                "temperature": 2.69,
+                "wind_speed": 3.6
             },
             "geometry": {
                 "type": "Point",
@@ -753,7 +937,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef J - Liberty Ship Daniels",
-                "countries_dive_avg_depth": "16.8 "
+                "countries_dive_avg_depth": "16.8 ",
+                "city": "Reef KC - Deck Barge",
+                "description": "clear sky",
+                "temperature": 3.1,
+                "wind_speed": 9.08
             },
             "geometry": {
                 "type": "Point",
@@ -768,7 +956,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef J - M-60 Battle Tanks",
-                "countries_dive_avg_depth": "16.8 "
+                "countries_dive_avg_depth": "16.8 ",
+                "city": "Reef KC - Dump Scow",
+                "description": "clear sky",
+                "temperature": 3.1,
+                "wind_speed": 9.08
             },
             "geometry": {
                 "type": "Point",
@@ -783,7 +975,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef J - Tug Elmira",
-                "countries_dive_avg_depth": "16.8 "
+                "countries_dive_avg_depth": "16.8 ",
+                "city": "Reef KC - Honey Barge",
+                "description": "clear sky",
+                "temperature": 3.1,
+                "wind_speed": 9.08
             },
             "geometry": {
                 "type": "Point",
@@ -798,7 +994,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef J - Tug Rio Apon",
-                "countries_dive_avg_depth": "16.8 "
+                "countries_dive_avg_depth": "16.8 ",
+                "city": "Reef KC - Motherlode Barge",
+                "description": "clear sky",
+                "temperature": 3.1,
+                "wind_speed": 9.08
             },
             "geometry": {
                 "type": "Point",
@@ -813,7 +1013,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef KC - Deck Barge",
-                "countries_dive_avg_depth": "12.2 "
+                "countries_dive_avg_depth": "12.2 ",
+                "city": "Reef KC - Olympics Barge",
+                "description": "clear sky",
+                "temperature": 3.09,
+                "wind_speed": 9.22
             },
             "geometry": {
                 "type": "Point",
@@ -828,7 +1032,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef KC - Dump Scow",
-                "countries_dive_avg_depth": "12.2 "
+                "countries_dive_avg_depth": "12.2 ",
+                "city": "Reef KC - Sailboat Jupiter",
+                "description": "clear sky",
+                "temperature": 3.1,
+                "wind_speed": 9.08
             },
             "geometry": {
                 "type": "Point",
@@ -843,7 +1051,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef KC - Honey Barge",
-                "countries_dive_avg_depth": "12.2 "
+                "countries_dive_avg_depth": "12.2 ",
+                "city": "Reef KTK - Barge Modena",
+                "description": "clear sky",
+                "temperature": 3.09,
+                "wind_speed": 3.09
             },
             "geometry": {
                 "type": "Point",
@@ -858,7 +1070,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef KC - Motherlode Barge",
-                "countries_dive_avg_depth": "12.2 "
+                "countries_dive_avg_depth": "12.2 ",
+                "city": "Reef L - Dredge Henry Bacon",
+                "description": "clear sky",
+                "temperature": 4.24,
+                "wind_speed": 10.88
             },
             "geometry": {
                 "type": "Point",
@@ -873,7 +1089,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef KC - Olympics Barge",
-                "countries_dive_avg_depth": "12.2 "
+                "countries_dive_avg_depth": "12.2 ",
+                "city": "Reef L - Latex Barge",
+                "description": "clear sky",
+                "temperature": 4.24,
+                "wind_speed": 10.88
             },
             "geometry": {
                 "type": "Point",
@@ -888,7 +1108,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef KC - Sailboat Jupiter",
-                "countries_dive_avg_depth": "12.2 "
+                "countries_dive_avg_depth": "12.2 ",
+                "city": "Reef L - M-60 Battle Tanks",
+                "description": "clear sky",
+                "temperature": 4.24,
+                "wind_speed": 10.38
             },
             "geometry": {
                 "type": "Point",
@@ -903,7 +1127,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef KTK - Barge Modena",
-                "countries_dive_avg_depth": "10.7 "
+                "countries_dive_avg_depth": "10.7 ",
+                "city": "Reef L - Sayler Barge",
+                "description": "clear sky",
+                "temperature": 4.24,
+                "wind_speed": 10.88
             },
             "geometry": {
                 "type": "Point",
@@ -918,7 +1146,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef L - Dredge Henry Bacon",
-                "countries_dive_avg_depth": "16.8 "
+                "countries_dive_avg_depth": "16.8 ",
+                "city": "Reef L - Tug Delta Diamond",
+                "description": "clear sky",
+                "temperature": 3.14,
+                "wind_speed": 10.88
             },
             "geometry": {
                 "type": "Point",
@@ -933,7 +1165,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef L - Latex Barge",
-                "countries_dive_avg_depth": "16.8 "
+                "countries_dive_avg_depth": "16.8 ",
+                "city": "Reef L - Tug Senasqua",
+                "description": "clear sky",
+                "temperature": 4.24,
+                "wind_speed": 10.88
             },
             "geometry": {
                 "type": "Point",
@@ -948,7 +1184,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef L - M-60 Battle Tanks",
-                "countries_dive_avg_depth": "16.8 "
+                "countries_dive_avg_depth": "16.8 ",
+                "city": "Reef SFC - Landing Craft Optimist",
+                "description": "clear sky",
+                "temperature": 3.82,
+                "wind_speed": 2.57
             },
             "geometry": {
                 "type": "Point",
@@ -963,7 +1203,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef L - Sayler Barge",
-                "countries_dive_avg_depth": "16.8 "
+                "countries_dive_avg_depth": "16.8 ",
+                "city": "Reef SFC - Landing Craft Scalper",
+                "description": "clear sky",
+                "temperature": 3.82,
+                "wind_speed": 2.57
             },
             "geometry": {
                 "type": "Point",
@@ -978,7 +1222,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef L - Tug Delta Diamond",
-                "countries_dive_avg_depth": "16.8 "
+                "countries_dive_avg_depth": "16.8 ",
+                "city": "Reef SFC - M-60 Battle Tanks",
+                "description": "clear sky",
+                "temperature": 3.81,
+                "wind_speed": 2.57
             },
             "geometry": {
                 "type": "Point",
@@ -993,7 +1241,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef L - Tug Senasqua",
-                "countries_dive_avg_depth": "16.8 "
+                "countries_dive_avg_depth": "16.8 ",
+                "city": "Reef WW - Hopper Barge",
+                "description": "clear sky",
+                "temperature": 11.7,
+                "wind_speed": 10.89
             },
             "geometry": {
                 "type": "Point",
@@ -1008,7 +1260,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef SFC - Landing Craft Optimist",
-                "countries_dive_avg_depth": "13.7 "
+                "countries_dive_avg_depth": "13.7 ",
+                "city": "Reef WW - Tug Semarca 40",
+                "description": "clear sky",
+                "temperature": 11.7,
+                "wind_speed": 10.89
             },
             "geometry": {
                 "type": "Point",
@@ -1023,7 +1279,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef SFC - Landing Craft Scalper",
-                "countries_dive_avg_depth": "13.7 "
+                "countries_dive_avg_depth": "13.7 ",
+                "city": "Idaho - Alturas Lake",
+                "description": "scattered clouds",
+                "temperature": -8.49,
+                "wind_speed": 1.54
             },
             "geometry": {
                 "type": "Point",
@@ -1038,7 +1298,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef SFC - M-60 Battle Tanks",
-                "countries_dive_avg_depth": "13.7 "
+                "countries_dive_avg_depth": "13.7 ",
+                "city": "Bob Rice Pond",
+                "description": "fog",
+                "temperature": -2.26,
+                "wind_speed": 1.12
             },
             "geometry": {
                 "type": "Point",
@@ -1053,7 +1317,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef WW - Hopper Barge",
-                "countries_dive_avg_depth": "36.6 "
+                "countries_dive_avg_depth": "36.6 ",
+                "city": "Jefferson County Lake",
+                "description": "overcast clouds",
+                "temperature": -6.54,
+                "wind_speed": 2.06
             },
             "geometry": {
                 "type": "Point",
@@ -1068,7 +1336,11 @@
             "properties": {
                 "countries_name": "Georgia",
                 "countries_dive_name": "Reef WW - Tug Semarca 40",
-                "countries_dive_avg_depth": "36.6 "
+                "countries_dive_avg_depth": "36.6 ",
+                "city": "Juniper Boat Dock",
+                "description": "overcast clouds",
+                "temperature": -6.52,
+                "wind_speed": 2.06
             },
             "geometry": {
                 "type": "Point",
@@ -1083,7 +1355,11 @@
             "properties": {
                 "countries_name": "Hawaii",
                 "countries_dive_name": "Idaho - Alturas Lake",
-                "countries_dive_avg_depth": "5 "
+                "countries_dive_avg_depth": "5 ",
+                "city": "Haigh Quarry",
+                "description": "snow",
+                "temperature": -1.41,
+                "wind_speed": 2.57
             },
             "geometry": {
                 "type": "Point",
@@ -1098,7 +1374,11 @@
             "properties": {
                 "countries_name": "Idaho",
                 "countries_dive_name": "Bob Rice Pond",
-                "countries_dive_avg_depth": "6.1 "
+                "countries_dive_avg_depth": "6.1 ",
+                "city": "Mermet Springs",
+                "description": "overcast clouds",
+                "temperature": 1.04,
+                "wind_speed": 4.12
             },
             "geometry": {
                 "type": "Point",
@@ -1113,7 +1393,11 @@
             "properties": {
                 "countries_name": "Idaho",
                 "countries_dive_name": "Jefferson County Lake",
-                "countries_dive_avg_depth": "4.6 "
+                "countries_dive_avg_depth": "4.6 ",
+                "city": "Pearl Lake",
+                "description": "light snow",
+                "temperature": 0.53,
+                "wind_speed": 5.66
             },
             "geometry": {
                 "type": "Point",
@@ -1128,7 +1412,11 @@
             "properties": {
                 "countries_name": "Idaho",
                 "countries_dive_name": "Juniper Boat Dock",
-                "countries_dive_avg_depth": "9.1 "
+                "countries_dive_avg_depth": "9.1 ",
+                "city": "St. Mary",
+                "description": "light snow",
+                "temperature": -0.37,
+                "wind_speed": 1.79
             },
             "geometry": {
                 "type": "Point",
@@ -1143,7 +1431,11 @@
             "properties": {
                 "countries_name": "Illinois",
                 "countries_dive_name": "Haigh Quarry",
-                "countries_dive_avg_depth": "35 "
+                "countries_dive_avg_depth": "35 ",
+                "city": "Reef CCA - Deck Barge 2",
+                "description": "clear sky",
+                "temperature": 3.1,
+                "wind_speed": 10.18
             },
             "geometry": {
                 "type": "Point",
@@ -1158,7 +1450,11 @@
             "properties": {
                 "countries_name": "Illinois",
                 "countries_dive_name": "Mermet Springs",
-                "countries_dive_avg_depth": "20 "
+                "countries_dive_avg_depth": "20 ",
+                "city": "June Lake",
+                "description": "clear sky",
+                "temperature": 3,
+                "wind_speed": 2.57
             },
             "geometry": {
                 "type": "Point",
@@ -1173,7 +1469,11 @@
             "properties": {
                 "countries_name": "Illinois",
                 "countries_dive_name": "Pearl Lake",
-                "countries_dive_avg_depth": "7.6 "
+                "countries_dive_avg_depth": "7.6 ",
+                "city": "Mission Bay Jetty South",
+                "description": "clear sky",
+                "temperature": 12.5,
+                "wind_speed": 0.95
             },
             "geometry": {
                 "type": "Point",
@@ -1188,7 +1488,11 @@
             "properties": {
                 "countries_name": "Illinois",
                 "countries_dive_name": "St. Mary",
-                "countries_dive_avg_depth": "35.1 "
+                "countries_dive_avg_depth": "35.1 ",
+                "city": "Straits of Mackinack",
+                "description": "snow",
+                "temperature": -0.1,
+                "wind_speed": 6.76
             },
             "geometry": {
                 "type": "Point",
@@ -1203,7 +1507,11 @@
             "properties": {
                 "countries_name": "Illinois",
                 "countries_dive_name": "Straits of Mackinack",
-                "countries_dive_avg_depth": "19.8 "
+                "countries_dive_avg_depth": "19.8 ",
+                "city": "Strode Lake",
+                "description": "light snow",
+                "temperature": 0.01,
+                "wind_speed": 4.63
             },
             "geometry": {
                 "type": "Point",
@@ -1218,7 +1526,11 @@
             "properties": {
                 "countries_name": "Illinois",
                 "countries_dive_name": "Strode Lake",
-                "countries_dive_avg_depth": "12.2 "
+                "countries_dive_avg_depth": "12.2 ",
+                "city": "Wells Burt",
+                "description": "light snow",
+                "temperature": -0.25,
+                "wind_speed": 2.24
             },
             "geometry": {
                 "type": "Point",
@@ -1233,7 +1545,11 @@
             "properties": {
                 "countries_name": "Illinois",
                 "countries_dive_name": "Wells Burt",
-                "countries_dive_avg_depth": "12.2 "
+                "countries_dive_avg_depth": "12.2 ",
+                "city": "France Park",
+                "description": "haze",
+                "temperature": -2.99,
+                "wind_speed": 3.14
             },
             "geometry": {
                 "type": "Point",
@@ -1248,7 +1564,11 @@
             "properties": {
                 "countries_name": "Indiana",
                 "countries_dive_name": "France Park",
-                "countries_dive_avg_depth": ""
+                "countries_dive_avg_depth": "",
+                "city": "Big Creek",
+                "description": "overcast clouds",
+                "temperature": -2.58,
+                "wind_speed": 6.17
             },
             "geometry": {
                 "type": "Point",
@@ -1263,7 +1583,11 @@
             "properties": {
                 "countries_name": "Iowa",
                 "countries_dive_name": "Big Creek",
-                "countries_dive_avg_depth": "9.1 "
+                "countries_dive_avg_depth": "9.1 ",
+                "city": "Blue Springs",
+                "description": "broken clouds",
+                "temperature": 0.69,
+                "wind_speed": 5.14
             },
             "geometry": {
                 "type": "Point",
@@ -1278,7 +1602,11 @@
             "properties": {
                 "countries_name": "Kentucky",
                 "countries_dive_name": "Blue Springs",
-                "countries_dive_avg_depth": "20 "
+                "countries_dive_avg_depth": "20 ",
+                "city": "Cerulean Springs",
+                "description": "overcast clouds",
+                "temperature": 0,
+                "wind_speed": 1.79
             },
             "geometry": {
                 "type": "Point",
@@ -1293,7 +1621,11 @@
             "properties": {
                 "countries_name": "Kentucky",
                 "countries_dive_name": "Cerulean Springs",
-                "countries_dive_avg_depth": ""
+                "countries_dive_avg_depth": "",
+                "city": "Pennyroyal",
+                "description": "broken clouds",
+                "temperature": 0.69,
+                "wind_speed": 5.14
             },
             "geometry": {
                 "type": "Point",
@@ -1308,7 +1640,11 @@
             "properties": {
                 "countries_name": "Kentucky",
                 "countries_dive_name": "Pennyroyal",
-                "countries_dive_avg_depth": "15 "
+                "countries_dive_avg_depth": "15 ",
+                "city": "Beauchamp Point",
+                "description": "overcast clouds",
+                "temperature": 3.71,
+                "wind_speed": 10.8
             },
             "geometry": {
                 "type": "Point",
@@ -1323,7 +1659,11 @@
             "properties": {
                 "countries_name": "Maine",
                 "countries_dive_name": "Beauchamp Point",
-                "countries_dive_avg_depth": "6.1 "
+                "countries_dive_avg_depth": "6.1 ",
+                "city": "Cape Neddick Nubble",
+                "description": "moderate rain",
+                "temperature": 5.39,
+                "wind_speed": 5.81
             },
             "geometry": {
                 "type": "Point",
@@ -1338,7 +1678,11 @@
             "properties": {
                 "countries_name": "Maine",
                 "countries_dive_name": "Cape Neddick Nubble",
-                "countries_dive_avg_depth": "16 "
+                "countries_dive_avg_depth": "16 ",
+                "city": "City Of Portland",
+                "description": "overcast clouds",
+                "temperature": 3.77,
+                "wind_speed": 10.8
             },
             "geometry": {
                 "type": "Point",
@@ -1353,7 +1697,11 @@
             "properties": {
                 "countries_name": "Maine",
                 "countries_dive_name": "City Of Portland",
-                "countries_dive_avg_depth": "6.1 "
+                "countries_dive_avg_depth": "6.1 ",
+                "city": "F.C. Pendleton",
+                "description": "overcast clouds",
+                "temperature": 3.33,
+                "wind_speed": 4.02
             },
             "geometry": {
                 "type": "Point",
@@ -1368,7 +1716,11 @@
             "properties": {
                 "countries_name": "Maine",
                 "countries_dive_name": "F.C. Pendleton",
-                "countries_dive_avg_depth": "12.2 "
+                "countries_dive_avg_depth": "12.2 ",
+                "city": "Little Hunters Beach",
+                "description": "overcast clouds",
+                "temperature": 3.14,
+                "wind_speed": 4.47
             },
             "geometry": {
                 "type": "Point",
@@ -1383,7 +1735,11 @@
             "properties": {
                 "countries_name": "Maine",
                 "countries_dive_name": "Little Hunters Beach",
-                "countries_dive_avg_depth": "7.6 "
+                "countries_dive_avg_depth": "7.6 ",
+                "city": "Sand Beach",
+                "description": "overcast clouds",
+                "temperature": 3.13,
+                "wind_speed": 3.13
             },
             "geometry": {
                 "type": "Point",
@@ -1398,7 +1754,11 @@
             "properties": {
                 "countries_name": "Maine",
                 "countries_dive_name": "Sand Beach",
-                "countries_dive_avg_depth": "7.6 "
+                "countries_dive_avg_depth": "7.6 ",
+                "city": "The Graves",
+                "description": "overcast clouds",
+                "temperature": 3.72,
+                "wind_speed": 10.8
             },
             "geometry": {
                 "type": "Point",
@@ -1413,7 +1773,11 @@
             "properties": {
                 "countries_name": "Maine",
                 "countries_dive_name": "The Graves",
-                "countries_dive_avg_depth": "7.6 "
+                "countries_dive_avg_depth": "7.6 ",
+                "city": "Wreck of the Irvington",
+                "description": "overcast clouds",
+                "temperature": 3.76,
+                "wind_speed": 10.8
             },
             "geometry": {
                 "type": "Point",
@@ -1428,7 +1792,11 @@
             "properties": {
                 "countries_name": "Maine",
                 "countries_dive_name": "Wreck of the Irvington",
-                "countries_dive_avg_depth": "15.2 "
+                "countries_dive_avg_depth": "15.2 ",
+                "city": "Fort Carroll",
+                "description": "clear sky",
+                "temperature": 2.78,
+                "wind_speed": 2.57
             },
             "geometry": {
                 "type": "Point",
@@ -1443,7 +1811,11 @@
             "properties": {
                 "countries_name": "Maryland",
                 "countries_dive_name": "Fort Carroll",
-                "countries_dive_avg_depth": "15 "
+                "countries_dive_avg_depth": "15 ",
+                "city": "Hydes Quarry",
+                "description": "clear sky",
+                "temperature": 0.31,
+                "wind_speed": 1.54
             },
             "geometry": {
                 "type": "Point",
@@ -1458,7 +1830,11 @@
             "properties": {
                 "countries_name": "Maryland",
                 "countries_dive_name": "Hydes Quarry",
-                "countries_dive_avg_depth": "9.1 "
+                "countries_dive_avg_depth": "9.1 ",
+                "city": "Woodsboro Quarry (550)",
+                "description": "mist",
+                "temperature": -0.47,
+                "wind_speed": 1.93
             },
             "geometry": {
                 "type": "Point",
@@ -1473,7 +1849,11 @@
             "properties": {
                 "countries_name": "Maryland",
                 "countries_dive_name": "Woodsboro Quarry (550)",
-                "countries_dive_avg_depth": "19.8 "
+                "countries_dive_avg_depth": "19.8 ",
+                "city": "Andrea Doria",
+                "description": "overcast clouds",
+                "temperature": 10.89,
+                "wind_speed": 16.55
             },
             "geometry": {
                 "type": "Point",
@@ -1488,7 +1868,11 @@
             "properties": {
                 "countries_name": "Massachusetts",
                 "countries_dive_name": "Andrea Doria",
-                "countries_dive_avg_depth": "53.3 "
+                "countries_dive_avg_depth": "53.3 ",
+                "city": "Brant Rock",
+                "description": "overcast clouds",
+                "temperature": 6.41,
+                "wind_speed": 5.36
             },
             "geometry": {
                 "type": "Point",
@@ -1503,7 +1887,11 @@
             "properties": {
                 "countries_name": "Massachusetts",
                 "countries_dive_name": "Brant Rock",
-                "countries_dive_avg_depth": "7.9 "
+                "countries_dive_avg_depth": "7.9 ",
+                "city": "City of Rockland Wreck",
+                "description": "moderate rain",
+                "temperature": 5.87,
+                "wind_speed": 7.2
             },
             "geometry": {
                 "type": "Point",
@@ -1518,7 +1906,11 @@
             "properties": {
                 "countries_name": "Massachusetts",
                 "countries_dive_name": "City of Rockland Wreck",
-                "countries_dive_avg_depth": "2 "
+                "countries_dive_avg_depth": "2 ",
+                "city": "Corporation Beach",
+                "description": "overcast clouds",
+                "temperature": 7.75,
+                "wind_speed": 7.2
             },
             "geometry": {
                 "type": "Point",
@@ -1533,7 +1925,11 @@
             "properties": {
                 "countries_name": "Massachusetts",
                 "countries_dive_name": "Corporation Beach",
-                "countries_dive_avg_depth": "3 "
+                "countries_dive_avg_depth": "3 ",
+                "city": "Folly Cove",
+                "description": "light rain",
+                "temperature": 5.92,
+                "wind_speed": 3.58
             },
             "geometry": {
                 "type": "Point",
@@ -1548,7 +1944,11 @@
             "properties": {
                 "countries_name": "Massachusetts",
                 "countries_dive_name": "Folly Cove",
-                "countries_dive_avg_depth": "9.1 "
+                "countries_dive_avg_depth": "9.1 ",
+                "city": "Garbage Beach",
+                "description": "moderate rain",
+                "temperature": 7.86,
+                "wind_speed": 11.83
             },
             "geometry": {
                 "type": "Point",
@@ -1563,7 +1963,11 @@
             "properties": {
                 "countries_name": "Massachusetts",
                 "countries_dive_name": "Garbage Beach",
-                "countries_dive_avg_depth": "10.7 "
+                "countries_dive_avg_depth": "10.7 ",
+                "city": "Hathaway's Pond",
+                "description": "overcast clouds",
+                "temperature": 7.55,
+                "wind_speed": 7.2
             },
             "geometry": {
                 "type": "Point",
@@ -1578,7 +1982,11 @@
             "properties": {
                 "countries_name": "Massachusetts",
                 "countries_dive_name": "Hathaway's Pond",
-                "countries_dive_avg_depth": "12.2 "
+                "countries_dive_avg_depth": "12.2 ",
+                "city": "Haviland Pond",
+                "description": "moderate rain",
+                "temperature": 2.89,
+                "wind_speed": 3.6
             },
             "geometry": {
                 "type": "Point",
@@ -1593,7 +2001,11 @@
             "properties": {
                 "countries_name": "Massachusetts",
                 "countries_dive_name": "Haviland Pond",
-                "countries_dive_avg_depth": "4.6 "
+                "countries_dive_avg_depth": "4.6 ",
+                "city": "Magnolia Rocks",
+                "description": "moderate rain",
+                "temperature": 5.91,
+                "wind_speed": 7.2
             },
             "geometry": {
                 "type": "Point",
@@ -1608,7 +2020,11 @@
             "properties": {
                 "countries_name": "Massachusetts",
                 "countries_dive_name": "Magnolia Rocks",
-                "countries_dive_avg_depth": "10 "
+                "countries_dive_avg_depth": "10 ",
+                "city": "Mares Pond",
+                "description": "moderate rain",
+                "temperature": 7.71,
+                "wind_speed": 12.35
             },
             "geometry": {
                 "type": "Point",
@@ -1623,7 +2039,11 @@
             "properties": {
                 "countries_name": "Massachusetts",
                 "countries_dive_name": "Mares Pond",
-                "countries_dive_avg_depth": "10.7 "
+                "countries_dive_avg_depth": "10.7 ",
+                "city": "Niles Beach",
+                "description": "moderate rain",
+                "temperature": 5.96,
+                "wind_speed": 4.47
             },
             "geometry": {
                 "type": "Point",
@@ -1638,7 +2058,11 @@
             "properties": {
                 "countries_name": "Massachusetts",
                 "countries_dive_name": "Niles Beach",
-                "countries_dive_avg_depth": "4.6 "
+                "countries_dive_avg_depth": "4.6 ",
+                "city": "Normans Woe",
+                "description": "moderate rain",
+                "temperature": 5.91,
+                "wind_speed": 7.2
             },
             "geometry": {
                 "type": "Point",
@@ -1653,7 +2077,11 @@
             "properties": {
                 "countries_name": "Massachusetts",
                 "countries_dive_name": "Normans Woe",
-                "countries_dive_avg_depth": "12.2 "
+                "countries_dive_avg_depth": "12.2 ",
+                "city": "Old Garden Beach",
+                "description": "light rain",
+                "temperature": 5.97,
+                "wind_speed": 8.94
             },
             "geometry": {
                 "type": "Point",
@@ -1668,7 +2096,11 @@
             "properties": {
                 "countries_name": "Massachusetts",
                 "countries_dive_name": "Old Garden Beach",
-                "countries_dive_avg_depth": "6.1 "
+                "countries_dive_avg_depth": "6.1 ",
+                "city": "Russell Pond",
+                "description": "moderate rain",
+                "temperature": 1.04,
+                "wind_speed": 2.57
             },
             "geometry": {
                 "type": "Point",
@@ -1683,7 +2115,11 @@
             "properties": {
                 "countries_name": "Massachusetts",
                 "countries_dive_name": "Russell Pond",
-                "countries_dive_avg_depth": "4.6 "
+                "countries_dive_avg_depth": "4.6 ",
+                "city": "Sandwich Town Beach",
+                "description": "overcast clouds",
+                "temperature": 7.96,
+                "wind_speed": 12.35
             },
             "geometry": {
                 "type": "Point",
@@ -1698,7 +2134,11 @@
             "properties": {
                 "countries_name": "Massachusetts",
                 "countries_dive_name": "Sandwich Town Beach",
-                "countries_dive_avg_depth": "6.1 "
+                "countries_dive_avg_depth": "6.1 ",
+                "city": "The Crane",
+                "description": "moderate rain",
+                "temperature": 5.97,
+                "wind_speed": 11.62
             },
             "geometry": {
                 "type": "Point",
@@ -1713,7 +2153,11 @@
             "properties": {
                 "countries_name": "Massachusetts",
                 "countries_dive_name": "The Crane",
-                "countries_dive_avg_depth": "43 "
+                "countries_dive_avg_depth": "43 ",
+                "city": "White Beach",
+                "description": "moderate rain",
+                "temperature": 5.95,
+                "wind_speed": 7.2
             },
             "geometry": {
                 "type": "Point",
@@ -1728,7 +2172,11 @@
             "properties": {
                 "countries_name": "Massachusetts",
                 "countries_dive_name": "White Beach",
-                "countries_dive_avg_depth": "7.6 "
+                "countries_dive_avg_depth": "7.6 ",
+                "city": "America Wreck",
+                "description": "overcast clouds",
+                "temperature": -4.17,
+                "wind_speed": 4.63
             },
             "geometry": {
                 "type": "Point",
@@ -1743,7 +2191,11 @@
             "properties": {
                 "countries_name": "Michigan",
                 "countries_dive_name": "America Wreck",
-                "countries_dive_avg_depth": "9.1 "
+                "countries_dive_avg_depth": "9.1 ",
+                "city": "Anita's Wreck",
+                "description": "mist",
+                "temperature": -1.67,
+                "wind_speed": 1.65
             },
             "geometry": {
                 "type": "Point",
@@ -1758,7 +2210,11 @@
             "properties": {
                 "countries_name": "Michigan",
                 "countries_dive_name": "Anita's Wreck",
-                "countries_dive_avg_depth": "5.8 "
+                "countries_dive_avg_depth": "5.8 ",
+                "city": "Bermuda Wreck",
+                "description": "light snow",
+                "temperature": 0.6,
+                "wind_speed": 4.63
             },
             "geometry": {
                 "type": "Point",
@@ -1773,7 +2229,11 @@
             "properties": {
                 "countries_name": "Michigan",
                 "countries_dive_name": "Bermuda Wreck",
-                "countries_dive_avg_depth": "7 "
+                "countries_dive_avg_depth": "7 ",
+                "city": "Car Bodies",
+                "description": "light snow",
+                "temperature": 0.31,
+                "wind_speed": 2.62
             },
             "geometry": {
                 "type": "Point",
@@ -1788,7 +2248,11 @@
             "properties": {
                 "countries_name": "Michigan",
                 "countries_dive_name": "Car Bodies",
-                "countries_dive_avg_depth": "5.5 "
+                "countries_dive_avg_depth": "5.5 ",
+                "city": "Depot beach",
+                "description": "light snow",
+                "temperature": 0.53,
+                "wind_speed": 2.65
             },
             "geometry": {
                 "type": "Point",
@@ -1803,7 +2267,11 @@
             "properties": {
                 "countries_name": "Michigan",
                 "countries_dive_name": "Depot beach",
-                "countries_dive_avg_depth": "5 "
+                "countries_dive_avg_depth": "5 ",
+                "city": "Eliza H. Strong",
+                "description": "mist",
+                "temperature": -2.23,
+                "wind_speed": 2.06
             },
             "geometry": {
                 "type": "Point",
@@ -1818,7 +2286,11 @@
             "properties": {
                 "countries_name": "Michigan",
                 "countries_dive_name": "Eliza H. Strong",
-                "countries_dive_avg_depth": "8.5 "
+                "countries_dive_avg_depth": "8.5 ",
+                "city": "Elmwood Wreck",
+                "description": "light snow",
+                "temperature": 0.38,
+                "wind_speed": 1.39
             },
             "geometry": {
                 "type": "Point",
@@ -1833,7 +2305,11 @@
             "properties": {
                 "countries_name": "Michigan",
                 "countries_dive_name": "Elmwood Wreck",
-                "countries_dive_avg_depth": "10 "
+                "countries_dive_avg_depth": "10 ",
+                "city": "Higgins lake",
+                "description": "light snow",
+                "temperature": -1.04,
+                "wind_speed": 2.06
             },
             "geometry": {
                 "type": "Point",
@@ -1848,7 +2324,11 @@
             "properties": {
                 "countries_name": "Michigan",
                 "countries_dive_name": "Higgins lake",
-                "countries_dive_avg_depth": "13.4 "
+                "countries_dive_avg_depth": "13.4 ",
+                "city": "Ironsides Wreck",
+                "description": "light snow",
+                "temperature": -0.38,
+                "wind_speed": 3.09
             },
             "geometry": {
                 "type": "Point",
@@ -1863,7 +2343,11 @@
             "properties": {
                 "countries_name": "Michigan",
                 "countries_dive_name": "Ironsides Wreck",
-                "countries_dive_avg_depth": "35.1 "
+                "countries_dive_avg_depth": "35.1 ",
+                "city": "Lake Fenton",
+                "description": "overcast clouds",
+                "temperature": -1.8,
+                "wind_speed": 2.06
             },
             "geometry": {
                 "type": "Point",
@@ -1878,7 +2362,11 @@
             "properties": {
                 "countries_name": "Michigan",
                 "countries_dive_name": "Lake Fenton",
-                "countries_dive_avg_depth": "10 "
+                "countries_dive_avg_depth": "10 ",
+                "city": "Marquette Upper Harbor",
+                "description": "snow",
+                "temperature": 0.2,
+                "wind_speed": 3.58
             },
             "geometry": {
                 "type": "Point",
@@ -1893,7 +2381,11 @@
             "properties": {
                 "countries_name": "Michigan",
                 "countries_dive_name": "Marquette Upper Harbor",
-                "countries_dive_avg_depth": "8.4 "
+                "countries_dive_avg_depth": "8.4 ",
+                "city": "Mary Alice B",
+                "description": "mist",
+                "temperature": -2.23,
+                "wind_speed": 2.06
             },
             "geometry": {
                 "type": "Point",
@@ -1908,7 +2400,11 @@
             "properties": {
                 "countries_name": "Michigan",
                 "countries_dive_name": "Mary Alice B",
-                "countries_dive_avg_depth": "27.4 "
+                "countries_dive_avg_depth": "27.4 ",
+                "city": "Myron Wreck",
+                "description": "light snow",
+                "temperature": 0.18,
+                "wind_speed": 2.06
             },
             "geometry": {
                 "type": "Point",
@@ -1923,7 +2419,11 @@
             "properties": {
                 "countries_name": "Michigan",
                 "countries_dive_name": "Myron Wreck",
-                "countries_dive_avg_depth": "12.2 "
+                "countries_dive_avg_depth": "12.2 ",
+                "city": "Mystic wreck",
+                "description": "light snow",
+                "temperature": 0.25,
+                "wind_speed": 3.6
             },
             "geometry": {
                 "type": "Point",
@@ -1938,7 +2438,11 @@
             "properties": {
                 "countries_name": "Michigan",
                 "countries_dive_name": "Mystic wreck",
-                "countries_dive_avg_depth": "13.7 "
+                "countries_dive_avg_depth": "13.7 ",
+                "city": "Sadie Thompson Wreck",
+                "description": "mist",
+                "temperature": 0.33,
+                "wind_speed": 3.6
             },
             "geometry": {
                 "type": "Point",
@@ -1953,7 +2457,11 @@
             "properties": {
                 "countries_name": "Michigan",
                 "countries_dive_name": "Sadie Thompson Wreck",
-                "countries_dive_avg_depth": "33.2 "
+                "countries_dive_avg_depth": "33.2 ",
+                "city": "Smith Moore Wreck",
+                "description": "light snow",
+                "temperature": 0.59,
+                "wind_speed": 4.63
             },
             "geometry": {
                 "type": "Point",
@@ -1968,7 +2476,11 @@
             "properties": {
                 "countries_name": "Michigan",
                 "countries_dive_name": "Smith Moore Wreck",
-                "countries_dive_avg_depth": "22.9 "
+                "countries_dive_avg_depth": "22.9 ",
+                "city": "Spring Mill Pond",
+                "description": "clear sky",
+                "temperature": -2.73,
+                "wind_speed": 1.34
             },
             "geometry": {
                 "type": "Point",
@@ -1983,7 +2495,11 @@
             "properties": {
                 "countries_name": "Michigan",
                 "countries_dive_name": "Spring Mill Pond",
-                "countries_dive_avg_depth": "10 "
+                "countries_dive_avg_depth": "10 ",
+                "city": "Straits of Mackinaw",
+                "description": "light snow",
+                "temperature": 0.67,
+                "wind_speed": 4.63
             },
             "geometry": {
                 "type": "Point",
@@ -1998,7 +2514,11 @@
             "properties": {
                 "countries_name": "Michigan",
                 "countries_dive_name": "Straits of Mackinaw",
-                "countries_dive_avg_depth": "15 "
+                "countries_dive_avg_depth": "15 ",
+                "city": "Three Brothers",
+                "description": "light snow",
+                "temperature": 0.32,
+                "wind_speed": 5.93
             },
             "geometry": {
                 "type": "Point",
@@ -2013,7 +2533,11 @@
             "properties": {
                 "countries_name": "Michigan",
                 "countries_dive_name": "Three Brothers",
-                "countries_dive_avg_depth": "6.1 "
+                "countries_dive_avg_depth": "6.1 ",
+                "city": "Vienna",
+                "description": "light snow",
+                "temperature": 0.35,
+                "wind_speed": 3.6
             },
             "geometry": {
                 "type": "Point",
@@ -2028,7 +2552,11 @@
             "properties": {
                 "countries_name": "Michigan",
                 "countries_dive_name": "Vienna",
-                "countries_dive_avg_depth": "36 "
+                "countries_dive_avg_depth": "36 ",
+                "city": "Crosby Mine Pit",
+                "description": "overcast clouds",
+                "temperature": -5.41,
+                "wind_speed": 4.12
             },
             "geometry": {
                 "type": "Point",
@@ -2043,7 +2571,11 @@
             "properties": {
                 "countries_name": "Minnesota",
                 "countries_dive_name": "Crosby Mine Pit",
-                "countries_dive_avg_depth": "3 "
+                "countries_dive_avg_depth": "3 ",
+                "city": "Louise Mine Pitt",
+                "description": "overcast clouds",
+                "temperature": -5.41,
+                "wind_speed": 4.12
             },
             "geometry": {
                 "type": "Point",
@@ -2058,7 +2590,11 @@
             "properties": {
                 "countries_name": "Minnesota",
                 "countries_dive_name": "Louise Mine Pitt",
-                "countries_dive_avg_depth": "12.2 "
+                "countries_dive_avg_depth": "12.2 ",
+                "city": "Madiera",
+                "description": "overcast clouds",
+                "temperature": -1.96,
+                "wind_speed": 2.57
             },
             "geometry": {
                 "type": "Point",
@@ -2073,7 +2609,11 @@
             "properties": {
                 "countries_name": "Minnesota",
                 "countries_dive_name": "Madiera",
-                "countries_dive_avg_depth": "10.7 "
+                "countries_dive_avg_depth": "10.7 ",
+                "city": "Bonne Terre Mine",
+                "description": "overcast clouds",
+                "temperature": 0.37,
+                "wind_speed": 3.6
             },
             "geometry": {
                 "type": "Point",
@@ -2088,7 +2628,11 @@
             "properties": {
                 "countries_name": "Missouri",
                 "countries_dive_name": "Bonne Terre Mine",
-                "countries_dive_avg_depth": "15.2 "
+                "countries_dive_avg_depth": "15.2 ",
+                "city": "Captain John's Dive Park",
+                "description": "overcast clouds",
+                "temperature": -0.41,
+                "wind_speed": 5.14
             },
             "geometry": {
                 "type": "Point",
@@ -2103,7 +2647,11 @@
             "properties": {
                 "countries_name": "Missouri",
                 "countries_dive_name": "Captain John's Dive Park",
-                "countries_dive_avg_depth": "13.7 "
+                "countries_dive_avg_depth": "13.7 ",
+                "city": "Duck Island",
+                "description": "overcast clouds",
+                "temperature": 0.07,
+                "wind_speed": 5.66
             },
             "geometry": {
                 "type": "Point",
@@ -2118,7 +2666,11 @@
             "properties": {
                 "countries_name": "Missouri",
                 "countries_dive_name": "Duck Island",
-                "countries_dive_avg_depth": "6.1 "
+                "countries_dive_avg_depth": "6.1 ",
+                "city": "Table Rock Lake",
+                "description": "overcast clouds",
+                "temperature": 0.07,
+                "wind_speed": 5.66
             },
             "geometry": {
                 "type": "Point",
@@ -2133,7 +2685,11 @@
             "properties": {
                 "countries_name": "Missouri",
                 "countries_dive_name": "Table Rock Lake",
-                "countries_dive_avg_depth": "30.5 "
+                "countries_dive_avg_depth": "30.5 ",
+                "city": "The Dive Stop",
+                "description": "overcast clouds",
+                "temperature": 0.72,
+                "wind_speed": 3.09
             },
             "geometry": {
                 "type": "Point",
@@ -2148,7 +2704,11 @@
             "properties": {
                 "countries_name": "Missouri",
                 "countries_dive_name": "The Dive Stop",
-                "countries_dive_avg_depth": "12.2 "
+                "countries_dive_avg_depth": "12.2 ",
+                "city": "Canyon Ferry Cemetery Island",
+                "description": "overcast clouds",
+                "temperature": 2.02,
+                "wind_speed": 4.63
             },
             "geometry": {
                 "type": "Point",
@@ -2163,7 +2723,11 @@
             "properties": {
                 "countries_name": "Montana",
                 "countries_dive_name": "Canyon Ferry Cemetery Island",
-                "countries_dive_avg_depth": "15.2 "
+                "countries_dive_avg_depth": "15.2 ",
+                "city": "Cliff Lake",
+                "description": "broken clouds",
+                "temperature": -7.82,
+                "wind_speed": 0.56
             },
             "geometry": {
                 "type": "Point",
@@ -2178,7 +2742,11 @@
             "properties": {
                 "countries_name": "Montana",
                 "countries_dive_name": "Cliff Lake",
-                "countries_dive_avg_depth": "4.6 "
+                "countries_dive_avg_depth": "4.6 ",
+                "city": "Kim's Marina",
+                "description": "overcast clouds",
+                "temperature": 2.02,
+                "wind_speed": 4.63
             },
             "geometry": {
                 "type": "Point",
@@ -2193,7 +2761,11 @@
             "properties": {
                 "countries_name": "Montana",
                 "countries_dive_name": "Kim's Marina",
-                "countries_dive_avg_depth": "9.1 "
+                "countries_dive_avg_depth": "9.1 ",
+                "city": "Old Canyon Ferry Dam and power plant",
+                "description": "overcast clouds",
+                "temperature": 2.02,
+                "wind_speed": 4.63
             },
             "geometry": {
                 "type": "Point",
@@ -2208,7 +2780,11 @@
             "properties": {
                 "countries_name": "Montana",
                 "countries_dive_name": "Old Canyon Ferry Dam and power plant",
-                "countries_dive_avg_depth": "24.4 "
+                "countries_dive_avg_depth": "24.4 ",
+                "city": "Lake Mead - Wreck Alley",
+                "description": "clear sky",
+                "temperature": 8.76,
+                "wind_speed": 3.09
             },
             "geometry": {
                 "type": "Point",
@@ -2223,7 +2799,11 @@
             "properties": {
                 "countries_name": "Nevada",
                 "countries_dive_name": "Lake Mead - Wreck Alley",
-                "countries_dive_avg_depth": "36.6 "
+                "countries_dive_avg_depth": "36.6 ",
+                "city": "Sand Harbor",
+                "description": "clear sky",
+                "temperature": 3.12,
+                "wind_speed": 0.43
             },
             "geometry": {
                 "type": "Point",
@@ -2238,7 +2818,11 @@
             "properties": {
                 "countries_name": "Nevada",
                 "countries_dive_name": "Sand Harbor",
-                "countries_dive_avg_depth": "9.1 "
+                "countries_dive_avg_depth": "9.1 ",
+                "city": "Sparks Marina",
+                "description": "clear sky",
+                "temperature": 1.55,
+                "wind_speed": 0.64
             },
             "geometry": {
                 "type": "Point",
@@ -2253,7 +2837,11 @@
             "properties": {
                 "countries_name": "Nevada",
                 "countries_dive_name": "Sparks Marina",
-                "countries_dive_avg_depth": "18.3 "
+                "countries_dive_avg_depth": "18.3 ",
+                "city": "Zephyr Cove",
+                "description": "clear sky",
+                "temperature": -2.4,
+                "wind_speed": 1.54
             },
             "geometry": {
                 "type": "Point",
@@ -2268,7 +2856,11 @@
             "properties": {
                 "countries_name": "Nevada",
                 "countries_dive_name": "Zephyr Cove",
-                "countries_dive_avg_depth": "8 "
+                "countries_dive_avg_depth": "8 ",
+                "city": "Split Rock",
+                "description": "snow",
+                "temperature": 0.67,
+                "wind_speed": 0.45
             },
             "geometry": {
                 "type": "Point",
@@ -2283,7 +2875,11 @@
             "properties": {
                 "countries_name": "New Hampshire",
                 "countries_dive_name": "Split Rock",
-                "countries_dive_avg_depth": "10 "
+                "countries_dive_avg_depth": "10 ",
+                "city": "The Plateau",
+                "description": "snow",
+                "temperature": 0.52,
+                "wind_speed": 0.45
             },
             "geometry": {
                 "type": "Point",
@@ -2298,7 +2894,11 @@
             "properties": {
                 "countries_name": "New Hampshire",
                 "countries_dive_name": "The Plateau",
-                "countries_dive_avg_depth": "9 "
+                "countries_dive_avg_depth": "9 ",
+                "city": "Three Old Boats",
+                "description": "snow",
+                "temperature": 0.73,
+                "wind_speed": 3.58
             },
             "geometry": {
                 "type": "Point",
@@ -2313,7 +2913,11 @@
             "properties": {
                 "countries_name": "New Hampshire",
                 "countries_dive_name": "Three Old Boats",
-                "countries_dive_avg_depth": "6 "
+                "countries_dive_avg_depth": "6 ",
+                "city": "Weetamoo Wreck",
+                "description": "snow",
+                "temperature": 0.52,
+                "wind_speed": 0.45
             },
             "geometry": {
                 "type": "Point",
@@ -2328,7 +2932,11 @@
             "properties": {
                 "countries_name": "New Hampshire",
                 "countries_dive_name": "Weetamoo Wreck",
-                "countries_dive_avg_depth": "18.3 "
+                "countries_dive_avg_depth": "18.3 ",
+                "city": "Adventure Aquarium",
+                "description": "overcast clouds",
+                "temperature": 6.81,
+                "wind_speed": 2.95
             },
             "geometry": {
                 "type": "Point",
@@ -2343,7 +2951,11 @@
             "properties": {
                 "countries_name": "New Jersey",
                 "countries_dive_name": "Adventure Aquarium",
-                "countries_dive_avg_depth": "6.7 "
+                "countries_dive_avg_depth": "6.7 ",
+                "city": "Great Isaac",
+                "description": "overcast clouds",
+                "temperature": 6.3,
+                "wind_speed": 6.17
             },
             "geometry": {
                 "type": "Point",
@@ -2358,7 +2970,11 @@
             "properties": {
                 "countries_name": "New Jersey",
                 "countries_dive_name": "Great Isaac",
-                "countries_dive_avg_depth": "25.9 "
+                "countries_dive_avg_depth": "25.9 ",
+                "city": "U-869 Wreck",
+                "description": "moderate rain",
+                "temperature": 9.1,
+                "wind_speed": 2.31
             },
             "geometry": {
                 "type": "Point",
@@ -2373,7 +2989,11 @@
             "properties": {
                 "countries_name": "New Jersey",
                 "countries_dive_name": "U-869 Wreck",
-                "countries_dive_avg_depth": "65 "
+                "countries_dive_avg_depth": "65 ",
+                "city": "USS Algol",
+                "description": "overcast clouds",
+                "temperature": 6.11,
+                "wind_speed": 6.07
             },
             "geometry": {
                 "type": "Point",
@@ -2388,7 +3008,11 @@
             "properties": {
                 "countries_name": "New Jersey",
                 "countries_dive_name": "USS Algol",
-                "countries_dive_avg_depth": "33.5 "
+                "countries_dive_avg_depth": "33.5 ",
+                "city": "Blue Hole",
+                "description": "clear sky",
+                "temperature": -7,
+                "wind_speed": 2.06
             },
             "geometry": {
                 "type": "Point",
@@ -2403,7 +3027,11 @@
             "properties": {
                 "countries_name": "New Mexico",
                 "countries_dive_name": "Blue Hole",
-                "countries_dive_avg_depth": "15 "
+                "countries_dive_avg_depth": "15 ",
+                "city": "Lea Lake",
+                "description": "clear sky",
+                "temperature": -4,
+                "wind_speed": 1.54
             },
             "geometry": {
                 "type": "Point",
@@ -2418,7 +3046,11 @@
             "properties": {
                 "countries_name": "New Mexico",
                 "countries_dive_name": "Lea Lake",
-                "countries_dive_avg_depth": "18 "
+                "countries_dive_avg_depth": "18 ",
+                "city": "A.E. Vickery",
+                "description": "snow",
+                "temperature": 0.64,
+                "wind_speed": 1.34
             },
             "geometry": {
                 "type": "Point",
@@ -2433,7 +3065,11 @@
             "properties": {
                 "countries_name": "New York",
                 "countries_dive_name": "A.E. Vickery",
-                "countries_dive_avg_depth": ""
+                "countries_dive_avg_depth": "",
+                "city": "American",
+                "description": "snow",
+                "temperature": 0,
+                "wind_speed": 1.34
             },
             "geometry": {
                 "type": "Point",
@@ -2448,7 +3084,11 @@
             "properties": {
                 "countries_name": "New York",
                 "countries_dive_name": "American",
-                "countries_dive_avg_depth": "16.9 "
+                "countries_dive_avg_depth": "16.9 ",
+                "city": "Lake Minnewaska State Park",
+                "description": "light rain",
+                "temperature": 1.35,
+                "wind_speed": 4.43
             },
             "geometry": {
                 "type": "Point",
@@ -2463,7 +3103,11 @@
             "properties": {
                 "countries_name": "New York",
                 "countries_dive_name": "Keystorm",
-                "countries_dive_avg_depth": "20 "
+                "countries_dive_avg_depth": "20 ",
+                "city": "Rogers Rock",
+                "description": "snow",
+                "temperature": 0.48,
+                "wind_speed": 2.55
             },
             "geometry": {
                 "type": "Point",
@@ -2478,7 +3122,11 @@
             "properties": {
                 "countries_name": "New York",
                 "countries_dive_name": "Lake Minnewaska State Park",
-                "countries_dive_avg_depth": "10 "
+                "countries_dive_avg_depth": "10 ",
+                "city": "Seneca Lake FLUPA buoy The Steps",
+                "description": "mist",
+                "temperature": 0.51,
+                "wind_speed": 2.21
             },
             "geometry": {
                 "type": "Point",
@@ -2493,7 +3141,11 @@
             "properties": {
                 "countries_name": "New York",
                 "countries_dive_name": "Radeau",
-                "countries_dive_avg_depth": "32.6 "
+                "countries_dive_avg_depth": "32.6 ",
+                "city": "Seneca Lake Watkins Glen Barges",
+                "description": "mist",
+                "temperature": 0.51,
+                "wind_speed": 2.54
             },
             "geometry": {
                 "type": "Point",
@@ -2508,7 +3160,11 @@
             "properties": {
                 "countries_name": "New York",
                 "countries_dive_name": "Rogers Rock",
-                "countries_dive_avg_depth": "18 "
+                "countries_dive_avg_depth": "18 ",
+                "city": "Radeau",
+                "description": "moderate rain",
+                "temperature": 0.8,
+                "wind_speed": 4.12
             },
             "geometry": {
                 "type": "Point",
@@ -2523,7 +3179,11 @@
             "properties": {
                 "countries_name": "New York",
                 "countries_dive_name": "Seneca Lake FLUPA buoy The Steps",
-                "countries_dive_avg_depth": "13.7 "
+                "countries_dive_avg_depth": "13.7 ",
+                "city": "Keystorm",
+                "description": "snow",
+                "temperature": 0,
+                "wind_speed": 1.34
             },
             "geometry": {
                 "type": "Point",
@@ -2538,7 +3198,11 @@
             "properties": {
                 "countries_name": "New York",
                 "countries_dive_name": "Seneca Lake Watkins Glen Barges",
-                "countries_dive_avg_depth": "9.1 "
+                "countries_dive_avg_depth": "9.1 ",
+                "city": "Mission Bay Jetty North",
+                "description": "clear sky",
+                "temperature": 12.5,
+                "wind_speed": 0.95
             },
             "geometry": {
                 "type": "Point",

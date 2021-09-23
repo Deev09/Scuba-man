@@ -17,8 +17,8 @@ def conversion(old):
 
 
 def tasker():
-    cities=Sites.query.limit(3).all()
-    job = q.enqueue(get_request_lalong, cities, job_timeout=1000, result_ttl=4000)
+    cities=Sites.query.all()
+    job = q.enqueue(get_request_lalong, cities, job_timeout=1000, result_ttl=10000)
     return job
 
 def get_request_lalong(cities):
@@ -35,5 +35,5 @@ def get_request_lalong(cities):
             'wind_speed': r1['wind']['speed'],
         }
         temp_arr.append(weather)
-        time.sleep(1)
+        #time.sleep(1)
     return temp_arr

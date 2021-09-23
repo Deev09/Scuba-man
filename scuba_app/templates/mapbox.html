@@ -6,8 +6,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
   <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-	<!-- <script src="countrio.geojson" type="text/javascript"></script> -->
-
+	
 	<script>
 		var today = new Date();
 		
@@ -272,21 +271,7 @@
 			}
 		
 		
-		/* #info {
-			display: block;
-			position: relative;
-			margin: 0px auto;
-			width: 50%;
-			padding: 10px;
-			border: none;
-			border-radius: 3px;
-			font-size: 12px;
-			text-align: center;
-			color: #222;
-			background:white;
-			}
-		 */
-		
+	
 			
 		.searcher{
 			background-color:rgba(216, 195, 181, 0.705);
@@ -315,6 +300,8 @@
 
 
 		}
+
+    
       .weather {
             background-color:rgba(241, 216, 183, 0.696);
             position: absolute;
@@ -392,9 +379,11 @@
 </head>
 
 <body>
+  
 	
 	
 	<div class="button_country">
+		<!-- this calls from the python file __init__.py where it ensures the user is authenticated and displays logout / store location functionality -->
 		{% if current_user.is_authenticated %}
 				<a class="nav-item nav-link" href="/logout" style="color: rgb(31, 29, 29);">Logout</a>
 				<a class="nav-item nav-link" href="/display_location" style="color: rgb(31, 29, 29);">Your locations</a>
@@ -402,14 +391,7 @@
 			<a class="nav-item nav-link" href="{{ url_for('userRoute.login') }}"style="color: rgb(31, 29, 29);">Login</a>
             <a class="nav-item nav-link" href="{{ url_for('userRoute.signup') }}"style="color: rgb(31, 29, 29);">Register</a>
         {% endif %}
-		<!-- <form class="form-signin" method="POST">
-			<button formaction="/signup" style="width:auto;">Sign Up</button>
-			<button formaction="/login" style="width:auto;">Login</button>
-			
-			
-			
-		</form> -->
-
+		
 
 		<form method="post" >
 			<label>Country state:</label>
@@ -424,22 +406,19 @@
 	
 	
 	<div class="container">
-    <!-- <div id="log">
-      <a href='/getdata' id="theButton">Click me</a>
-    </div> -->
-    
-    
-
-		
+   
     <font face="verdana" size='7'> Scuba-man, {{ name }} </font> <br/><br/>
-    <!-- <a href='/getdata' id="theButton">Click Me {{ description }}</a> -->
-		<!-- <p id="value_map">{{ coord }}</p> -->
-		
+    
 		
 		<div id='map' style='width: 95%; height:500px;'></div><br/><br/>
 
-	</div>
+  </div>
+  
 	<div class="weather">
+    
+      <button id="depth">Depth</button>
+      <button id="temperature">Temperature</button>
+     
 		<!-- it's site name -->
 		<h3>{{weather_data.city}}</h3>
 		<h5>temp: {{ weather_data.temperature }} C</h5>
@@ -487,16 +466,10 @@
 					listing_coord.push(latsearch);
 					
 						
-					// .setPopup(new mapboxgl.Popup({ offset: 25 })
-					// .setHTML('<h3>'+ searching +'</h3>'))	
-					// .addTo(map);
 					
 
-				// };
-
 			</script>
-			<!-- <li style="font-size:90%;text-align: center; color: coral;"><a href="/meh/{{meh.site_name}}" style="color: rgb(39, 39, 44)
-			;">{{meh.site_name}}  </a></li> -->
+			
 			<li style="font-size:90%;text-align: center; color: coral;"><a href="/meh/{{meh.site_name}}" style="color: rgb(39, 39, 44)
 				;">{{meh.site_name}}  </a></li>
 			<button class="open-button" onclick="openForm()">Save location?</button>
@@ -508,11 +481,15 @@
 				<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
 				</form>
 			</div>
-		{% endfor %}
+    {% endfor %}
+    
+    
+
 		
         
 		
-	</div>
+  </div>
+
 
 		<div class="tide">
 			<h4>Tidal pattern</h4>
@@ -536,9 +513,11 @@
     
 
 	<script>
+
+	
    
    var geojson = {{ addedapi|tojson }};
-   //var geojson = JSON.parse(geojson);
+   
 
 
       //usage:
@@ -559,9 +538,7 @@
 							
       });
       
-      //var geojson = require('sitee_update.json')
-      //var geojson = fetch('sitee_update.json').then(response => response.json())
-
+      
 
 			map.on('load', function(){
 
@@ -573,7 +550,8 @@
         
 
 
-	
+				// these are the different layers where I added the layers to mpabox from an extension API which I call by the url
+				// the layers is then displayed in javascript
 			
 
 
@@ -656,7 +634,7 @@
 			});
 			var toggleableLayerIds = ['preci', 'temp', 'cloud','wind speed', 'cities'];
 				
-      // var added= {{ addedapi }};
+			// this makes the layers visible and invisible by cliking on the button
       
 
 			for (var i = 0; i < toggleableLayerIds.length; i++) {
@@ -688,202 +666,76 @@
 				layers.appendChild(link);
       }
       
-      // map.on('mousemove', 'dive_siting', function(e) {
-			// 	// Change the cursor style as a UI indicator.
-      //     map.getCanvas().style.cursor = 'pointer';
-          
-      //     var coordinates = e.features[0].geometry.coordinates.slice();
-      //     var description = e.features[0].properties.countries_dive_name;
-      //     var depth = e.features[0].properties.countries_dive_avg_depth;
-      //     console.log(description);
-      //     popup
-      //     .setLngLat(coordinates)
-      //     .setHTML('<h5>' + description + '</h5><h4>' + depth + '</h4>')
-      //     .addTo(map);
-      // });
+     
+		
+    
 
 
-      // 	map.on('mouseleave', 'dive_siting', function() {
-			// 		map.getCanvas().style.cursor = '';
-			// 		popup.remove();
-      // });
-      
+			
 
+      var deep = document.getElementById("depth");
+      var temp = document.getElementById("temperature");
 
+		// this is under the condition that the user clicks on button to show the marker
+      deep.onclick = function(){
 
-
-      var popup = new mapboxgl.Popup({
-				closeButton: false,
-				closeOnClick: false
-        });
-
-      
-
-
-			map.on('mouseenter', 'countrio-81c8vj', function(e) {
-				// Change the cursor style as a UI indicator.
-				map.getCanvas().style.cursor = 'pointer';
-				
-				var coordinates = e.features[0].geometry.coordinates.slice();
-				var description = e.features[0].properties.countries_dive_name;
-        var depth = e.features[0].properties.countries_dive_avg_depth;
-        var varr='he'
-        var api= '{{ allapi }}'
-        var result = Object.keys(api).map(e => ({word: e, count: api[e]}))
-        console.log(result)
-        
-
-        // console.log(description);
-        // (function () {
-        //   var old = console.log;
-        //   var logger = document.getElementById('log');
-        //   console.log = function (message) {
-        //       if (typeof message == 'object') {
-        //           logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : message) + '<br />';
-        //       } else {
-        //           logger.innerHTML += message + '<br />';
-        //       }
-        //   }
-        // })();
-
-
-
-        window.onload = function() {
-          
-          document.getElementById("theButton").onclick = function() {
-            doWork()
-          };
-          
-        }
-
-
-
-        function doWork() {
-
-          var site = description;
-          // $.ajax(
-          //       {
-          //           type:'POST',
-          //           contentType:'application/json;charset-utf-08',
-          //           dataType:'json',
-          //           url:'http://127.0.0.1:5000/getdata?value='+description ,
-          //           success:function (data) {
-          //               var reply=data.reply;
-          //               if (reply=="success")
-          //               {
-          //                   return;
-          //               }
-          //               else
-          //                   {
-          //                   alert("some error ocured in session agent")
-          //                   }
-
-          //           }
-          //       }
-          //   );
-          
-
-          // fetch('/getdata')
-          // .then(function (response) {
-          //     return description;
-          //     console.log(description)
-              
-          // }).then(function (text) {
-          //     console.log('GET response:');
-          //     console.log(text.greeting); 
-          // });
-
-
-
-          $.post("/getdata", description, function(){
+            geojson.features.forEach(function(marker) {
             
-           
-	        });
-            event.preventDefault();
+            // makes a marker for each feature and adds it to the map
+            if ((marker.properties.countries_dive_avg_depth)>10){
+              new mapboxgl.Marker({ color: 'aqua '})
+              .setLngLat(marker.geometry.coordinates)
+              .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+              .setHTML('<h5>' + marker.properties.countries_dive_name + '</h5><h6> Depth in m: </h6><h6>' + marker.properties.countries_dive_avg_depth + '</h6><h6> Temperature: </h6><h6>' + marker.properties.temperature + '</h6>'))
+              .addTo(map);
+            } else {
             
+            new mapboxgl.Marker({ color: 'green'})
+            .setLngLat(marker.geometry.coordinates)
+            .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+              .setHTML('<h5>' + marker.properties.countries_dive_name + '</h5><h6> Depth in m: </h6><h6>' + marker.properties.countries_dive_avg_depth + '</h6><h6> Temperature: </h6><h6>' + marker.properties.temperature + '</h6>'))
+            .addTo(map);
+            }
 
-        }
-        
-        
-                    
+          });
+            
+          }
+  
+      temp.onclick = function(){
 
-				popup
-				.setLngLat(coordinates)
-				.setHTML('<h4>' + description + '</h4><h5>' + depth + '</h5>'+ '<h6>' + api + '</h6>')
-				.addTo(map);
-      });
-      
+        geojson.features.forEach(function(marker) {
+            
+            // makes a marker for each feature and adds it to the map
+            if ((marker.properties.temperature)<5){
+              new mapboxgl.Marker({ color: 'white '})
+              .setLngLat(marker.geometry.coordinates)
+              .setPopup(new mapboxgl.Popup({ offset: 25 }) // adding popups
+              .setHTML('<h5>' + marker.properties.countries_dive_name + '</h5><h6> Depth in m: </h6><h6>' + marker.properties.countries_dive_avg_depth + '</h6><h6> Temperature: </h6><h6>' + marker.properties.temperature + '</h6>'))
+              .addTo(map);
+            } else {
+            
+            new mapboxgl.Marker({ color: 'blue'})
+            .setLngLat(marker.geometry.coordinates)
+            .setPopup(new mapboxgl.Popup({ offset: 25 }) // adding popups
+              .setHTML('<h5>' + marker.properties.countries_dive_name + '</h5><h6> Depth in m: </h6><h6>' + marker.properties.countries_dive_avg_depth + '</h6><h6> Temperature: </h6><h6>' + marker.properties.temperature + '</h6>'))
+            .addTo(map);
+            }
 
-
-
-			map.on('mouseleave', 'countrio-81c8vj', function() {
-					map.getCanvas().style.cursor = '';
-					popup.remove();
-			});
-
-			
-      
-
-
-
-
-      
-
-
-
-			// map.on('mouseleave', 'places', function() {
-			// 		map.getCanvas().style.cursor = '';
-			// 		popup.remove();
-			// });
-
-
-			
-			
-
-			
-
-			
-			const locations = {{ coord }};
-
-			geojson.features.forEach(function(marker) {
-
-				// create a HTML element for each feature
-				// var el = document.createElement('div');
-				// el.className = 'marker';
-
-				// make a marker for each feature and add to the map
-				if ((marker.properties.countries_dive_avg_depth)>10){
-					new mapboxgl.Marker({ color: 'aqua '})
-					.setLngLat(marker.geometry.coordinates)
-					.setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-    			.setHTML('<h3>' + marker.properties.countries_dive_name + '</h3><p>' + marker.properties.countries_dive_avg_depth + '</p>'+'<p>' + marker.properties.temperature + '</p>'))
-					// .setPopup(new mapboxgl.Popup({ offset: 25 })
-					
-					// .setHTML('<h3>' + marker.properties.countries_dive_name + '</h3><p>' + marker.properties.countries_dive_avg_depth + '</p>')
-					.addTo(map);
-				} else {
-				
-				new mapboxgl.Marker({ color: 'green'})
-				.setLngLat(marker.geometry.coordinates)
-				.setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-    			.setHTML('<h3>' + marker.properties.countries_dive_name + '</h3><p>' + marker.properties.countries_dive_avg_depth + '</p>'))
-				.addTo(map);
-				}
-
-      });
+          });
+            
+          }
 
       
-
-			// eurfherifuheirufheifuheirfuheifuhdwriuh fuhliehruighairufh;frog;wyergyoiuuoiyiyiy
-			const locations_dos = {{ coordinator }};
+		
+	// highlights the nearby places in the map		
             locations_dos.forEach(function(coords) {new mapboxgl.Marker().setLngLat(coords)
             .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
             .setHTML('<h3>nearby</h3>'))
             .addTo(map);
 			});
 
-
-			//dewiwedgiuegdwieudgwiudgwieudgwieudgwiudgwieudgwidugwiudwiedgwieudgwieudgwidugwudgwiedgwieudgwidgwieudgiweg
+    //  highlights the dive site searched in pink
+			
 			new mapboxgl.Marker({ color: 'hotpink' }).setLngLat(locations)
             .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
             .setHTML('<h3>{{ sito }}</h3>'))
