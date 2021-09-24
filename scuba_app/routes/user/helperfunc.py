@@ -3,6 +3,7 @@ import time
 from redis import Redis
 from rq import Queue
 from ...models.country import Sites
+from ....secrets import OPENWEATHER_ID
 
 redis_conn = Redis()
 q = Queue(connection=redis_conn)
@@ -23,11 +24,11 @@ def tasker():
 
 def get_request_lalong(cities):
     temp_arr = []
-    url = 'http://api.openweathermap.org/data/2.5/weather?lat={}&lon={}&units=metric&appid=230b7544b48513a794a7284e48f2ca63'
+    url = 'http://api.openweathermap.org/data/2.5/weather?lat={}&lon={}&units=metric&appid={}'
     for city in cities:
         lat=conversion(city.latitude)
         lon=conversion(city.longitude)
-        r1 = requests.get(url.format(lat,lon)).json()
+        r1 = requests.get(url.format(lat,lon, OPENWEATHER_ID)).json()
         weather = { 
             'city' : city.site_name,
             'temperature' : r1['main']['temp'],
