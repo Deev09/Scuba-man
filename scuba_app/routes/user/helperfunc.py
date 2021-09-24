@@ -3,7 +3,7 @@ import time
 from redis import Redis
 from rq import Queue
 from ...models.country import Sites
-from ....secrets import OPENWEATHER_ID
+from ...secrets import OPENWEATHER_ID
 
 redis_conn = Redis()
 q = Queue(connection=redis_conn)

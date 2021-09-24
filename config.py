@@ -1,4 +1,4 @@
-from secrets import SECRET, POSTGRES_URI
+from scuba_app.secrets import SECRET, POSTGRES_URI
 class Config():
     SECRET_KEY = SECRET
 

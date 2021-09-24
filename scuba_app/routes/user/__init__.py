@@ -19,7 +19,7 @@ from flask_login import login_user, current_user, logout_user, login_required,An
 from ...models.base import db, bcrypt, login_manager
 from ...models.user import User
 from ...models.country import (sites_schema, Sites, site_schema)
-from ....secrets import MAPBOX, OPENWEATHER_ID, TIDE_AUTH_ID
+from ...secrets import MAPBOX, OPENWEATHER_ID, TIDE_AUTH_ID
 
 # this fetches the job id required for catching with Redis to call multipl API
 def background_task(n):
@@ -69,7 +69,7 @@ def geojson_submit(jobid):
     # Opening JSON file 
 
     # f = open('/Users/assswain/Desktop/projects/Scuba-man/scuba_app/routes/user/sitee.json',) 
-    f = open('sitee.json',) 
+    f = open('/Users/deevyaswain/Desktop/projects/Scuba/Scuba-man/scuba_app/routes/user/sitee.json',) 
     
     # returns JSON object as a dictionary 
     data = json.load(f) 
@@ -92,7 +92,7 @@ def geojson_submit(jobid):
         d1['wind_speed']=d2['wind_speed']
     
     # with open('/Users/assswain/Desktop/projects/Scuba-man/scuba_app/routes/user/sitee_update.json', 'w', encoding='utf-8') as f:
-    with open('sitee_update.json', 'w', encoding='utf-8') as f:
+    with open('/Users/deevyaswain/Desktop/projects/Scuba/Scuba-man/scuba_app/routes/user/sitee_update.json', 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
    
 
@@ -319,7 +319,7 @@ def maps():
     waves=session.get('waves',[{1:1},{2:2}])
     
     # Opening JSON file 
-    f = open('/Users/assswain/Desktop/projects/Scuba-man/scuba_app/routes/user/sitee_update.json',) 
+    f = open('/Users/deevyaswain/Desktop/projects/Scuba/Scuba-man/scuba_app/routes/user/sitee_update.json',) 
  
     data = json.load(f) 
 
