@@ -1,5 +1,6 @@
+from secrets import SECRET, POSTGRES_URI
 class Config():
-    SECRET_KEY = '378f9b8d99211b55f74229568e4a732b' 
+    SECRET_KEY = SECRET
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
@@ -13,8 +14,7 @@ class Config():
 
 class DevConfig(Config):
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = 'postgresql://mask:password@localhost/scubapp_db'
-  
+    SQLALCHEMY_DATABASE_URI = POSTGRES_URI
 
 
 class ProdConfig(Config):

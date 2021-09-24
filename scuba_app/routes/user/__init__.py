@@ -12,13 +12,14 @@ from redis import Redis
 from rq.job import Job
 from .forms import CountryForm
 from .helperfunc import conversion, tasker
+from pathlib import Path
 # from .helper_func import send_confirmation_email, confirm_token
 from .forms import RegisterForm, LoginForm
 from flask_login import login_user, current_user, logout_user, login_required,AnonymousUserMixin
 from ...models.base import db, bcrypt, login_manager
 from ...models.user import User
 from ...models.country import (sites_schema, Sites, site_schema)
-from ...secrets import MAPBOX
+from ....secrets import MAPBOX, OPENWEATHER_ID, TIDE_AUTH_ID
 
 # this fetches the job id required for catching with Redis to call multipl API
 def background_task(n):
@@ -66,7 +67,9 @@ def geojson_submit(jobid):
     allapi=job.result
     print(len(allapi))
     # Opening JSON file 
-    f = open('/Users/assswain/Desktop/projects/Scuba-man/scuba_app/routes/user/sitee.json',) 
+
+    # f = open('/Users/assswain/Desktop/projects/Scuba-man/scuba_app/routes/user/sitee.json',) 
+    f = open('sitee.json',) 
     
     # returns JSON object as a dictionary 
     data = json.load(f) 
@@ -87,8 +90,9 @@ def geojson_submit(jobid):
         d1['description']=d2['description']
         d1['temperature']=d2['temperature']
         d1['wind_speed']=d2['wind_speed']
-       
-    with open('/Users/assswain/Desktop/projects/Scuba-man/scuba_app/routes/user/sitee_update.json', 'w', encoding='utf-8') as f:
+    
+    # with open('/Users/assswain/Desktop/projects/Scuba-man/scuba_app/routes/user/sitee_update.json', 'w', encoding='utf-8') as f:
+    with open('sitee_update.json', 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
    
 
@@ -190,7 +194,8 @@ def simple():
 def index(country):
     cities=Sites.query.filter_by(site_name="{}".format(country)).first()
 #    url from an api
-    url = 'http://api.openweathermap.org/data/2.5/weather?lat={}&lon={}&units=metric&appid=230b7544b48513a794a7284e48f2ca63'
+    url = 'http://api.openweathermap.org/data/2.5/weather?lat={}&lon={}&units=metric&appid={}'
+    
 
     weather_data = []
     lat=conversion(cities.latitude)
@@ -198,7 +203,7 @@ def index(country):
     print(lat, lon, 'string : latlong')
     
     # gathering the data from the api by sending in the latitude and logitude from the previous function 
-    r1 =requests.get(url.format(lat,lon)).json()
+    r1 =requests.get(url.format(lat,lon, OPENWEATHER_ID)).json()
     
 
     weather = { 
@@ -220,7 +225,7 @@ def index(country):
         'end': end.to('UTC').timestamp,  # Convert to UTC timestam
     },
     headers={
-        'Authorization': '4604db58-c6ab-11ea-870a-0242ac130002-4604dc5c-c6ab-11ea-870a-0242ac130002'
+        'Authorization': TIDE_AUTH_ID
     }
     )
     tide_data = response1.json()
@@ -243,7 +248,7 @@ def index(country):
              # Convert to UTC timestamp
         },
         headers={
-            'Authorization': '4604db58-c6ab-11ea-870a-0242ac130002-4604dc5c-c6ab-11ea-870a-0242ac130002'
+            'Authorization': TIDE_AUTH_ID
         }
         )
     wave_data=response2.json()
